@@ -1,0 +1,38 @@
+{
+    "name": "Qt6 SciFi App",
+    // Use Dockerfile instead of image
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+
+    // Forward X11 for GUI applications
+    "mounts": [
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+    ],
+
+    // Environment variables for Qt GUI
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}",
+        "QT_QPA_PLATFORM": "xcb"
+    },
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "echo 'Qt6 development environment ready!'",
+
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake"
+            ]
+        }
+    },
+
+    // Run as vscode user (non-root)
+    "remoteUser": "vscode"
+}

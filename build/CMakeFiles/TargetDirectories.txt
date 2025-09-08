@@ -1,0 +1,5 @@
+/workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen.dir
+/workspaces/qtpcetu/build/CMakeFiles/edit_cache.dir
+/workspaces/qtpcetu/build/CMakeFiles/rebuild_cache.dir
+/workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir
+/workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen_autogen.dir

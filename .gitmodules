@@ -1,0 +1,6 @@
+[submodule "build/external/libmodbus"]
+	path = build/external/libmodbus
+	url = https://github.com/stephane/libmodbus.git
+[submodule "external/libmodbus"]
+	path = external/libmodbus
+	url = https://github.com/stephane/libmodbus.git

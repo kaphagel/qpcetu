@@ -1,7 +1,7 @@
 CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_animatedprogressbar.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_animatedprogressbar.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -116,7 +116,7 @@ CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/animatedprogressbar.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/animatedprogressbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QProgressBar \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qprogressbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -315,8 +315,8 @@ CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_datawidget.cpp \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/datawidget.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_datawidget.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/datawidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
@@ -329,8 +329,8 @@ CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsEffect \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_graphwidget.cpp \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/graphwidget.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_graphwidget.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/graphwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
@@ -360,8 +360,8 @@ CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/random.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
  /usr/include/c++/13/bits/random.tcc \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_mainwindow.cpp \
- /workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/mainwindow.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_mainwindow.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
@@ -382,4 +382,29 @@ CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGroupBox \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgroupbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedwidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedwidget.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/udpservice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QUdpSocket \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qudpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkInterface \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkinterface.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/moc_dashboardpage.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/../../../src/pages/dashboardpage.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/moc_graphspage.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/../../../src/pages/graphspage.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/moc_settingspage.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/../../../src/pages/settingspage.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/moc_udpresponsepage.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/V5LNE4NMWJ/../../../src/pages/udpresponsepage.h \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_udpservice.cpp \
+ /workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/../../../src/udpservice.h

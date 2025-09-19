@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/qtpcetu
+CMAKE_SOURCE_DIR = /workspaces/qpcetu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/qtpcetu/build
+CMAKE_BINARY_DIR = /workspaces/qpcetu/build
 
 # Utility rule file for SciFiDataScreen_autogen_timestamp_deps.
 
@@ -68,7 +68,9 @@ include CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/SciFiDataScreen_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 CMakeFiles/SciFiDataScreen_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
+CMakeFiles/SciFiDataScreen_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.15.13
 CMakeFiles/SciFiDataScreen_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
+CMakeFiles/SciFiDataScreen_autogen_timestamp_deps: external/libmodbus/src/liblibmodbus.a
 
 SciFiDataScreen_autogen_timestamp_deps: CMakeFiles/SciFiDataScreen_autogen_timestamp_deps
 SciFiDataScreen_autogen_timestamp_deps: CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/build.make
@@ -83,6 +85,6 @@ CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/depend:
-	cd /workspaces/qtpcetu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/qtpcetu /workspaces/qtpcetu /workspaces/qtpcetu/build /workspaces/qtpcetu/build /workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /workspaces/qpcetu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/qpcetu /workspaces/qpcetu /workspaces/qpcetu/build /workspaces/qpcetu/build /workspaces/qpcetu/build/CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/depend
 

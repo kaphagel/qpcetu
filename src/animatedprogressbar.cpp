@@ -12,8 +12,8 @@ AnimatedProgressBar::AnimatedProgressBar(QWidget *parent)
     setMinimum(0);
     setMaximum(100);
     setTextVisible(false);
+    setValue(0); // Ensure initial value is 0
     setupAnimation();
-    
     // Custom styling
     setStyleSheet(R"(
         QProgressBar {
@@ -111,34 +111,15 @@ void AnimatedProgressBar::paintEvent(QPaintEvent *event)
             baseColor = QColor(0, 170, 255);  // Blue
             lightColor = QColor(102, 204, 255);
             darkColor = QColor(0, 100, 200);
-        } else if (value() >= 30) {
-            baseColor = QColor(255, 170, 0);  // Orange
-            lightColor = QColor(255, 220, 136);
-            darkColor = QColor(200, 130, 0);
         } else {
             baseColor = QColor(255, 68, 68);  // Red
             lightColor = QColor(255, 136, 136);
             darkColor = QColor(200, 0, 0);
         }
-        
-        // Create flowing effect
-        gradient.setColorAt(0.0, darkColor);
-        gradient.setColorAt(offset * 0.3, lightColor);
-        gradient.setColorAt(offset * 0.6, baseColor);
-        gradient.setColorAt(offset * 0.8, lightColor);
-        gradient.setColorAt(1.0, darkColor);
-        
-        // Draw the progress with flowing gradient
-        painter.fillRect(progressRect, gradient);
-        
-        // Add glow effect
-        QPen glowPen(lightColor, 1);
-        painter.setPen(glowPen);
-        painter.drawRect(progressRect);
-    }
     
-    // Draw border
-    QPen borderPen(QColor(0, 68, 136), 2);
-    painter.setPen(borderPen);
-    painter.drawRect(barRect);
+        // Draw border
+        QPen borderPen(QColor(0, 68, 136), 2);
+        painter.setPen(borderPen);
+        painter.drawRect(barRect);
+    } // end of paintEvent
 }

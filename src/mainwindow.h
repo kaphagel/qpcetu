@@ -15,6 +15,14 @@
 #include <QGroupBox>
 #include <QStackedWidget>
 
+#include "udpservice.h"
+
+// Forward declarations for page classes
+class DashboardPage;
+class GraphsPage;
+class SettingsPage;
+class UdpResponsePage;
+
 class DataWidget;
 class AnimatedProgressBar;
 class GraphWidget;
@@ -32,7 +40,14 @@ private slots:
     void updateSystemStatus();
     void simulateAlert();
 
+protected:
+    void closeEvent(QCloseEvent *event) override;
+
 private:
+    // Main pages for QStackedWidget
+    DashboardPage *dashboardPage;
+    GraphsPage *graphsPage;
+    SettingsPage *settingsPage;
     void setupUI();
     void setupStyling();
     void createStatusPanel();
@@ -40,11 +55,13 @@ private:
     void createGraphPanels();
     void createSystemPanel();
     void createControlPanel();
-
-    // Multi-page navigation demo
     void setupPages();
     void setupBreadcrumbs(const QStringList &crumbs, int activeIndex);
     void navigateToPage(int index);
+
+    // UDP Service and Response Page
+    UdpService *m_udpService;
+    UdpResponsePage *m_udpResponsePage;
 
     // UI Components
     QWidget *m_centralWidget;
@@ -58,44 +75,7 @@ private:
     QLabel *m_timeLabel;
     QLabel *m_connectionStatus;
 
-    // Data panels
-    DataWidget *m_energyWidget;
-    DataWidget *m_shieldWidget;
-    DataWidget *m_engineWidget;
-    DataWidget *m_weaponWidget;
 
-    // Progress bars
-    AnimatedProgressBar *m_powerBar;
-    AnimatedProgressBar *m_coolantBar;
-    AnimatedProgressBar *m_fuelBar;
 
-    // System info
-    QTextEdit *m_logDisplay;
-    QLabel *m_coordinates;
-    QLabel *m_velocity;
-    QLabel *m_altitude;
-
-    // Control buttons
-    QPushButton *m_engageBtn;
-    QPushButton *m_alertBtn;
-    QPushButton *m_scanBtn;
-
-    // Timers
-    QTimer *m_updateTimer;
-    QTimer *m_statusTimer;
-    QTimer *m_alertTimer;
-
-    // Graph widgets
-    GraphWidget *m_energyGraph;
-    GraphWidget *m_shieldGraph;
-    GraphWidget *m_systemGraph;
-    GraphWidget *m_networkGraph;
-    GraphWidget *m_thrusterGraph;
-    GraphWidget *m_sensorGraph;
-
-    // Data
-    int m_alertLevel;
-    bool m_systemOnline;
 };
-
 #endif // MAINWINDOW_H

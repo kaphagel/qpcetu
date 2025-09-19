@@ -1,5 +1,5 @@
-/workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_animatedprogressbar.cpp: /workspaces/qtpcetu/src/animatedprogressbar.h \
-  /workspaces/qtpcetu/build/SciFiDataScreen_autogen/moc_predefs.h \
+/workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_animatedprogressbar.cpp: /workspaces/qpcetu/src/animatedprogressbar.h \
+  /workspaces/qpcetu/build/SciFiDataScreen_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

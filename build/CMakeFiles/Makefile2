@@ -54,44 +54,100 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/qtpcetu
+CMAKE_SOURCE_DIR = /workspaces/qpcetu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/qtpcetu/build
+CMAKE_BINARY_DIR = /workspaces/qpcetu/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/SciFiDataScreen.dir/all
+all: CMakeFiles/mockudpservice.dir/all
+all: tests/all
+all: external/libmodbus/src/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: tests/preinstall
+preinstall: external/libmodbus/src/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/SciFiDataScreen.dir/clean
+clean: CMakeFiles/mockudpservice.dir/clean
 clean: CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/clean
 clean: CMakeFiles/SciFiDataScreen_autogen.dir/clean
+clean: CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/clean
+clean: CMakeFiles/mockudpservice_autogen.dir/clean
+clean: tests/clean
+clean: external/libmodbus/src/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external/libmodbus/src
+
+# Recursive "all" directory target.
+external/libmodbus/src/all: external/libmodbus/src/CMakeFiles/libmodbus.dir/all
+.PHONY : external/libmodbus/src/all
+
+# Recursive "preinstall" directory target.
+external/libmodbus/src/preinstall:
+.PHONY : external/libmodbus/src/preinstall
+
+# Recursive "clean" directory target.
+external/libmodbus/src/clean: external/libmodbus/src/CMakeFiles/libmodbus.dir/clean
+external/libmodbus/src/clean: external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/clean
+external/libmodbus/src/clean: external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/clean
+.PHONY : external/libmodbus/src/clean
+
+#=============================================================================
+# Directory level rules for directory tests
+
+# Recursive "all" directory target.
+tests/all: tests/CMakeFiles/test_mainwindow.dir/all
+tests/all: tests/CMakeFiles/test_datawidget.dir/all
+tests/all: tests/CMakeFiles/test_animatedprogressbar.dir/all
+tests/all: tests/CMakeFiles/test_graphwidget.dir/all
+.PHONY : tests/all
+
+# Recursive "preinstall" directory target.
+tests/preinstall:
+.PHONY : tests/preinstall
+
+# Recursive "clean" directory target.
+tests/clean: tests/CMakeFiles/test_mainwindow.dir/clean
+tests/clean: tests/CMakeFiles/test_datawidget.dir/clean
+tests/clean: tests/CMakeFiles/test_animatedprogressbar.dir/clean
+tests/clean: tests/CMakeFiles/test_graphwidget.dir/clean
+tests/clean: tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_mainwindow_autogen.dir/clean
+tests/clean: tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_datawidget_autogen.dir/clean
+tests/clean: tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_animatedprogressbar_autogen.dir/clean
+tests/clean: tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/test_graphwidget_autogen.dir/clean
+.PHONY : tests/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/SciFiDataScreen.dir
 
 # All Build rule for target.
+CMakeFiles/SciFiDataScreen.dir/all: external/libmodbus/src/CMakeFiles/libmodbus.dir/all
 CMakeFiles/SciFiDataScreen.dir/all: CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/all
 CMakeFiles/SciFiDataScreen.dir/all: CMakeFiles/SciFiDataScreen_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target SciFiDataScreen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target SciFiDataScreen"
 .PHONY : CMakeFiles/SciFiDataScreen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SciFiDataScreen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SciFiDataScreen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
 .PHONY : CMakeFiles/SciFiDataScreen.dir/rule
 
 # Convenience name for target.
@@ -104,20 +160,47 @@ CMakeFiles/SciFiDataScreen.dir/clean:
 .PHONY : CMakeFiles/SciFiDataScreen.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/mockudpservice.dir
+
+# All Build rule for target.
+CMakeFiles/mockudpservice.dir/all: CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/all
+CMakeFiles/mockudpservice.dir/all: CMakeFiles/mockudpservice_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=23,24,25,26 "Built target mockudpservice"
+.PHONY : CMakeFiles/mockudpservice.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/mockudpservice.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mockudpservice.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : CMakeFiles/mockudpservice.dir/rule
+
+# Convenience name for target.
+mockudpservice: CMakeFiles/mockudpservice.dir/rule
+.PHONY : mockudpservice
+
+# clean rule for target.
+CMakeFiles/mockudpservice.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/clean
+.PHONY : CMakeFiles/mockudpservice.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/all:
+CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/all: external/libmodbus/src/CMakeFiles/libmodbus.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/build.make CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/build.make CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num= "Built target SciFiDataScreen_autogen_timestamp_deps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num= "Built target SciFiDataScreen_autogen_timestamp_deps"
 .PHONY : CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
 .PHONY : CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -136,14 +219,14 @@ CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/clean:
 CMakeFiles/SciFiDataScreen_autogen.dir/all: CMakeFiles/SciFiDataScreen_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen_autogen.dir/build.make CMakeFiles/SciFiDataScreen_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen_autogen.dir/build.make CMakeFiles/SciFiDataScreen_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=9 "Built target SciFiDataScreen_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=14 "Built target SciFiDataScreen_autogen"
 .PHONY : CMakeFiles/SciFiDataScreen_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SciFiDataScreen_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SciFiDataScreen_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
 .PHONY : CMakeFiles/SciFiDataScreen_autogen.dir/rule
 
 # Convenience name for target.
@@ -154,6 +237,453 @@ SciFiDataScreen_autogen: CMakeFiles/SciFiDataScreen_autogen.dir/rule
 CMakeFiles/SciFiDataScreen_autogen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen_autogen.dir/build.make CMakeFiles/SciFiDataScreen_autogen.dir/clean
 .PHONY : CMakeFiles/SciFiDataScreen_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/mockudpservice_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/build.make CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/build.make CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num= "Built target mockudpservice_autogen_timestamp_deps"
+.PHONY : CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+mockudpservice_autogen_timestamp_deps: CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/rule
+.PHONY : mockudpservice_autogen_timestamp_deps
+
+# clean rule for target.
+CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/build.make CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/clean
+.PHONY : CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/mockudpservice_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/mockudpservice_autogen.dir/all: CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen.dir/build.make CMakeFiles/mockudpservice_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen.dir/build.make CMakeFiles/mockudpservice_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=27 "Built target mockudpservice_autogen"
+.PHONY : CMakeFiles/mockudpservice_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/mockudpservice_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mockudpservice_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : CMakeFiles/mockudpservice_autogen.dir/rule
+
+# Convenience name for target.
+mockudpservice_autogen: CMakeFiles/mockudpservice_autogen.dir/rule
+.PHONY : mockudpservice_autogen
+
+# clean rule for target.
+CMakeFiles/mockudpservice_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen.dir/build.make CMakeFiles/mockudpservice_autogen.dir/clean
+.PHONY : CMakeFiles/mockudpservice_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_mainwindow.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_mainwindow.dir/all: tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_mainwindow.dir/all: tests/CMakeFiles/test_mainwindow_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow.dir/build.make tests/CMakeFiles/test_mainwindow.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow.dir/build.make tests/CMakeFiles/test_mainwindow.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=46,47,48,49,50,51,52,53,54,55,56,57,58 "Built target test_mainwindow"
+.PHONY : tests/CMakeFiles/test_mainwindow.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_mainwindow.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_mainwindow.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_mainwindow.dir/rule
+
+# Convenience name for target.
+test_mainwindow: tests/CMakeFiles/test_mainwindow.dir/rule
+.PHONY : test_mainwindow
+
+# clean rule for target.
+tests/CMakeFiles/test_mainwindow.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow.dir/build.make tests/CMakeFiles/test_mainwindow.dir/clean
+.PHONY : tests/CMakeFiles/test_mainwindow.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_datawidget.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_datawidget.dir/all: tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_datawidget.dir/all: tests/CMakeFiles/test_datawidget_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget.dir/build.make tests/CMakeFiles/test_datawidget.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget.dir/build.make tests/CMakeFiles/test_datawidget.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=34,35,36,37,38 "Built target test_datawidget"
+.PHONY : tests/CMakeFiles/test_datawidget.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_datawidget.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_datawidget.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_datawidget.dir/rule
+
+# Convenience name for target.
+test_datawidget: tests/CMakeFiles/test_datawidget.dir/rule
+.PHONY : test_datawidget
+
+# clean rule for target.
+tests/CMakeFiles/test_datawidget.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget.dir/build.make tests/CMakeFiles/test_datawidget.dir/clean
+.PHONY : tests/CMakeFiles/test_datawidget.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_animatedprogressbar.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_animatedprogressbar.dir/all: tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_animatedprogressbar.dir/all: tests/CMakeFiles/test_animatedprogressbar_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar.dir/build.make tests/CMakeFiles/test_animatedprogressbar.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar.dir/build.make tests/CMakeFiles/test_animatedprogressbar.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=28,29,30,31,32 "Built target test_animatedprogressbar"
+.PHONY : tests/CMakeFiles/test_animatedprogressbar.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_animatedprogressbar.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_animatedprogressbar.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_animatedprogressbar.dir/rule
+
+# Convenience name for target.
+test_animatedprogressbar: tests/CMakeFiles/test_animatedprogressbar.dir/rule
+.PHONY : test_animatedprogressbar
+
+# clean rule for target.
+tests/CMakeFiles/test_animatedprogressbar.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar.dir/build.make tests/CMakeFiles/test_animatedprogressbar.dir/clean
+.PHONY : tests/CMakeFiles/test_animatedprogressbar.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_graphwidget.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_graphwidget.dir/all: tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/test_graphwidget.dir/all: tests/CMakeFiles/test_graphwidget_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget.dir/build.make tests/CMakeFiles/test_graphwidget.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget.dir/build.make tests/CMakeFiles/test_graphwidget.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=40,41,42,43,44 "Built target test_graphwidget"
+.PHONY : tests/CMakeFiles/test_graphwidget.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_graphwidget.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_graphwidget.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_graphwidget.dir/rule
+
+# Convenience name for target.
+test_graphwidget: tests/CMakeFiles/test_graphwidget.dir/rule
+.PHONY : test_graphwidget
+
+# clean rule for target.
+tests/CMakeFiles/test_graphwidget.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget.dir/build.make tests/CMakeFiles/test_graphwidget.dir/clean
+.PHONY : tests/CMakeFiles/test_graphwidget.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num= "Built target test_mainwindow_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_mainwindow_autogen_timestamp_deps: tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/rule
+.PHONY : test_mainwindow_autogen_timestamp_deps
+
+# clean rule for target.
+tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_mainwindow_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_mainwindow_autogen.dir/all: tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen.dir/build.make tests/CMakeFiles/test_mainwindow_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen.dir/build.make tests/CMakeFiles/test_mainwindow_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=59 "Built target test_mainwindow_autogen"
+.PHONY : tests/CMakeFiles/test_mainwindow_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_mainwindow_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_mainwindow_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_mainwindow_autogen.dir/rule
+
+# Convenience name for target.
+test_mainwindow_autogen: tests/CMakeFiles/test_mainwindow_autogen.dir/rule
+.PHONY : test_mainwindow_autogen
+
+# clean rule for target.
+tests/CMakeFiles/test_mainwindow_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen.dir/build.make tests/CMakeFiles/test_mainwindow_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_mainwindow_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num= "Built target test_datawidget_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_datawidget_autogen_timestamp_deps: tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/rule
+.PHONY : test_datawidget_autogen_timestamp_deps
+
+# clean rule for target.
+tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_datawidget_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_datawidget_autogen.dir/all: tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen.dir/build.make tests/CMakeFiles/test_datawidget_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen.dir/build.make tests/CMakeFiles/test_datawidget_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=39 "Built target test_datawidget_autogen"
+.PHONY : tests/CMakeFiles/test_datawidget_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_datawidget_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_datawidget_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_datawidget_autogen.dir/rule
+
+# Convenience name for target.
+test_datawidget_autogen: tests/CMakeFiles/test_datawidget_autogen.dir/rule
+.PHONY : test_datawidget_autogen
+
+# clean rule for target.
+tests/CMakeFiles/test_datawidget_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen.dir/build.make tests/CMakeFiles/test_datawidget_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_datawidget_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num= "Built target test_animatedprogressbar_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_animatedprogressbar_autogen_timestamp_deps: tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/rule
+.PHONY : test_animatedprogressbar_autogen_timestamp_deps
+
+# clean rule for target.
+tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_animatedprogressbar_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_animatedprogressbar_autogen.dir/all: tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=33 "Built target test_animatedprogressbar_autogen"
+.PHONY : tests/CMakeFiles/test_animatedprogressbar_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_animatedprogressbar_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_animatedprogressbar_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_animatedprogressbar_autogen.dir/rule
+
+# Convenience name for target.
+test_animatedprogressbar_autogen: tests/CMakeFiles/test_animatedprogressbar_autogen.dir/rule
+.PHONY : test_animatedprogressbar_autogen
+
+# clean rule for target.
+tests/CMakeFiles/test_animatedprogressbar_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_animatedprogressbar_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num= "Built target test_graphwidget_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+test_graphwidget_autogen_timestamp_deps: tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/rule
+.PHONY : test_graphwidget_autogen_timestamp_deps
+
+# clean rule for target.
+tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/test_graphwidget_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/test_graphwidget_autogen.dir/all: tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen.dir/build.make tests/CMakeFiles/test_graphwidget_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen.dir/build.make tests/CMakeFiles/test_graphwidget_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=45 "Built target test_graphwidget_autogen"
+.PHONY : tests/CMakeFiles/test_graphwidget_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/test_graphwidget_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test_graphwidget_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/test_graphwidget_autogen.dir/rule
+
+# Convenience name for target.
+test_graphwidget_autogen: tests/CMakeFiles/test_graphwidget_autogen.dir/rule
+.PHONY : test_graphwidget_autogen
+
+# clean rule for target.
+tests/CMakeFiles/test_graphwidget_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen.dir/build.make tests/CMakeFiles/test_graphwidget_autogen.dir/clean
+.PHONY : tests/CMakeFiles/test_graphwidget_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target external/libmodbus/src/CMakeFiles/libmodbus.dir
+
+# All Build rule for target.
+external/libmodbus/src/CMakeFiles/libmodbus.dir/all: external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/all
+external/libmodbus/src/CMakeFiles/libmodbus.dir/all: external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/all
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=15,16,17,18,19,20,21 "Built target libmodbus"
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus.dir/all
+
+# Build rule for subdir invocation for target.
+external/libmodbus/src/CMakeFiles/libmodbus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/libmodbus/src/CMakeFiles/libmodbus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus.dir/rule
+
+# Convenience name for target.
+libmodbus: external/libmodbus/src/CMakeFiles/libmodbus.dir/rule
+.PHONY : libmodbus
+
+# clean rule for target.
+external/libmodbus/src/CMakeFiles/libmodbus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus.dir/clean
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus.dir/clean
+
+#=============================================================================
+# Target rules for target external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num= "Built target libmodbus_autogen_timestamp_deps"
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+libmodbus_autogen_timestamp_deps: external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/rule
+.PHONY : libmodbus_autogen_timestamp_deps
+
+# clean rule for target.
+external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/clean
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir
+
+# All Build rule for target.
+external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/all: external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=22 "Built target libmodbus_autogen"
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/rule
+
+# Convenience name for target.
+libmodbus_autogen: external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/rule
+.PHONY : libmodbus_autogen
+
+# clean rule for target.
+external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/clean
+.PHONY : external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

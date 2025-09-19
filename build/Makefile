@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/qtpcetu
+CMAKE_SOURCE_DIR = /workspaces/qpcetu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/qtpcetu/build
+CMAKE_BINARY_DIR = /workspaces/qpcetu/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles /workspaces/qtpcetu/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles /workspaces/qpcetu/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qtpcetu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/qpcetu/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,6 +130,19 @@ SciFiDataScreen/fast:
 .PHONY : SciFiDataScreen/fast
 
 #=============================================================================
+# Target rules for targets named mockudpservice
+
+# Build rule for target.
+mockudpservice: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mockudpservice
+.PHONY : mockudpservice
+
+# fast build rule for target.
+mockudpservice/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/build
+.PHONY : mockudpservice/fast
+
+#=============================================================================
 # Target rules for targets named SciFiDataScreen_autogen_timestamp_deps
 
 # Build rule for target.
@@ -155,6 +168,227 @@ SciFiDataScreen_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen_autogen.dir/build.make CMakeFiles/SciFiDataScreen_autogen.dir/build
 .PHONY : SciFiDataScreen_autogen/fast
 
+#=============================================================================
+# Target rules for targets named mockudpservice_autogen_timestamp_deps
+
+# Build rule for target.
+mockudpservice_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mockudpservice_autogen_timestamp_deps
+.PHONY : mockudpservice_autogen_timestamp_deps
+
+# fast build rule for target.
+mockudpservice_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/build.make CMakeFiles/mockudpservice_autogen_timestamp_deps.dir/build
+.PHONY : mockudpservice_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named mockudpservice_autogen
+
+# Build rule for target.
+mockudpservice_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mockudpservice_autogen
+.PHONY : mockudpservice_autogen
+
+# fast build rule for target.
+mockudpservice_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice_autogen.dir/build.make CMakeFiles/mockudpservice_autogen.dir/build
+.PHONY : mockudpservice_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_mainwindow
+
+# Build rule for target.
+test_mainwindow: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_mainwindow
+.PHONY : test_mainwindow
+
+# fast build rule for target.
+test_mainwindow/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow.dir/build.make tests/CMakeFiles/test_mainwindow.dir/build
+.PHONY : test_mainwindow/fast
+
+#=============================================================================
+# Target rules for targets named test_datawidget
+
+# Build rule for target.
+test_datawidget: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_datawidget
+.PHONY : test_datawidget
+
+# fast build rule for target.
+test_datawidget/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget.dir/build.make tests/CMakeFiles/test_datawidget.dir/build
+.PHONY : test_datawidget/fast
+
+#=============================================================================
+# Target rules for targets named test_animatedprogressbar
+
+# Build rule for target.
+test_animatedprogressbar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_animatedprogressbar
+.PHONY : test_animatedprogressbar
+
+# fast build rule for target.
+test_animatedprogressbar/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar.dir/build.make tests/CMakeFiles/test_animatedprogressbar.dir/build
+.PHONY : test_animatedprogressbar/fast
+
+#=============================================================================
+# Target rules for targets named test_graphwidget
+
+# Build rule for target.
+test_graphwidget: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_graphwidget
+.PHONY : test_graphwidget
+
+# fast build rule for target.
+test_graphwidget/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget.dir/build.make tests/CMakeFiles/test_graphwidget.dir/build
+.PHONY : test_graphwidget/fast
+
+#=============================================================================
+# Target rules for targets named test_mainwindow_autogen_timestamp_deps
+
+# Build rule for target.
+test_mainwindow_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_mainwindow_autogen_timestamp_deps
+.PHONY : test_mainwindow_autogen_timestamp_deps
+
+# fast build rule for target.
+test_mainwindow_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_mainwindow_autogen_timestamp_deps.dir/build
+.PHONY : test_mainwindow_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_mainwindow_autogen
+
+# Build rule for target.
+test_mainwindow_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_mainwindow_autogen
+.PHONY : test_mainwindow_autogen
+
+# fast build rule for target.
+test_mainwindow_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_mainwindow_autogen.dir/build.make tests/CMakeFiles/test_mainwindow_autogen.dir/build
+.PHONY : test_mainwindow_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_datawidget_autogen_timestamp_deps
+
+# Build rule for target.
+test_datawidget_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_datawidget_autogen_timestamp_deps
+.PHONY : test_datawidget_autogen_timestamp_deps
+
+# fast build rule for target.
+test_datawidget_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_datawidget_autogen_timestamp_deps.dir/build
+.PHONY : test_datawidget_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_datawidget_autogen
+
+# Build rule for target.
+test_datawidget_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_datawidget_autogen
+.PHONY : test_datawidget_autogen
+
+# fast build rule for target.
+test_datawidget_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_datawidget_autogen.dir/build.make tests/CMakeFiles/test_datawidget_autogen.dir/build
+.PHONY : test_datawidget_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_animatedprogressbar_autogen_timestamp_deps
+
+# Build rule for target.
+test_animatedprogressbar_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_animatedprogressbar_autogen_timestamp_deps
+.PHONY : test_animatedprogressbar_autogen_timestamp_deps
+
+# fast build rule for target.
+test_animatedprogressbar_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen_timestamp_deps.dir/build
+.PHONY : test_animatedprogressbar_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_animatedprogressbar_autogen
+
+# Build rule for target.
+test_animatedprogressbar_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_animatedprogressbar_autogen
+.PHONY : test_animatedprogressbar_autogen
+
+# fast build rule for target.
+test_animatedprogressbar_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_animatedprogressbar_autogen.dir/build.make tests/CMakeFiles/test_animatedprogressbar_autogen.dir/build
+.PHONY : test_animatedprogressbar_autogen/fast
+
+#=============================================================================
+# Target rules for targets named test_graphwidget_autogen_timestamp_deps
+
+# Build rule for target.
+test_graphwidget_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_graphwidget_autogen_timestamp_deps
+.PHONY : test_graphwidget_autogen_timestamp_deps
+
+# fast build rule for target.
+test_graphwidget_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/build.make tests/CMakeFiles/test_graphwidget_autogen_timestamp_deps.dir/build
+.PHONY : test_graphwidget_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named test_graphwidget_autogen
+
+# Build rule for target.
+test_graphwidget_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_graphwidget_autogen
+.PHONY : test_graphwidget_autogen
+
+# fast build rule for target.
+test_graphwidget_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test_graphwidget_autogen.dir/build.make tests/CMakeFiles/test_graphwidget_autogen.dir/build
+.PHONY : test_graphwidget_autogen/fast
+
+#=============================================================================
+# Target rules for targets named libmodbus
+
+# Build rule for target.
+libmodbus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libmodbus
+.PHONY : libmodbus
+
+# fast build rule for target.
+libmodbus/fast:
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus.dir/build
+.PHONY : libmodbus/fast
+
+#=============================================================================
+# Target rules for targets named libmodbus_autogen_timestamp_deps
+
+# Build rule for target.
+libmodbus_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libmodbus_autogen_timestamp_deps
+.PHONY : libmodbus_autogen_timestamp_deps
+
+# fast build rule for target.
+libmodbus_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen_timestamp_deps.dir/build
+.PHONY : libmodbus_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named libmodbus_autogen
+
+# Build rule for target.
+libmodbus_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libmodbus_autogen
+.PHONY : libmodbus_autogen
+
+# fast build rule for target.
+libmodbus_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/build.make external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/build
+.PHONY : libmodbus_autogen/fast
+
 SciFiDataScreen_autogen/mocs_compilation.o: SciFiDataScreen_autogen/mocs_compilation.cpp.o
 .PHONY : SciFiDataScreen_autogen/mocs_compilation.o
 
@@ -178,6 +412,30 @@ SciFiDataScreen_autogen/mocs_compilation.s: SciFiDataScreen_autogen/mocs_compila
 SciFiDataScreen_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.s
 .PHONY : SciFiDataScreen_autogen/mocs_compilation.cpp.s
+
+mockudpservice_autogen/mocs_compilation.o: mockudpservice_autogen/mocs_compilation.cpp.o
+.PHONY : mockudpservice_autogen/mocs_compilation.o
+
+# target to build an object file
+mockudpservice_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/mockudpservice_autogen/mocs_compilation.cpp.o
+.PHONY : mockudpservice_autogen/mocs_compilation.cpp.o
+
+mockudpservice_autogen/mocs_compilation.i: mockudpservice_autogen/mocs_compilation.cpp.i
+.PHONY : mockudpservice_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+mockudpservice_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/mockudpservice_autogen/mocs_compilation.cpp.i
+.PHONY : mockudpservice_autogen/mocs_compilation.cpp.i
+
+mockudpservice_autogen/mocs_compilation.s: mockudpservice_autogen/mocs_compilation.cpp.s
+.PHONY : mockudpservice_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+mockudpservice_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/mockudpservice_autogen/mocs_compilation.cpp.s
+.PHONY : mockudpservice_autogen/mocs_compilation.cpp.s
 
 src/animatedprogressbar.o: src/animatedprogressbar.cpp.o
 .PHONY : src/animatedprogressbar.o
@@ -299,6 +557,150 @@ src/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.s
 .PHONY : src/mainwindow.cpp.s
 
+src/mockudpservice.o: src/mockudpservice.cpp.o
+.PHONY : src/mockudpservice.o
+
+# target to build an object file
+src/mockudpservice.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/src/mockudpservice.cpp.o
+.PHONY : src/mockudpservice.cpp.o
+
+src/mockudpservice.i: src/mockudpservice.cpp.i
+.PHONY : src/mockudpservice.i
+
+# target to preprocess a source file
+src/mockudpservice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/src/mockudpservice.cpp.i
+.PHONY : src/mockudpservice.cpp.i
+
+src/mockudpservice.s: src/mockudpservice.cpp.s
+.PHONY : src/mockudpservice.s
+
+# target to generate assembly for a file
+src/mockudpservice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/src/mockudpservice.cpp.s
+.PHONY : src/mockudpservice.cpp.s
+
+src/pages/dashboardpage.o: src/pages/dashboardpage.cpp.o
+.PHONY : src/pages/dashboardpage.o
+
+# target to build an object file
+src/pages/dashboardpage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o
+.PHONY : src/pages/dashboardpage.cpp.o
+
+src/pages/dashboardpage.i: src/pages/dashboardpage.cpp.i
+.PHONY : src/pages/dashboardpage.i
+
+# target to preprocess a source file
+src/pages/dashboardpage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.i
+.PHONY : src/pages/dashboardpage.cpp.i
+
+src/pages/dashboardpage.s: src/pages/dashboardpage.cpp.s
+.PHONY : src/pages/dashboardpage.s
+
+# target to generate assembly for a file
+src/pages/dashboardpage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.s
+.PHONY : src/pages/dashboardpage.cpp.s
+
+src/pages/graphspage.o: src/pages/graphspage.cpp.o
+.PHONY : src/pages/graphspage.o
+
+# target to build an object file
+src/pages/graphspage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o
+.PHONY : src/pages/graphspage.cpp.o
+
+src/pages/graphspage.i: src/pages/graphspage.cpp.i
+.PHONY : src/pages/graphspage.i
+
+# target to preprocess a source file
+src/pages/graphspage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.i
+.PHONY : src/pages/graphspage.cpp.i
+
+src/pages/graphspage.s: src/pages/graphspage.cpp.s
+.PHONY : src/pages/graphspage.s
+
+# target to generate assembly for a file
+src/pages/graphspage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.s
+.PHONY : src/pages/graphspage.cpp.s
+
+src/pages/settingspage.o: src/pages/settingspage.cpp.o
+.PHONY : src/pages/settingspage.o
+
+# target to build an object file
+src/pages/settingspage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o
+.PHONY : src/pages/settingspage.cpp.o
+
+src/pages/settingspage.i: src/pages/settingspage.cpp.i
+.PHONY : src/pages/settingspage.i
+
+# target to preprocess a source file
+src/pages/settingspage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.i
+.PHONY : src/pages/settingspage.cpp.i
+
+src/pages/settingspage.s: src/pages/settingspage.cpp.s
+.PHONY : src/pages/settingspage.s
+
+# target to generate assembly for a file
+src/pages/settingspage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.s
+.PHONY : src/pages/settingspage.cpp.s
+
+src/pages/udpresponsepage.o: src/pages/udpresponsepage.cpp.o
+.PHONY : src/pages/udpresponsepage.o
+
+# target to build an object file
+src/pages/udpresponsepage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o
+.PHONY : src/pages/udpresponsepage.cpp.o
+
+src/pages/udpresponsepage.i: src/pages/udpresponsepage.cpp.i
+.PHONY : src/pages/udpresponsepage.i
+
+# target to preprocess a source file
+src/pages/udpresponsepage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.i
+.PHONY : src/pages/udpresponsepage.cpp.i
+
+src/pages/udpresponsepage.s: src/pages/udpresponsepage.cpp.s
+.PHONY : src/pages/udpresponsepage.s
+
+# target to generate assembly for a file
+src/pages/udpresponsepage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.s
+.PHONY : src/pages/udpresponsepage.cpp.s
+
+src/udpservice.o: src/udpservice.cpp.o
+.PHONY : src/udpservice.o
+
+# target to build an object file
+src/udpservice.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o
+.PHONY : src/udpservice.cpp.o
+
+src/udpservice.i: src/udpservice.cpp.i
+.PHONY : src/udpservice.i
+
+# target to preprocess a source file
+src/udpservice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.i
+.PHONY : src/udpservice.cpp.i
+
+src/udpservice.s: src/udpservice.cpp.s
+.PHONY : src/udpservice.s
+
+# target to generate assembly for a file
+src/udpservice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SciFiDataScreen.dir/build.make CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.s
+.PHONY : src/udpservice.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -309,10 +711,31 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SciFiDataScreen_autogen"
 	@echo "... SciFiDataScreen_autogen_timestamp_deps"
+	@echo "... libmodbus_autogen"
+	@echo "... libmodbus_autogen_timestamp_deps"
+	@echo "... mockudpservice_autogen"
+	@echo "... mockudpservice_autogen_timestamp_deps"
+	@echo "... test_animatedprogressbar_autogen"
+	@echo "... test_animatedprogressbar_autogen_timestamp_deps"
+	@echo "... test_datawidget_autogen"
+	@echo "... test_datawidget_autogen_timestamp_deps"
+	@echo "... test_graphwidget_autogen"
+	@echo "... test_graphwidget_autogen_timestamp_deps"
+	@echo "... test_mainwindow_autogen"
+	@echo "... test_mainwindow_autogen_timestamp_deps"
 	@echo "... SciFiDataScreen"
+	@echo "... libmodbus"
+	@echo "... mockudpservice"
+	@echo "... test_animatedprogressbar"
+	@echo "... test_datawidget"
+	@echo "... test_graphwidget"
+	@echo "... test_mainwindow"
 	@echo "... SciFiDataScreen_autogen/mocs_compilation.o"
 	@echo "... SciFiDataScreen_autogen/mocs_compilation.i"
 	@echo "... SciFiDataScreen_autogen/mocs_compilation.s"
+	@echo "... mockudpservice_autogen/mocs_compilation.o"
+	@echo "... mockudpservice_autogen/mocs_compilation.i"
+	@echo "... mockudpservice_autogen/mocs_compilation.s"
 	@echo "... src/animatedprogressbar.o"
 	@echo "... src/animatedprogressbar.i"
 	@echo "... src/animatedprogressbar.s"
@@ -328,6 +751,24 @@ help:
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
+	@echo "... src/mockudpservice.o"
+	@echo "... src/mockudpservice.i"
+	@echo "... src/mockudpservice.s"
+	@echo "... src/pages/dashboardpage.o"
+	@echo "... src/pages/dashboardpage.i"
+	@echo "... src/pages/dashboardpage.s"
+	@echo "... src/pages/graphspage.o"
+	@echo "... src/pages/graphspage.i"
+	@echo "... src/pages/graphspage.s"
+	@echo "... src/pages/settingspage.o"
+	@echo "... src/pages/settingspage.i"
+	@echo "... src/pages/settingspage.s"
+	@echo "... src/pages/udpresponsepage.o"
+	@echo "... src/pages/udpresponsepage.i"
+	@echo "... src/pages/udpresponsepage.s"
+	@echo "... src/udpservice.o"
+	@echo "... src/udpservice.i"
+	@echo "... src/udpservice.s"
 .PHONY : help
 
 

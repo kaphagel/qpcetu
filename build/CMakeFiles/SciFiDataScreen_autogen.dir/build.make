@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/qtpcetu
+CMAKE_SOURCE_DIR = /workspaces/qpcetu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/qtpcetu/build
+CMAKE_BINARY_DIR = /workspaces/qpcetu/build
 
 # Utility rule file for SciFiDataScreen_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/SciFiDataScreen_autogen: SciFiDataScreen_autogen/timestamp
 
 SciFiDataScreen_autogen/timestamp: /usr/lib/qt5/bin/moc
 SciFiDataScreen_autogen/timestamp: CMakeFiles/SciFiDataScreen_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target SciFiDataScreen"
-	/usr/bin/cmake -E cmake_autogen /workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /workspaces/qtpcetu/build/SciFiDataScreen_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target SciFiDataScreen"
+	/usr/bin/cmake -E cmake_autogen /workspaces/qpcetu/build/CMakeFiles/SciFiDataScreen_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /workspaces/qpcetu/build/SciFiDataScreen_autogen/timestamp
 
 SciFiDataScreen_autogen: CMakeFiles/SciFiDataScreen_autogen
 SciFiDataScreen_autogen: SciFiDataScreen_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/SciFiDataScreen_autogen.dir/clean:
 .PHONY : CMakeFiles/SciFiDataScreen_autogen.dir/clean
 
 CMakeFiles/SciFiDataScreen_autogen.dir/depend:
-	cd /workspaces/qtpcetu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/qtpcetu /workspaces/qtpcetu /workspaces/qtpcetu/build /workspaces/qtpcetu/build /workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /workspaces/qpcetu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/qpcetu /workspaces/qpcetu /workspaces/qpcetu/build /workspaces/qpcetu/build /workspaces/qpcetu/build/CMakeFiles/SciFiDataScreen_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/SciFiDataScreen_autogen.dir/depend
 

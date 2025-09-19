@@ -3,6 +3,7 @@
 #include <QPalette>
 #include <QFont>
 #include "mainwindow.h"
+#include "udpservice.h"
 
 int main(int argc, char *argv[])
 {
@@ -20,9 +21,12 @@ int main(int argc, char *argv[])
     }
     app.setFont(font);
     
-    // Create and show the main window
+    // Create and show the main window maximized
     MainWindow window;
-    window.show();
+    window.showMaximized();
+    
+    // Optionally, start on UDP page for demo:
+    // window.navigateToPage(3); // 3 = UDP response page
     
     return app.exec();
 }

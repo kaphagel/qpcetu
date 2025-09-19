@@ -1,6 +1,6 @@
 CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o: \
- /workspaces/qtpcetu/src/animatedprogressbar.cpp \
- /usr/include/stdc-predef.h /workspaces/qtpcetu/src/animatedprogressbar.h \
+ /workspaces/qpcetu/src/animatedprogressbar.cpp \
+ /usr/include/stdc-predef.h /workspaces/qpcetu/src/animatedprogressbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QProgressBar \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qprogressbar.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \

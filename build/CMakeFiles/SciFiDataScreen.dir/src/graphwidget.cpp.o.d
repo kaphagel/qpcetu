@@ -1,6 +1,6 @@
 CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o: \
- /workspaces/qtpcetu/src/graphwidget.cpp /usr/include/stdc-predef.h \
- /workspaces/qtpcetu/src/graphwidget.h \
+ /workspaces/qpcetu/src/graphwidget.cpp /usr/include/stdc-predef.h \
+ /workspaces/qpcetu/src/graphwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \

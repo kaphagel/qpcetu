@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/qtpcetu
+CMAKE_SOURCE_DIR = /workspaces/qpcetu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/qtpcetu/build
+CMAKE_BINARY_DIR = /workspaces/qpcetu/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SciFiDataScreen.dir/depend.make
@@ -71,93 +71,163 @@ include CMakeFiles/SciFiDataScreen.dir/flags.make
 
 SciFiDataScreen_autogen/timestamp: /usr/lib/qt5/bin/moc
 SciFiDataScreen_autogen/timestamp: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target SciFiDataScreen"
-	/usr/bin/cmake -E cmake_autogen /workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /workspaces/qtpcetu/build/SciFiDataScreen_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target SciFiDataScreen"
+	/usr/bin/cmake -E cmake_autogen /workspaces/qpcetu/build/CMakeFiles/SciFiDataScreen_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /workspaces/qpcetu/build/SciFiDataScreen_autogen/timestamp
 
 CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
 CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: SciFiDataScreen_autogen/mocs_compilation.cpp
 CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o -c /workspaces/qtpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.o -c /workspaces/qpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp
 
 CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qtpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp > CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp > CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qtpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp -o CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/build/SciFiDataScreen_autogen/mocs_compilation.cpp -o CMakeFiles/SciFiDataScreen.dir/SciFiDataScreen_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
-CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o: /workspaces/qtpcetu/src/main.cpp
+CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o: /workspaces/qpcetu/src/main.cpp
 CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o -c /workspaces/qtpcetu/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/main.cpp.o -c /workspaces/qpcetu/src/main.cpp
 
 CMakeFiles/SciFiDataScreen.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qtpcetu/src/main.cpp > CMakeFiles/SciFiDataScreen.dir/src/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/main.cpp > CMakeFiles/SciFiDataScreen.dir/src/main.cpp.i
 
 CMakeFiles/SciFiDataScreen.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qtpcetu/src/main.cpp -o CMakeFiles/SciFiDataScreen.dir/src/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/main.cpp -o CMakeFiles/SciFiDataScreen.dir/src/main.cpp.s
 
 CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
-CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o: /workspaces/qtpcetu/src/mainwindow.cpp
+CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o: /workspaces/qpcetu/src/mainwindow.cpp
 CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o -c /workspaces/qtpcetu/src/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o -c /workspaces/qpcetu/src/mainwindow.cpp
 
 CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qtpcetu/src/mainwindow.cpp > CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/mainwindow.cpp > CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.i
 
 CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qtpcetu/src/mainwindow.cpp -o CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/mainwindow.cpp -o CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.s
 
 CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
-CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o: /workspaces/qtpcetu/src/datawidget.cpp
+CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o: /workspaces/qpcetu/src/datawidget.cpp
 CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o -c /workspaces/qtpcetu/src/datawidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o -c /workspaces/qpcetu/src/datawidget.cpp
 
 CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qtpcetu/src/datawidget.cpp > CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/datawidget.cpp > CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.i
 
 CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qtpcetu/src/datawidget.cpp -o CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/datawidget.cpp -o CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.s
 
 CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
-CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o: /workspaces/qtpcetu/src/animatedprogressbar.cpp
+CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o: /workspaces/qpcetu/src/animatedprogressbar.cpp
 CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o -c /workspaces/qtpcetu/src/animatedprogressbar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o -c /workspaces/qpcetu/src/animatedprogressbar.cpp
 
 CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qtpcetu/src/animatedprogressbar.cpp > CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/animatedprogressbar.cpp > CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.i
 
 CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qtpcetu/src/animatedprogressbar.cpp -o CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/animatedprogressbar.cpp -o CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.s
 
 CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
-CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o: /workspaces/qtpcetu/src/graphwidget.cpp
+CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o: /workspaces/qpcetu/src/graphwidget.cpp
 CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o -c /workspaces/qtpcetu/src/graphwidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o -c /workspaces/qpcetu/src/graphwidget.cpp
 
 CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qtpcetu/src/graphwidget.cpp > CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/graphwidget.cpp > CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.i
 
 CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qtpcetu/src/graphwidget.cpp -o CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/graphwidget.cpp -o CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.s
+
+CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
+CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o: /workspaces/qpcetu/src/udpservice.cpp
+CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o -c /workspaces/qpcetu/src/udpservice.cpp
+
+CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/udpservice.cpp > CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.i
+
+CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/udpservice.cpp -o CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.s
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
+CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o: /workspaces/qpcetu/src/pages/dashboardpage.cpp
+CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o -c /workspaces/qpcetu/src/pages/dashboardpage.cpp
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/pages/dashboardpage.cpp > CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.i
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/pages/dashboardpage.cpp -o CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.s
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
+CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o: /workspaces/qpcetu/src/pages/graphspage.cpp
+CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o -c /workspaces/qpcetu/src/pages/graphspage.cpp
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/pages/graphspage.cpp > CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.i
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/pages/graphspage.cpp -o CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.s
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
+CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o: /workspaces/qpcetu/src/pages/settingspage.cpp
+CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o -c /workspaces/qpcetu/src/pages/settingspage.cpp
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/pages/settingspage.cpp > CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.i
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/pages/settingspage.cpp -o CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.s
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o: CMakeFiles/SciFiDataScreen.dir/flags.make
+CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o: /workspaces/qpcetu/src/pages/udpresponsepage.cpp
+CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o: CMakeFiles/SciFiDataScreen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o -MF CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o.d -o CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o -c /workspaces/qpcetu/src/pages/udpresponsepage.cpp
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/pages/udpresponsepage.cpp > CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.i
+
+CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/pages/udpresponsepage.cpp -o CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.s
 
 # Object files for target SciFiDataScreen
 SciFiDataScreen_OBJECTS = \
@@ -166,7 +236,12 @@ SciFiDataScreen_OBJECTS = \
 "CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o" \
 "CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o" \
 "CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o" \
-"CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o"
+"CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o" \
+"CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o" \
+"CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o" \
+"CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o" \
+"CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o" \
+"CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o"
 
 # External object files for target SciFiDataScreen
 SciFiDataScreen_EXTERNAL_OBJECTS =
@@ -177,12 +252,19 @@ bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/mainwindow.cpp.o
 bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/datawidget.cpp.o
 bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/animatedprogressbar.cpp.o
 bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/graphwidget.cpp.o
+bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/udpservice.cpp.o
+bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/pages/dashboardpage.cpp.o
+bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/pages/graphspage.cpp.o
+bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/pages/settingspage.cpp.o
+bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/src/pages/udpresponsepage.cpp.o
 bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/build.make
 bin/SciFiDataScreen: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
+bin/SciFiDataScreen: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.15.13
+bin/SciFiDataScreen: external/libmodbus/src/liblibmodbus.a
 bin/SciFiDataScreen: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 bin/SciFiDataScreen: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 bin/SciFiDataScreen: CMakeFiles/SciFiDataScreen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/qtpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable bin/SciFiDataScreen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable bin/SciFiDataScreen"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SciFiDataScreen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -194,6 +276,6 @@ CMakeFiles/SciFiDataScreen.dir/clean:
 .PHONY : CMakeFiles/SciFiDataScreen.dir/clean
 
 CMakeFiles/SciFiDataScreen.dir/depend: SciFiDataScreen_autogen/timestamp
-	cd /workspaces/qtpcetu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/qtpcetu /workspaces/qtpcetu /workspaces/qtpcetu/build /workspaces/qtpcetu/build /workspaces/qtpcetu/build/CMakeFiles/SciFiDataScreen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /workspaces/qpcetu/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/qpcetu /workspaces/qpcetu /workspaces/qpcetu/build /workspaces/qpcetu/build /workspaces/qpcetu/build/CMakeFiles/SciFiDataScreen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/SciFiDataScreen.dir/depend
 

@@ -3,3 +3,8 @@
 #include "UVLADIE3JM/moc_datawidget.cpp"
 #include "UVLADIE3JM/moc_graphwidget.cpp"
 #include "UVLADIE3JM/moc_mainwindow.cpp"
+#include "V5LNE4NMWJ/moc_dashboardpage.cpp"
+#include "V5LNE4NMWJ/moc_graphspage.cpp"
+#include "V5LNE4NMWJ/moc_settingspage.cpp"
+#include "V5LNE4NMWJ/moc_udpresponsepage.cpp"
+#include "UVLADIE3JM/moc_udpservice.cpp"

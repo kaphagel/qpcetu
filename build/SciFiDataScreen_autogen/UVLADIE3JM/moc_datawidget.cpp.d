@@ -1,5 +1,5 @@
-/workspaces/qtpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_datawidget.cpp: /workspaces/qtpcetu/src/datawidget.h \
-  /workspaces/qtpcetu/build/SciFiDataScreen_autogen/moc_predefs.h \
+/workspaces/qpcetu/build/SciFiDataScreen_autogen/UVLADIE3JM/moc_datawidget.cpp: /workspaces/qpcetu/src/datawidget.h \
+  /workspaces/qpcetu/build/SciFiDataScreen_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

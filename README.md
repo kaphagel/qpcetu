@@ -1,21 +1,53 @@
-# Quantum Tactical Processing Center - ETU
+# SciFi Data Screen
 
-A futuristic Qt application that simulates a sci-fi data screen interface with dark blue theme, animated elements, and real-time data updates.
+[![Build Status](https://github.com/kaphagel/qpcetu/workflows/CI/badge.svg)](https://github.com/kaphagel/qpcetu/actions)
+[![Qt Version](https://img.shields.io/badge/Qt-6.x-green.svg)](https://www.qt.io/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+# SciFi Data Screen - Industrial HMI Application
+
+A modern Qt5-based industrial Human-Machine Interface (HMI) application with sci-fi aesthetics, designed for real-time data visualization and industrial controller management.
+
+## 🏗️ Enterprise Architecture
+
+This application implements proven **design patterns** for industrial HMI systems:
+
+- **Strategy Pattern**: Pluggable controller protocols (EPIC4, EPIC5, SNAP_PAC)
+- **State Machine Pattern**: Robust connection lifecycle management
+- **Command Pattern**: Industrial operations with undo/redo and audit logging
+- **MVVM Pattern**: QML views with C++ ViewModels and Models
+- **Observer Pattern**: Real-time event system for alarms and notifications
+- **Repository Pattern**: Historical data persistence and configuration management
+- **Plugin Architecture**: Extensible controller support
+
+📖 **[Detailed Architecture Documentation](docs/ARCHITECTURE.md)**
+
+## ✨ Features
+
+- **Multi-Controller Support**: EPIC4/EPIC5 (Opto22), SNAP_PAC controllers
+- **Real-time Visualization**: 4-graph dashboard with industrial data
+- **UDP Discovery**: Automatic controller detection on network
+- **Cross-Platform**: Linux, Windows (via MXE cross-compilation)
+- **Industrial Standards**: Event acknowledgment, state management, operation auditing
+- **Modular Design**: Easy to extend with new controller types
+- **Thread-Safe**: Robust real-time data handling
+
+## 🚀 Quick Start
 
 ## Features
 
-- **Sci-Fi Interface**: Dark blue theme with glowing effects reminiscent of science fiction movies
-- **Real-time Data**: Animated progress bars and data widgets that update continuously  
-- **Interactive Controls**: Buttons for system engagement, alerts, and deep scans
-- **System Monitoring**: Energy, shields, engines, weapons, and navigation displays
-- **Animated Elements**: Smooth transitions, flowing progress bars, and pulsing glow effects
-- **System Log**: Real-time event logging with sci-fi style messages
+- 🚀 **Real-time Data Visualization** - 4 synchronized graphs in 2x2 layout
+- 🌐 **Modbus TCP Integration** - Live data from industrial devices
+- 🎨 **Sci-Fi Interface** - Dark theme with neon accents and glow effects
+- ⚡ **High Performance** - Efficient circular buffers and smooth animations
+- 🔧 **Cross-Platform** - Linux, Windows, macOS support
 
 ## Requirements
 
-- Qt6 (Core and Widgets modules)
-- CMake 3.16 or higher
+- Qt6 with QML support
+- CMake 3.20 or higher
 - C++17 compatible compiler (GCC, Clang, or MSVC)
+- libmodbus for network communication
 - Linux, Windows, or macOS
 
 ## Installation

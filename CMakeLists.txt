@@ -6,6 +6,23 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)  # Disable GNU extensions for portability
 
+# Professional Testing Framework Integration
+option(BUILD_TESTS "Build test suite" ON)
+option(ENABLE_COVERAGE "Enable test coverage reporting" OFF)
+
+# Configure testing in Debug mode
+if(BUILD_TESTS AND CMAKE_BUILD_TYPE STREQUAL "Debug")
+    message(STATUS "Building with comprehensive test suite")
+    add_subdirectory(tests)
+    
+    # Add test coverage support for GCC
+    if(ENABLE_COVERAGE AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+        set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} --coverage -fprofile-arcs -ftest-coverage")
+        set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} --coverage")
+        message(STATUS "Test coverage reporting enabled")
+    endif()
+endif()
+
 # MXE Cross-compilation setup for Windows
 if(WIN32 AND CMAKE_CROSSCOMPILING)
     # Set MXE installation path

@@ -9,7 +9,8 @@
 /**
  * @brief Data point for historical trending
  */
-struct DataPoint {
+struct DataPoint
+{
     QString source;
     QString tag;
     QVariant value;
@@ -19,7 +20,7 @@ struct DataPoint {
 
 /**
  * @brief Repository pattern for industrial data persistence
- * 
+ *
  * Handles historical data, configurations, and event logging
  */
 class DataRepository : public QObject
@@ -37,20 +38,20 @@ public:
     bool insertDataPoint(const DataPoint &point);
     bool insertDataPoints(const QList<DataPoint> &points);
     QList<DataPoint> getHistoricalData(const QString &source, const QString &tag,
-                                     const QDateTime &startTime, const QDateTime &endTime) const;
+                                       const QDateTime &startTime, const QDateTime &endTime) const;
     QList<DataPoint> getLatestData(const QString &source, int count = 100) const;
-    
+
     // Configuration management
     bool saveControllerConfig(const QString &controllerIp, const QVariantMap &config);
     QVariantMap loadControllerConfig(const QString &controllerIp) const;
     QStringList getConfiguredControllers() const;
-    
+
     // Event logging
-    bool logEvent(const QString &type, const QString &source, 
+    bool logEvent(const QString &type, const QString &source,
                   const QString &message, const QDateTime &timestamp = QDateTime::currentDateTime());
     QList<QVariantMap> getEvents(const QDateTime &startTime, const QDateTime &endTime,
-                                const QString &source = QString()) const;
-    
+                                 const QString &source = QString()) const;
+
     // Maintenance
     bool cleanupOldData(const QDateTime &cutoffTime);
     qint64 getDatabaseSize() const;
@@ -68,17 +69,17 @@ private:
     bool createTables();
     bool executeSql(const QString &query, const QVariantMap &bindings = QVariantMap()) const;
     QList<QVariantMap> executeQuery(const QString &query, const QVariantMap &bindings = QVariantMap()) const;
-    
+
     QSqlDatabase m_database;
     QString m_databasePath;
     bool m_initialized;
-    
+
     mutable QMutex m_dbMutex;
 };
 
 /**
  * @brief High-performance circular buffer for real-time data
- * 
+ *
  * Used for live trending while repository handles historical storage
  */
 class CircularDataBuffer : public QObject
@@ -91,7 +92,7 @@ public:
     void addDataPoint(const DataPoint &point);
     QList<DataPoint> getData(int count = -1) const; // -1 = all data
     QList<DataPoint> getDataRange(const QDateTime &start, const QDateTime &end) const;
-    
+
     void clear();
     int size() const;
     int maxSize() const;

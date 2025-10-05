@@ -22,6 +22,8 @@ class DashboardPage;
 class GraphsPage;
 class SettingsPage;
 class UdpResponsePage;
+class OverviewPage; // Added forward declaration for OverviewPage
+class SimpleDragDropPage;
 
 class DataWidget;
 class AnimatedProgressBar;
@@ -35,6 +37,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void navigateToPage(int index);
+
 private slots:
     void updateData();
     void updateSystemStatus();
@@ -45,9 +50,11 @@ protected:
 
 private:
     // Main pages for QStackedWidget
+    OverviewPage *overviewPage;
     DashboardPage *dashboardPage;
     GraphsPage *graphsPage;
     SettingsPage *settingsPage;
+    SimpleDragDropPage *dragDropPage;
     void setupUI();
     void setupStyling();
     void createStatusPanel();
@@ -57,7 +64,6 @@ private:
     void createControlPanel();
     void setupPages();
     void setupBreadcrumbs(const QStringList &crumbs, int activeIndex);
-    void navigateToPage(int index);
 
     // UDP Service and Response Page
     UdpService *m_udpService;
@@ -74,8 +80,5 @@ private:
     QLabel *m_statusLabel;
     QLabel *m_timeLabel;
     QLabel *m_connectionStatus;
-
-
-
 };
 #endif // MAINWINDOW_H

@@ -1,0 +1,325 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The target system is: Windows -  - x86_64
+      The host system is: Linux - 6.6.87.2-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu/bin/x86_64-w64-mingw32.static-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        /workspaces/qpcetu/build-windows-x64/CMakeFiles/3.31.8/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq"
+      binary: "/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/workspaces/qpcetu/mxe-lite/usr/share/cmake/modules;/workspaces/qpcetu/mxe-lite/usr/share/cmake/modules"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq'
+        
+        Run Build Command(s): /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d52af/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d52af.dir/build.make CMakeFiles/cmTC_d52af.dir/build
+        gmake[1]: Entering directory '/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq'
+        Building CXX object CMakeFiles/cmTC_d52af.dir/CMakeCXXCompilerABI.cpp.obj
+        /workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu/bin/x86_64-w64-mingw32.static-g++   -O3 -DNDEBUG   -v -o CMakeFiles/cmTC_d52af.dir/CMakeCXXCompilerABI.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Reading specs from /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/specs
+        COLLECT_GCC=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++
+        Target: x86_64-w64-mingw32.static
+        Configured with: /workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --infodir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --mandir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --with-html-dir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --disable-doxygen --target=x86_64-w64-mingw32.static --build=x86_64-pc-linux-gnu --prefix=/workspaces/qpcetu/mxe-lite/usr --libdir=/workspaces/qpcetu/mxe-lite/usr/lib --with-sysroot=/workspaces/qpcetu/mxe-lite/usr/x86_64-w64-mingw32.static --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=posix --enable-default-ssp --enable-libgomp --with-gmp=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-isl=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpc=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpfr=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-as=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-as --with-ld=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ld --with-nm=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-nm --enable-libstdcxx-time
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.5.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-O3' '-v' '-D' 'NDEBUG' '-c' '-o' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_38e7a.dir/'
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/cc1plus -quiet -v -iprefix /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/ -isysroot /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static -D_REENTRANT -D NDEBUG /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_38e7a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -O3 -version -o /tmp/ccDBQQYx.s
+        GNU C++17 (GCC) version 11.5.0 (x86_64-w64-mingw32.static)
+        	compiled by GNU C version 11.4.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++"
+        ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static"
+        ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward"
+        ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include"
+        ignoring nonexistent directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/usr/local/include"
+        ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed"
+        ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/include"
+        ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/include
+        End of search list.
+        GNU C++17 (GCC) version 11.5.0 (x86_64-w64-mingw32.static)
+        	compiled by GNU C version 11.4.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 87ffa53877e2928bf01e379cfa0b05cf
+        COLLECT_GCC_OPTIONS='-O3' '-v' '-D' 'NDEBUG' '-c' '-o' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_38e7a.dir/'
+         /workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-as -v -o CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccDBQQYx.s
+        GNU assembler version 2.38 (x86_64-w64-mingw32.static) using BFD version (GNU Binutils) 2.38
+        COMPILER_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/bin/
+        LIBRARY_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/
+        COLLECT_GCC_OPTIONS='-O3' '-v' '-D' 'NDEBUG' '-c' '-o' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_d52af.exe
+        /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d52af.dir/link.txt --verbose=1
+        Reading specs from /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/specs
+        COLLECT_GCC=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++
+        COLLECT_LTO_WRAPPER=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/lto-wrapper
+        Target: x86_64-w64-mingw32.static
+        Configured with: /workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --infodir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --mandir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --with-html-dir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --disable-doxygen --target=x86_64-w64-mingw32.static --build=x86_64-pc-linux-gnu --prefix=/workspaces/qpcetu/mxe-lite/usr --libdir=/workspaces/qpcetu/mxe-lite/usr/lib --with-sysroot=/workspaces/qpcetu/mxe-lite/usr/x86_64-w64-mingw32.static --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=posix --enable-default-ssp --enable-libgomp --with-gmp=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-isl=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpc=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpfr=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-as=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-as --with-ld=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ld --with-nm=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-nm --enable-libstdcxx-time
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.5.0 (GCC) 
+        COMPILER_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/bin/
+        LIBRARY_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/
+        COLLECT_GCC_OPTIONS='-O3' '-D' 'NDEBUG' '-v' '-o' 'cmTC_d52af.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d52af.'
+         /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/collect2 -plugin /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/liblto_plugin.so -plugin-opt=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXFyJG4.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static -m i386pep -Bdynamic -o cmTC_d52af.exe /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/crt2.o /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0 -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib -v --whole-archive CMakeFiles/cmTC_d52af.dir/objects.a --no-whole-archive --out-implib libcmTC_d52af.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o
+        collect2 version 11.5.0
+        /workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ld -plugin /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/liblto_plugin.so -plugin-opt=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXFyJG4.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static -m i386pep -Bdynamic -o cmTC_d52af.exe /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/crt2.o /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0 -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib -v --whole-archive CMakeFiles/cmTC_d52af.dir/objects.a --no-whole-archive --out-implib libcmTC_d52af.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o
+        GNU ld (GNU Binutils) 2.38
+        COLLECT_GCC_OPTIONS='-O3' '-D' 'NDEBUG' '-v' '-o' 'cmTC_d52af.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d52af.'
+        /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E rm -f CMakeFiles/cmTC_d52af.dir/objects.a
+        /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ar qc CMakeFiles/cmTC_d52af.dir/objects.a @CMakeFiles/cmTC_d52af.dir/objects1.rsp
+        /workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu/bin/x86_64-w64-mingw32.static-g++ -O3 -DNDEBUG  -v -Wl,-v -Wl,--whole-archive CMakeFiles/cmTC_d52af.dir/objects.a -Wl,--no-whole-archive -o cmTC_d52af.exe -Wl,--out-implib,libcmTC_d52af.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        gmake[1]: Leaving directory '/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++]
+          add: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static]
+          add: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward]
+          add: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include]
+          add: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed]
+          add: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/include]
+        end of search list found
+        collapse include dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++]
+        collapse include dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static]
+        collapse include dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward]
+        collapse include dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include]
+        collapse include dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed]
+        collapse include dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/include] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include]
+        implicit include dirs: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq']
+        ignore line: []
+        ignore line: [Run Build Command(s): /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d52af/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_d52af.dir/build.make CMakeFiles/cmTC_d52af.dir/build]
+        ignore line: [gmake[1]: Entering directory '/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq']
+        ignore line: [Building CXX object CMakeFiles/cmTC_d52af.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu/bin/x86_64-w64-mingw32.static-g++   -O3 -DNDEBUG   -v -o CMakeFiles/cmTC_d52af.dir/CMakeCXXCompilerABI.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Reading specs from /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/specs]
+        ignore line: [COLLECT_GCC=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++]
+        ignore line: [Target: x86_64-w64-mingw32.static]
+        ignore line: [Configured with: /workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --infodir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --mandir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --with-html-dir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --disable-doxygen --target=x86_64-w64-mingw32.static --build=x86_64-pc-linux-gnu --prefix=/workspaces/qpcetu/mxe-lite/usr --libdir=/workspaces/qpcetu/mxe-lite/usr/lib --with-sysroot=/workspaces/qpcetu/mxe-lite/usr/x86_64-w64-mingw32.static --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=posix --enable-default-ssp --enable-libgomp --with-gmp=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-isl=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpc=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpfr=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-as=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-as --with-ld=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ld --with-nm=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-nm --enable-libstdcxx-time]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.5.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-O3' '-v' '-D' 'NDEBUG' '-c' '-o' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_38e7a.dir/']
+        ignore line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/cc1plus -quiet -v -iprefix /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/ -isysroot /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static -D_REENTRANT -D NDEBUG /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_38e7a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -O3 -version -o /tmp/ccDBQQYx.s]
+        ignore line: [GNU C++17 (GCC) version 11.5.0 (x86_64-w64-mingw32.static)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++"]
+        ignore line: [ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static"]
+        ignore line: [ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include"]
+        ignore line: [ignoring nonexistent directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/../../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/include"]
+        ignore line: [ignoring duplicate directory "/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++]
+        ignore line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static]
+        ignore line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/backward]
+        ignore line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include]
+        ignore line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed]
+        ignore line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (GCC) version 11.5.0 (x86_64-w64-mingw32.static)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 87ffa53877e2928bf01e379cfa0b05cf]
+        ignore line: [COLLECT_GCC_OPTIONS='-O3' '-v' '-D' 'NDEBUG' '-c' '-o' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_38e7a.dir/']
+        ignore line: [ /workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-as -v -o CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccDBQQYx.s]
+        ignore line: [GNU assembler version 2.38 (x86_64-w64-mingw32.static) using BFD version (GNU Binutils) 2.38]
+        ignore line: [COMPILER_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/bin/]
+        ignore line: [LIBRARY_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-O3' '-v' '-D' 'NDEBUG' '-c' '-o' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.obj' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_38e7a.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_d52af.exe]
+        ignore line: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d52af.dir/link.txt --verbose=1]
+        ignore line: [Reading specs from /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/specs]
+        ignore line: [COLLECT_GCC=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/lto-wrapper]
+        ignore line: [Target: x86_64-w64-mingw32.static]
+        ignore line: [Configured with: /workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0/configure ac_cv_prog_HAVE_DOXYGEN=false --enable-doc=no --enable-gtk-doc=no --enable-gtk-doc-html=no --enable-gtk-doc-pdf=no --docdir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --infodir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --mandir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --with-html-dir=/workspaces/qpcetu/mxe-lite/tmp-gcc-x86_64-w64-mingw32.static/gcc-11.5.0.build_.sink --disable-doxygen --target=x86_64-w64-mingw32.static --build=x86_64-pc-linux-gnu --prefix=/workspaces/qpcetu/mxe-lite/usr --libdir=/workspaces/qpcetu/mxe-lite/usr/lib --with-sysroot=/workspaces/qpcetu/mxe-lite/usr/x86_64-w64-mingw32.static --enable-languages=c,c++,objc,fortran --enable-version-specific-runtime-libs --with-gcc --with-gnu-ld --with-gnu-as --disable-nls --disable-shared --disable-multilib --without-x --disable-win32-registry --enable-threads=posix --enable-default-ssp --enable-libgomp --with-gmp=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-isl=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpc=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-mpfr=/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu --with-as=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-as --with-ld=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ld --with-nm=/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-nm --enable-libstdcxx-time]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.5.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/bin/]
+        ignore line: [LIBRARY_PATH=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/:/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-O3' '-D' 'NDEBUG' '-v' '-o' 'cmTC_d52af.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d52af.']
+        link line: [ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/collect2 -plugin /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/liblto_plugin.so -plugin-opt=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXFyJG4.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static -m i386pep -Bdynamic -o cmTC_d52af.exe /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/crt2.o /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0 -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib -v --whole-archive CMakeFiles/cmTC_d52af.dir/objects.a --no-whole-archive --out-implib libcmTC_d52af.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o]
+          arg [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccXFyJG4.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lssp_nonshared] ==> ignore
+          arg [-plugin-opt=-pass-through=-lssp] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+          arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lssp_nonshared] ==> ignore
+          arg [-plugin-opt=-pass-through=-lssp] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [--sysroot=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_d52af.exe] ==> ignore
+          arg [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/crt2.o] ==> obj [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/crt2.o]
+          arg [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o] ==> obj [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o]
+          arg [-L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0] ==> dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0]
+          arg [-L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc] ==> dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc]
+          arg [-L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib] ==> dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib]
+          arg [-L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib] ==> dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib]
+          arg [-L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib] ==> dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib]
+          arg [-L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib] ==> dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib]
+          arg [-v] ==> ignore
+          arg [--whole-archive] ==> ignore
+          arg [CMakeFiles/cmTC_d52af.dir/objects.a] ==> ignore
+          arg [--no-whole-archive] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_d52af.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lssp_nonshared] ==> lib [ssp_nonshared]
+          arg [-lssp] ==> lib [ssp]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lssp_nonshared] ==> lib [ssp_nonshared]
+          arg [-lssp] ==> lib [ssp]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o] ==> obj [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o]
+        ignore line: [collect2 version 11.5.0]
+        ignore line: [/workspaces/qpcetu/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ld -plugin /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/liblto_plugin.so -plugin-opt=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../libexec/gcc/x86_64-w64-mingw32.static/11.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXFyJG4.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lssp_nonshared -plugin-opt=-pass-through=-lssp -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static -m i386pep -Bdynamic -o cmTC_d52af.exe /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/crt2.o /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0 -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib -L/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib -v --whole-archive CMakeFiles/cmTC_d52af.dir/objects.a --no-whole-archive --out-implib libcmTC_d52af.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmoldname -lmingwex -lssp_nonshared -lssp -lmsvcrt -lkernel32 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o]
+        ignore line: [GNU ld (GNU Binutils) 2.38]
+        ignore line: [COLLECT_GCC_OPTIONS='-O3' '-D' 'NDEBUG' '-v' '-o' 'cmTC_d52af.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d52af.']
+        ignore line: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E rm -f CMakeFiles/cmTC_d52af.dir/objects.a]
+        ignore line: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ar qc CMakeFiles/cmTC_d52af.dir/objects.a @CMakeFiles/cmTC_d52af.dir/objects1.rsp]
+        ignore line: [/workspaces/qpcetu/mxe-lite/usr/x86_64-pc-linux-gnu/bin/x86_64-w64-mingw32.static-g++ -O3 -DNDEBUG  -v -Wl -v -Wl --whole-archive CMakeFiles/cmTC_d52af.dir/objects.a -Wl --no-whole-archive -o cmTC_d52af.exe -Wl --out-implib libcmTC_d52af.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [gmake[1]: Leaving directory '/workspaces/qpcetu/build-windows-x64/CMakeFiles/CMakeScratch/TryCompile-24O1Zq']
+        ignore line: []
+        ignore line: []
+        remove lib [msvcrt]
+        remove lib [msvcrt]
+        collapse obj [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib/crt2.o] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/lib/crt2.o]
+        collapse obj [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o]
+        collapse obj [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o]
+        collapse library dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0]
+        collapse library dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc]
+        collapse library dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib/../lib] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/lib]
+        collapse library dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib/../lib] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/lib]
+        collapse library dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../lib/gcc/x86_64-w64-mingw32.static/11.5.0/../../../../x86_64-w64-mingw32.static/lib] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/lib]
+        collapse library dir [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/../x86_64-w64-mingw32.static/lib] ==> [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/lib]
+        implicit libs: [stdc++;mingw32;gcc;moldname;mingwex;ssp_nonshared;ssp;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex;ssp_nonshared;ssp;kernel32]
+        implicit objs: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/lib/crt2.o;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtbegin.o;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/crtend.o]
+        implicit dirs: [/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc;/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/lib]
+        implicit fwks: []
+      
+      
+...

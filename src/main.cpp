@@ -8,6 +8,32 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+        app.setStyleSheet(R"(
+            QPushButton {
+                background-color: #23272b;
+                color: #e0e0e0;
+                border: 1px solid #444;
+                border-radius: 2px;
+                font-family: 'Segoe UI', 'Arial', sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 6px 18px;
+                outline: none;
+            }
+            QPushButton:hover {
+                background-color: #2c3136;
+                border: 1px solid #666;
+            }
+            QPushButton:pressed {
+                background-color: #1a1d20;
+                border: 1px solid #888;
+            }
+            QPushButton:disabled {
+                background-color: #181a1b;
+                color: #888;
+                border: 1px solid #222;
+            }
+        )");
     
     // Set application properties
     app.setApplicationName("Sci-Fi Data Screen");

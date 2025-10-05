@@ -6,7 +6,7 @@
 
 /**
  * @brief Abstract base class for all industrial operations
- * 
+ *
  * Implements Command pattern for undo/redo functionality
  * and logging of all industrial operations
  */
@@ -39,11 +39,17 @@ class ControllerOperationCommand : public Command
     Q_OBJECT
 
 public:
-    enum Operation { Start, Stop, Reset, Configure };
+    enum Operation
+    {
+        Start,
+        Stop,
+        Reset,
+        Configure
+    };
 
-    ControllerOperationCommand(const QString &controllerIp, 
-                             Operation operation,
-                             QObject *parent = nullptr);
+    ControllerOperationCommand(const QString &controllerIp,
+                               Operation operation,
+                               QObject *parent = nullptr);
 
     bool execute() override;
     bool undo() override;

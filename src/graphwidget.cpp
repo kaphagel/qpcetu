@@ -12,34 +12,21 @@ GraphWidget::GraphWidget(const QString &title, GraphType graphType, QWidget *par
 {
     setMinimumSize(200, 150);
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    
+
+    m_maxDataPoints = 120; // Reasonable default for visible graph
+
     // Initialize graph parameters
     setupUI();
-    
-    // Timer for data updates
-    m_updateTimer = new QTimer(this);
-    connect(m_updateTimer, &QTimer::timeout, this, &GraphWidget::generateData);
-    m_updateTimer->start(100); // Update every 100ms for smooth animation
-    
-    // Initialize with some data
-    for (int i = 0; i < 50; ++i) {
-        m_dataPoints.append(generateInitialValue());
-    }
 }
 
 GraphWidget::~GraphWidget()
 {
-    if (m_updateTimer) {
-        m_updateTimer->stop();
-        delete m_updateTimer;
-        m_updateTimer = nullptr;
-    }
 }
 
 void GraphWidget::setupUI()
 {
-    setMinimumSize(300, 150);
-    setMaximumSize(400, 200);
+    setMinimumSize(400, 300);
+    setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
     
     // Initialize sci-fi themed colors based on graph type
     switch (m_graphType) {
@@ -97,13 +84,15 @@ void GraphWidget::setupUI()
 
 void GraphWidget::addDataPoint(qreal value)
 {
-    m_dataPoints.append(qBound(m_minValue, value, m_maxValue));
-    
-    // Keep only the last N data points for performance
-    if (m_dataPoints.size() > m_maxDataPoints) {
-        m_dataPoints.removeFirst();
+    qDebug() << "addDataPoint:" << value;
+    int bufferSize = width() > 0 && m_stepSize > 0 ? (width() - 20) / m_stepSize : m_maxDataPoints;
+    if (m_dataPoints.size() < bufferSize) {
+        m_dataPoints.append(value);
+        m_bufferHead = m_dataPoints.size() - 1;
+    } else {
+        m_bufferHead = (m_bufferHead + 1) % bufferSize;
+        m_dataPoints[m_bufferHead] = value;
     }
-    
     update(); // Trigger repaint
 }
 
@@ -118,63 +107,6 @@ void GraphWidget::setRange(qreal min, qreal max)
     m_minValue = min;
     m_maxValue = max;
     update();
-}
-
-void GraphWidget::generateData()
-{
-    qreal newValue = generateNextValue();
-    addDataPoint(newValue);
-    m_time += 0.1;
-}
-
-qreal GraphWidget::generateInitialValue()
-{
-    QRandomGenerator *rng = QRandomGenerator::global();
-    
-    switch (m_graphType) {
-        case SineWave:
-            return m_offset + (rng->bounded(20) - 10); // Start near center with some variation
-            
-        case RandomData:
-            return m_minValue + rng->bounded(int(m_maxValue - m_minValue)); // Random starting point
-            
-        case StepFunction:
-            return m_minValue + rng->bounded(int(m_maxValue - m_minValue)); // Random starting level
-            
-        case PulseWave:
-            return rng->bounded(2) ? m_maxValue * 0.8 : m_minValue + 20; // Start high or low
-    }
-    
-    return m_offset;
-}
-
-qreal GraphWidget::generateNextValue()
-{
-    QRandomGenerator *rng = QRandomGenerator::global();
-    
-    switch (m_graphType) {
-        case SineWave:
-            return m_offset + m_amplitude * std::sin(m_frequency * m_time);
-            
-        case RandomData:
-            // More dramatic random walk
-            m_lastValue += (rng->bounded(40) - 20) * 1.5; // Larger changes: ±30
-            m_lastValue = qBound(m_minValue, m_lastValue, m_maxValue);
-            return m_lastValue;
-            
-        case StepFunction:
-            // Step function that changes more frequently
-            if (rng->bounded(100) < 8) { // 8% chance to change (was 3%)
-                m_lastValue = m_minValue + rng->bounded(int(m_maxValue - m_minValue));
-            }
-            return m_lastValue;
-            
-        case PulseWave:
-            // Square wave with clearer transitions
-            return (int(m_time * 1.5) % 8 < 4) ? m_maxValue * 0.9 : m_minValue + 10;
-    }
-    
-    return m_offset;
 }
 
 void GraphWidget::paintEvent(QPaintEvent *event)
@@ -193,9 +125,41 @@ void GraphWidget::paintEvent(QPaintEvent *event)
     
     // Draw grid
     drawGrid(painter, graphRect);
-    
+
+    // Draw vertical axis with scale
+    QPen axisPen(Qt::white, 2);
+    painter.setPen(axisPen);
+    painter.drawLine(graphRect.left(), graphRect.top(), graphRect.left(), graphRect.bottom());
+    int numTicks = 5;
+    QFont tickFont = painter.font();
+    tickFont.setPointSize(10);
+    painter.setFont(tickFont);
+    for (int i = 0; i <= numTicks; ++i) {
+        qreal value = m_minValue + (m_maxValue - m_minValue) * (1.0 - i / (qreal)numTicks);
+        int y = graphRect.top() + (graphRect.height() * i) / numTicks;
+        painter.drawLine(graphRect.left() - 10, y, graphRect.left(), y);
+        painter.setPen(Qt::white);
+        QFont tickFont = painter.font();
+        tickFont.setPointSize(14);
+        painter.setFont(tickFont);
+        painter.drawText(5, y - 12, 50, 24, Qt::AlignLeft | Qt::AlignVCenter, QString::number((int)value));
+        painter.setPen(axisPen);
+    }
+
     // Draw graph data
     drawGraph(painter, graphRect);
+
+    // Show current value label
+    if (!m_dataPoints.isEmpty()) {
+        qreal lastValue = m_dataPoints.last();
+        QString valueLabel = QString("Value: %1").arg(lastValue, 0, 'f', 1);
+        QFont valueFont = painter.font();
+        valueFont.setBold(true);
+        valueFont.setPointSize(12);
+        painter.setFont(valueFont);
+        painter.setPen(Qt::yellow);
+        painter.drawText(graphRect.right() - 120, graphRect.top() + 10, 110, 24, Qt::AlignRight | Qt::AlignVCenter, valueLabel);
+    }
 }
 
 void GraphWidget::drawGrid(QPainter &painter, const QRect &graphRect)
@@ -270,90 +234,66 @@ void GraphWidget::drawGrid(QPainter &painter, const QRect &graphRect)
     }
 }
 
+
 void GraphWidget::drawGraph(QPainter &painter, const QRect &graphRect)
 {
-    if (m_dataPoints.size() < 2) {
+    if (m_dataPoints.isEmpty())
         return;
-    }
-    
-    // Calculate data points
-    QVector<QPointF> points;
-    qreal xStep = qreal(graphRect.width()) / qMax(1, m_dataPoints.size() - 1);
+
+    int bufferSize = graphRect.width() / m_stepSize;
     qreal valueRange = qMax(1.0, m_maxValue - m_minValue);
-    
-    for (int i = 0; i < m_dataPoints.size(); ++i) {
-        qreal x = graphRect.left() + i * xStep;
-        qreal normalizedValue = (m_dataPoints[i] - m_minValue) / valueRange;
-        normalizedValue = qBound(0.0, normalizedValue, 1.0);
-        qreal y = graphRect.bottom() - (normalizedValue * graphRect.height());
-        points.append(QPointF(x, y));
-    }
-    
-    // ENHANCED GLOW EFFECT - Multiple layers
-    // Outer glow (widest, most transparent)
-    for (int glow = 8; glow >= 1; --glow) {
-        QPen glowPen(m_graphColor, glow);
-        int alpha = 255 / (glow + 1); // More dramatic falloff
-        glowPen.setColor(QColor(m_graphColor.red(), m_graphColor.green(), m_graphColor.blue(), alpha));
-        painter.setPen(glowPen);
-        
-        for (int i = 1; i < points.size(); ++i) {
-            painter.drawLine(points[i-1], points[i]);
-        }
-    }
-    
-    // Core line (brightest)
+
+    int N = m_dataPoints.size();
+    int startIdx = (N > bufferSize) ? (m_bufferHead + 1) % N : 0;
+
+    // Marker X position
+    int markerX = graphRect.left() + (m_bufferHead % bufferSize) * m_stepSize;
+
+    // Clear a narrow strip ahead of the marker
+    int eraseWidth = m_stepSize + 2;
+    int eraseX = markerX + 1;
+    if (eraseX + eraseWidth > graphRect.right())
+        eraseX -= graphRect.width(); // wrap
+    painter.save();
+    painter.setCompositionMode(QPainter::CompositionMode_Source);
+    painter.fillRect(QRect(eraseX, graphRect.top(), eraseWidth, graphRect.height()), palette().color(QPalette::Window));
+    painter.restore();
+
+    // Draw all segments except those crossing the cleared strip
     QPen corePen(m_graphColor.lighter(120), 1);
     painter.setPen(corePen);
-    for (int i = 1; i < points.size(); ++i) {
-        painter.drawLine(points[i-1], points[i]);
-    }
-    
-    // Add energy particles/sparks at data points
-    painter.setBrush(m_graphColor);
-    painter.setPen(QPen(m_graphColor.lighter(150), 1));
-    
-    // Draw glowing data points (last 15 points)
-    int startPoint = qMax(0, points.size() - 15);
-    for (int i = startPoint; i < points.size(); ++i) {
-        // Outer glow circle
-        painter.setBrush(QColor(m_graphColor.red(), m_graphColor.green(), m_graphColor.blue(), 60));
-        painter.drawEllipse(points[i], 4, 4);
-        
-        // Inner bright core
-        painter.setBrush(m_graphColor);
-        painter.drawEllipse(points[i], 2, 2);
-    }
-    
-    // Add scan line effect (moving vertical line)
-    static qreal scanPosition = 0.0;
-    scanPosition += 2.0;
-    if (scanPosition > graphRect.width()) scanPosition = 0.0;
-    
-    QPen scanPen(QColor(m_graphColor.red(), m_graphColor.green(), m_graphColor.blue(), 100), 2);
-    painter.setPen(scanPen);
-    qreal scanX = graphRect.left() + scanPosition;
-    painter.drawLine(QPointF(scanX, graphRect.top()), QPointF(scanX, graphRect.bottom()));
-    
-    // Add subtle gradient fill under the curve
-    if (points.size() > 2) {
-        QPolygonF fillArea;
-        fillArea << QPointF(graphRect.left(), graphRect.bottom()); // Start at bottom-left
-        
-        // Add all the data points
-        for (const QPointF &point : points) {
-            fillArea << point;
+
+    QPointF prevPoint;
+    bool hasPrev = false;
+
+    for (int i = 0; i < qMin(bufferSize, N); ++i)
+    {
+        int bufIdx = (startIdx + i) % N;
+        qreal normalizedValue = (m_dataPoints[bufIdx] - m_minValue) / valueRange;
+        normalizedValue = qBound(0.0, normalizedValue, 1.0);
+        qreal y = graphRect.bottom() - normalizedValue * graphRect.height();
+        int x = graphRect.left() + i * m_stepSize;
+
+        QPointF currentPoint(x, y);
+
+        if (hasPrev)
+        {
+            // Skip line if it crosses cleared area
+            if (!((prevPoint.x() < eraseX + eraseWidth && prevPoint.x() > eraseX) ||
+                  (currentPoint.x() < eraseX + eraseWidth && currentPoint.x() > eraseX)))
+            {
+                painter.drawLine(prevPoint, currentPoint);
+            }
         }
-        
-        fillArea << QPointF(graphRect.right(), graphRect.bottom()); // End at bottom-right
-        
-        // Create gradient fill
-        QLinearGradient gradient(graphRect.topLeft(), graphRect.bottomLeft());
-        gradient.setColorAt(0.0, QColor(m_graphColor.red(), m_graphColor.green(), m_graphColor.blue(), 40));
-        gradient.setColorAt(1.0, QColor(m_graphColor.red(), m_graphColor.green(), m_graphColor.blue(), 5));
-        
-        painter.setBrush(QBrush(gradient));
-        painter.setPen(Qt::NoPen);
-        painter.drawPolygon(fillArea);
+
+        prevPoint = currentPoint;
+        hasPrev = true;
     }
+
+  // Draw vertical marker as a subtle dotted line
+QPen scanPen(m_graphColor.lighter(150), 1); // lighter color, thinner
+scanPen.setStyle(Qt::DotLine);              // dotted line
+scanPen.setColor(QColor(m_graphColor.red(), m_graphColor.green(), m_graphColor.blue(), 120)); // semi-transparent
+painter.setPen(scanPen);
+painter.drawLine(QPointF(markerX, graphRect.top()), QPointF(markerX, graphRect.bottom()));
 }

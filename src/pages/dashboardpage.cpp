@@ -1,4 +1,5 @@
 #include "dashboardpage.h"
+#include "../mainwindow.h"
 #include "../datawidget.h"
 #include "../animatedprogressbar.h"
 #include "../graphwidget.h"
@@ -214,10 +215,10 @@ void DashboardPage::updateSystemStatus() {
         if (m_statusLabel) {
             if (m_systemOnline) {
                 m_statusLabel->setText("SYSTEM ONLINE");
-                m_statusLabel->setStyleSheet("color: #00ff88; background-color: #002211; border-color: #00aa44;");
+                // Removed per-label stylesheet for global style
             } else {
                 m_statusLabel->setText("SYSTEM WARNING");
-                m_statusLabel->setStyleSheet("color: #ffaa00; background-color: #221100; border-color: #aa4400;");
+                // Removed per-label stylesheet for global style
             }
         }
     }
@@ -253,12 +254,145 @@ void DashboardPage::simulateAlert() {
 #include <QLabel>
 
 DashboardPage::DashboardPage(QWidget *parent) : QWidget(parent) {
-    QVBoxLayout *mainVLayout = new QVBoxLayout(this);
-    createStatusPanel(mainVLayout);
-    QGridLayout *mainGrid = new QGridLayout;
-    createDataPanels(mainGrid);
-    createSystemPanel(mainGrid);
-    createControlPanel(mainGrid);
-    createGraphPanels(mainGrid);
-    mainVLayout->addLayout(mainGrid);
+    setupEEGLayout();
+    // Apply EEG-inspired dark style
+    QString styleSheet = R"(
+        QWidget {
+            background-color: #101020;
+            color: #00ffcc;
+        }
+            // Removed custom QPushButton styles for global flat style
+        QLabel {
+            font-size: 22px;
+            color: #00ffcc;
+        }
+        QFrame, QWidget#graphArea {
+            background-color: #181830;
+            border: 2px solid #00ffcc;
+            border-radius: 12px;
+        }
+        QLineEdit, QTextEdit {
+            background-color: #181830;
+            color: #00ffcc;
+            font-size: 20px;
+            border: 2px solid #00ffcc;
+            border-radius: 8px;
+        }
+    )";
+    // Removed per-page stylesheet to allow global button style
+}
+
+void DashboardPage::setupEEGLayout() {
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->setSpacing(16);
+    mainLayout->setContentsMargins(16, 16, 16, 16);
+
+    // Top bar (info/status/navigation)
+    // Top app bar with home button
+    QWidget *topBar = new QWidget;
+    QHBoxLayout *topLayout = new QHBoxLayout(topBar);
+    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setSpacing(0);
+    QPushButton *homeBtn = new QPushButton;
+    homeBtn->setIcon(QIcon(":/icons/home.svg"));
+    homeBtn->setIconSize(QSize(32, 32));
+    homeBtn->setFlat(true);
+    homeBtn->setStyleSheet("QPushButton { background: transparent; border: none; margin: 0 8px; } QPushButton:pressed { background: #e0e0e0; }");
+    topLayout->addWidget(homeBtn, 0, Qt::AlignLeft);
+    QLabel *titleLabel = new QLabel("Dashboard");
+    titleLabel->setStyleSheet("font-size: 22px; font-weight: bold; color: #007AFF; background: transparent;");
+    topLayout->addWidget(titleLabel, 1, Qt::AlignLeft);
+    topLayout->addStretch();
+    mainLayout->addWidget(topBar);
+    connect(homeBtn, &QPushButton::clicked, this, [this]() {
+        QWidget *mw = this->window();
+        if (auto mainWin = qobject_cast<MainWindow*>(mw)) {
+            mainWin->navigateToPage(0);
+        }
+    });
+
+    // Main graph area (full-width)
+    mainLayout->addWidget(createGraphArea(), 1);
+
+    // Data widgets row (horizontal)
+    mainLayout->addWidget(createDataWidgetRow());
+
+    // Bottom control bar
+    mainLayout->addWidget(createBottomBar());
+    this->setLayout(mainLayout);
+}
+
+QWidget* DashboardPage::createTopBar() {
+    QWidget *topBar = new QWidget;
+    QHBoxLayout *layout = new QHBoxLayout(topBar);
+    layout->setSpacing(24);
+    layout->setContentsMargins(0, 0, 0, 0);
+    QLabel *infoLabel = new QLabel("Patient: John Doe | Device: QTC-ETU");
+    // Removed per-label stylesheet for global style
+    QLabel *statusLabel = new QLabel("Status: OK");
+    // Removed per-label stylesheet for global style
+    QPushButton *dashboardBtn = new QPushButton("Dashboard");
+    QPushButton *graphsBtn = new QPushButton("Graphs");
+    QPushButton *udpBtn = new QPushButton("UDP Response");
+    dashboardBtn->setMinimumSize(80, 48);
+    graphsBtn->setMinimumSize(80, 48);
+    udpBtn->setMinimumSize(120, 48);
+    layout->addWidget(infoLabel);
+    layout->addWidget(statusLabel);
+    layout->addStretch();
+    layout->addWidget(dashboardBtn);
+    layout->addWidget(graphsBtn);
+    layout->addWidget(udpBtn);
+    return topBar;
+}
+
+QWidget* DashboardPage::createGraphArea() {
+    QWidget *graphArea = new QWidget;
+    QVBoxLayout *layout = new QVBoxLayout(graphArea);
+    layout->setSpacing(8);
+    layout->setContentsMargins(0, 0, 0, 0);
+    GraphWidget *eegGraph = new GraphWidget("EEG Waveform", GraphWidget::SineWave);
+    eegGraph->setMinimumHeight(220);
+    eegGraph->setRange(0, 100);
+    layout->addWidget(eegGraph);
+    return graphArea;
+}
+
+QWidget* DashboardPage::createDataWidgetRow() {
+    QWidget *row = new QWidget;
+    QHBoxLayout *layout = new QHBoxLayout(row);
+    layout->setSpacing(24);
+    layout->setContentsMargins(0, 0, 0, 0);
+    DataWidget *w1 = new DataWidget("Alpha", "uV");
+    DataWidget *w2 = new DataWidget("Beta", "uV");
+    DataWidget *w3 = new DataWidget("Gamma", "uV");
+    w1->setMinimumSize(180, 120);
+    w2->setMinimumSize(180, 120);
+    w3->setMinimumSize(180, 120);
+    layout->addWidget(w1);
+    layout->addWidget(w2);
+    layout->addWidget(w3);
+    return row;
+}
+
+QWidget* DashboardPage::createBottomBar() {
+    QWidget *bottomBar = new QWidget;
+    QHBoxLayout *layout = new QHBoxLayout(bottomBar);
+    layout->setSpacing(32);
+    layout->setContentsMargins(0, 0, 0, 0);
+    QPushButton *startBtn = new QPushButton("Start");
+    QPushButton *stopBtn = new QPushButton("Stop");
+    QPushButton *settingsBtn = new QPushButton("Settings");
+    QPushButton *alertBtn = new QPushButton("Alert");
+    startBtn->setMinimumSize(120, 60);
+    stopBtn->setMinimumSize(120, 60);
+    settingsBtn->setMinimumSize(120, 60);
+    alertBtn->setMinimumSize(120, 60);
+    layout->addStretch();
+    layout->addWidget(startBtn);
+    layout->addWidget(stopBtn);
+    layout->addWidget(settingsBtn);
+    layout->addWidget(alertBtn);
+    layout->addStretch();
+    return bottomBar;
 }

@@ -1,21 +1,50 @@
-# SciFi Data Screen
+# SciFi Da## 🍎 Apple Design System Integration
 
-[![Build Status](https://github.com/kaphagel/qpcetu/workflows/CI/badge.svg)](https://github.com/kaphagel/qpcetu/actions)
+This HMI implements **Apple Human Interface Guidelines** for professional consistency:
+
+- **Typography Scale**: Complete Apple font hierarchy (Large Title → Caption 2)
+- **Semantic Colors**: Apple system colors with light/dark theme support  
+- **Motion Design**: Apple-compliant animations and transitions
+- **Accessibility**: VoiceOver support and accessibility best practices
+- **Touch Guidelines**: Apple touch interaction standards adapted for industrial use
+
+## 📱 Touch Screen Optimization
+
+This HMI is specifically designed for **touch screen operation** with:
+
+- **Large Touch Targets**: Minimum 60x60px buttons for reliable finger interaction
+- **Industrial Glove Support**: Oversized controls for safety equipment compatibility  
+- **High Contrast Design**: Clear visibility in various industrial lighting conditions
+- **Touch Feedback**: Visual pressed states and animation feedback for all interactions
+- **Finger-First Design**: All controls optimized for direct finger operation
+- **Large Fonts**: Minimum 14px fonts for arm's-length readability
+- **Generous Spacing**: 12-20px margins prevent accidental activation[![Build Status](https://github.com/kaphagel/qpcetu/workflows/CI/badge.svg)](https://github.com/kaphagel/qpcetu/actions)
 [![Qt Version](https://img.shields.io/badge/Qt-6.x-green.svg)](https://www.qt.io/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-# SciFi Data Screen - Industrial HMI Application
+# SciFi Data Screen - Touch-Optimized Industrial HMI
 
-A modern Qt5-based industrial Human-Machine Interface (HMI) application with sci-fi aesthetics, designed for real-time data visualization and industrial controller management.
+A modern Qt5-based industrial Human-Machine Interface (HMI) application with sci-fi aesthetics, designed for real-time data visualization and industrial controller management. **Optimized for touch screen interfaces** in industrial environments.
 
-## 🏗️ Enterprise Architecture
+## � Touch Screen Optimization
+
+This HMI is specifically designed for **touch screen operation** with:
+
+- **Large Touch Targets**: Minimum 60x60px buttons for reliable finger interaction
+- **Industrial Glove Support**: Oversized controls for safety equipment compatibility  
+- **High Contrast Design**: Clear visibility in various industrial lighting conditions
+- **Touch Feedback**: Visual pressed states and animation feedback for all interactions
+- **Finger-First Design**: All controls optimized for direct finger operation
+- **Large Fonts**: Minimum 14px fonts for arm's-length readability
+- **Generous Spacing**: 12-20px margins prevent accidental activation
+
+## �🏗️ Enterprise Architecture
 
 This application implements proven **design patterns** for industrial HMI systems:
 
 - **Strategy Pattern**: Pluggable controller protocols (EPIC4, EPIC5, SNAP_PAC)
 - **State Machine Pattern**: Robust connection lifecycle management
 - **Command Pattern**: Industrial operations with undo/redo and audit logging
-- **MVVM Pattern**: QML views with C++ ViewModels and Models
 - **Observer Pattern**: Real-time event system for alarms and notifications
 - **Repository Pattern**: Historical data persistence and configuration management
 - **Plugin Architecture**: Extensible controller support
@@ -24,30 +53,100 @@ This application implements proven **design patterns** for industrial HMI system
 
 ## ✨ Features
 
+- **Apple Design System**: Full implementation of Apple HIG for professional UX
+- **Touch-Optimized Interface**: Large, clearly spaced controls for industrial touch screens
+- **Professional Build Structure**: Organized scripts and build artifacts
 - **Multi-Controller Support**: EPIC4/EPIC5 (Opto22), SNAP_PAC controllers
 - **Real-time Visualization**: 4-graph dashboard with industrial data
 - **UDP Discovery**: Automatic controller detection on network
-- **Cross-Platform**: Linux, Windows (via MXE cross-compilation)
+- **Cross-Platform**: Linux (native) + Windows (MXE cross-compilation)
 - **Industrial Standards**: Event acknowledgment, state management, operation auditing
 - **Modular Design**: Easy to extend with new controller types
 - **Thread-Safe**: Robust real-time data handling
 
 ## 🚀 Quick Start
 
-## Features
+### Professional Build System
+```bash
+# Linux Build (Professional Structure)
+cd scripts && ./build-linux.sh
 
-- 🚀 **Real-time Data Visualization** - 4 synchronized graphs in 2x2 layout
-- 🌐 **Modbus TCP Integration** - Live data from industrial devices
-- 🎨 **Sci-Fi Interface** - Dark theme with neon accents and glow effects
-- ⚡ **High Performance** - Efficient circular buffers and smooth animations
-- 🔧 **Cross-Platform** - Linux, Windows, macOS support
+# Windows Build (Professional Structure) 
+cd scripts && ./build-windows.sh
 
-## Requirements
+# Build All Platforms (Recommended)
+cd scripts && ./build-all.sh
+```
 
-- Qt6 with QML support
-- CMake 3.20 or higher
-- C++17 compatible compiler (GCC, Clang, or MSVC)
-- libmodbus for network communication
+### Build Output
+- **Linux**: `build-linux-x64/bin/ModernSciFiHMI` (823KB + Qt5 libraries)
+- **Windows**: `build-windows-x64/bin/ModernSciFiHMI.exe` (49MB standalone)
+
+### Docker (Both Platforms)
+```bash
+docker build -t scifi-hmi . && docker run --rm -v $(pwd)/output:/output scifi-hmi
+```
+
+🔧 **[Complete Build Instructions & Status](.github/instructions/instructions.instructions.md)**
+
+## 🖥️ Touch Screen Interface
+
+### Modern Touch-Optimized HMI (`ModernSciFiHMI`)
+- **60x60px minimum** touch targets for reliable interaction
+- **Large fonts** (14-18px) for readability from arm's length
+- **High contrast** sci-fi industrial styling with blue accents (#00E5FF)
+- **Touch feedback** with pressed states and visual animations
+- **Controller cards** with real-time metrics and status indicators
+- **Glove-friendly** design for industrial safety equipment
+
+### Interface Components
+- **Header Bar**: Connection status, user info, real-time clock
+- **Status Strip**: Live system monitoring (Discovery, Modbus, Events, Data)
+- **Controller Grid**: Card-based layout with drag-friendly spacing
+- **Quick Actions Panel**: Large buttons for common operations
+- **Status Bar**: System metrics (CPU, Memory, Network, Updates)
+
+### Touch Gestures
+- **Tap**: Primary selection and activation
+- **Long Press**: Context menus and detailed views
+- **Swipe**: Navigation between pages (future enhancement)
+
+## 📋 Requirements
+
+- **Qt5.15+**: Core, Widgets, Network, Svg modules
+- **CMake 3.16+**: Build system
+- **C++17 Compiler**: GCC 7+, Clang 5+, MSVC 2019+
+- **libmodbus**: Industrial Modbus TCP communication
+- **Touch Screen**: For optimal user experience (mouse/keyboard also supported)
+- Linux, Windows, or macOS
+
+## Installation
+
+### Ubuntu/Debian
+```bash
+sudo apt update
+sudo apt install qt5-default qt5-qmake libqt5svg5-dev cmake build-essential
+```
+```
+
+### Windows Build
+```bash
+cd build-windows && ./build.sh
+```
+
+### Docker (Both Platforms)
+```bash
+docker build -t scifi-hmi . && docker run --rm -v $(pwd)/output:/output scifi-hmi
+```
+
+� **[Complete Build Instructions & Status](.github/instructions/instructions.instructions.md)**
+
+## 📋 Requirements
+
+- **Qt5.15+**: Core, Widgets, Network, Svg modules
+- **CMake 3.16+**: Build system
+- **C++17 Compiler**: GCC 7+, Clang 5+, MSVC 2019+
+- **libmodbus**: Industrial Modbus TCP communication
 - Linux, Windows, or macOS
 
 ## Installation

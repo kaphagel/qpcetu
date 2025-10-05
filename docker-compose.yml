@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  # Development environment with cross-compilation tools
+  scifi-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: scifi-datascreen:latest
+    container_name: scifi-datascreen-dev
+    ports:
+      - "3250:3250/udp"  # UDP discovery port
+    volumes:
+      - .:/app/source:ro  # Mount source code (read-only)
+      - scifi-output:/app/output  # Output volume for built executables
+    environment:
+      - BUILD_TYPE=Release
+    working_dir: /app
+    command: >
+      bash -c "
+        echo '=== SciFi Data Screen Build Container ==='
+        echo 'Linux executable:' && ls -lh build-linux/SciFiDataScreen 2>/dev/null || echo '  Not built'
+        echo 'Windows executable:' && ls -lh build-windows/SciFiDataScreen.exe 2>/dev/null || echo '  Not built'
+        echo ''
+        echo 'Available commands:'
+        echo '  - Copy executables: cp build-*/SciFiDataScreen* /app/output/'
+        echo '  - Run Linux version: ./build-linux/SciFiDataScreen'
+        echo '  - Interactive shell: bash'
+        echo ''
+        echo 'UDP Discovery will broadcast on port 3250'
+        echo 'Container ready for development...'
+        exec bash
+      "
+    networks:
+      - scifi-network
+
+  # Base image builder (for development)
+  scifi-base:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    image: scifi-datascreen-base:latest
+    container_name: scifi-base-builder
+    volumes:
+      - mxe-cache:/opt/mxe  # Cache MXE installation
+    command: >
+      bash -c "
+        echo '=== MXE Cross-Compilation Base Image ==='
+        echo 'Qt5 Windows tools available at: /opt/mxe/usr/bin/'
+        echo 'libmodbus Windows library at: /opt/libmodbus-windows/'
+        echo ''
+        echo 'This base image can be used to quickly build applications'
+        echo 'without rebuilding the entire cross-compilation environment.'
+        echo ''
+        ls -la /opt/mxe/usr/x86_64-w64-mingw32.static/qt5/bin/qmake* 2>/dev/null || echo 'Qt5 tools not found'
+        exec bash
+      "
+
+  # Production runtime (Linux version)
+  scifi-runtime:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: application
+    image: scifi-datascreen:latest
+    container_name: scifi-datascreen-runtime
+    ports:
+      - "3250:3250/udp"
+    environment:
+      - QT_QPA_PLATFORM=offscreen  # For headless operation
+    command: >
+      bash -c "
+        echo '=== SciFi Data Screen Runtime ==='
+        echo 'Starting UDP discovery service...'
+        echo 'Industrial modules will be discovered on port 3250'
+        echo ''
+        if [ -f build-linux/SciFiDataScreen ]; then
+          echo 'Running Linux version...'
+          ./build-linux/SciFiDataScreen
+        else
+          echo 'Linux executable not found. Available files:'
+          find . -name 'SciFiDataScreen*' -type f
+          exec bash
+        fi
+      "
+    networks:
+      - scifi-network
+    restart: unless-stopped
+
+volumes:
+  scifi-output:
+    driver: local
+  mxe-cache:
+    driver: local
+
+networks:
+  scifi-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

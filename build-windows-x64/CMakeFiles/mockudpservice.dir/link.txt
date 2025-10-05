@@ -1,0 +1,3 @@
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E rm -f CMakeFiles/mockudpservice.dir/objects.a
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ar qc CMakeFiles/mockudpservice.dir/objects.a @CMakeFiles/mockudpservice.dir/objects1.rsp
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles/mockudpservice.dir/objects.a -Wl,--no-whole-archive -o mockudpservice.exe -Wl,--out-implib,libmockudpservice.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/mockudpservice.dir/linkLibs.rsp

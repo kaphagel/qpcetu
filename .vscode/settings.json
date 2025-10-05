@@ -1,5 +1,63 @@
 {
+    "mcp.servers": {
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/workspaces/qpcetu"
+            ],
+            "name": "Project Files",
+            "description": "Access project files and directories"
+        },
+        "git": {
+            "command": "python",
+            "args": [
+                "-m",
+                "mcp_server_git",
+                "--repository",
+                "/workspaces/qpcetu"
+            ],
+            "name": "Git Operations",
+            "description": "Git version control operations"
+        },
+        "memory": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-memory"
+            ],
+            "name": "Context Memory",
+            "description": "Persistent memory across sessions"
+        },
+        "sequential-thinking": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ],
+            "name": "Sequential Thinking",
+            "description": "Enhanced reasoning capabilities"
+        }
+    },
+    "qt.cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.configureOnOpen": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/src/**",
+        "/usr/include/qt5/**",
+        "/usr/include/qt5/QtCore",
+        "/usr/include/qt5/QtQml",
+        "/usr/include/qt5/QtQuick",
+        "/usr/include/qt5/QtWidgets"
+    ],
     "files.associations": {
+        "*.qml": "qml",
+        "*.pro": "makefile",
+        "CMakeLists.txt": "cmake",
         "deque": "cpp",
         "list": "cpp",
         "string": "cpp",
@@ -14,6 +72,13 @@
         "functional": "cpp",
         "tuple": "cpp",
         "type_traits": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "cerrno": "cpp",
+        "compare": "cpp",
+        "variant": "cpp"
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
     }
 }

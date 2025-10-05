@@ -8,7 +8,7 @@
 
 /**
  * @brief State machine for managing industrial controller lifecycle
- * 
+ *
  * Handles: Disconnected -> Connecting -> Connected -> Running -> Fault -> Maintenance
  */
 class ControllerStateMachine : public QObject
@@ -16,7 +16,8 @@ class ControllerStateMachine : public QObject
     Q_OBJECT
 
 public:
-    enum ControllerState {
+    enum ControllerState
+    {
         Disconnected,
         Connecting,
         Connected,
@@ -28,7 +29,7 @@ public:
     Q_ENUM(ControllerState)
 
     explicit ControllerStateMachine(const QString &controllerIp, QObject *parent = nullptr);
-    
+
     ControllerState currentState() const;
     void start();
     void stop();
@@ -57,7 +58,7 @@ private slots:
 private:
     void setupStateMachine();
     void setupTransitions();
-    
+
     QStateMachine *m_stateMachine;
     QState *m_disconnectedState;
     QState *m_connectingState;
@@ -66,7 +67,7 @@ private:
     QState *m_faultState;
     QState *m_maintenanceState;
     QState *m_stoppingState;
-    
+
     QTimer *m_heartbeatTimer;
     QString m_controllerIp;
     ControllerState m_currentState;

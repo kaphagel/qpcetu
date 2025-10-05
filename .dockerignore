@@ -1,0 +1,55 @@
+# Docker ignore file for SciFi Data Screen
+
+# Build outputs
+build/
+build-*/
+*.exe
+*.app
+*.dmg
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Documentation (keep only essential docs)
+*.md
+!README.md
+
+# Test outputs
+test-output/
+logs/
+*.log
+
+# Qt generated files
+moc_*
+ui_*
+qrc_*
+*_autogen/
+
+# Temporary files
+libmodbus-windows/
+mxe-lite/
+windows-test/
+windows-full/
+docker-output/
+
+# Package manager
+node_modules/
+__pycache__/

@@ -13,7 +13,8 @@
 class IndustrialEvent
 {
 public:
-    enum EventType {
+    enum EventType
+    {
         Info,
         Warning,
         Alarm,
@@ -21,7 +22,8 @@ public:
         SystemEvent
     };
 
-    enum EventCategory {
+    enum EventCategory
+    {
         Communication,
         Process,
         Safety,
@@ -29,8 +31,8 @@ public:
         User
     };
 
-    IndustrialEvent(EventType type, EventCategory category, 
-                   const QString &source, const QString &message);
+    IndustrialEvent(EventType type, EventCategory category,
+                    const QString &source, const QString &message);
 
     EventType type() const { return m_type; }
     EventCategory category() const { return m_category; }
@@ -39,14 +41,14 @@ public:
     QDateTime timestamp() const { return m_timestamp; }
     quint64 eventId() const { return m_eventId; }
     bool isAcknowledged() const { return m_acknowledged; }
-    
+
     void acknowledge(const QString &user = QString());
     QString acknowledgedBy() const { return m_acknowledgedBy; }
     QDateTime acknowledgedAt() const { return m_acknowledgedAt; }
 
 private:
     static quint64 s_nextEventId;
-    
+
     quint64 m_eventId;
     EventType m_type;
     EventCategory m_category;
@@ -60,7 +62,7 @@ private:
 
 /**
  * @brief Central event manager for industrial HMI
- * 
+ *
  * Manages alarms, events, and notifications with priority queuing
  */
 class IndustrialEventManager : public QObject
@@ -74,13 +76,13 @@ public:
     void addEvent(const IndustrialEvent &event);
     void acknowledgeEvent(quint64 eventId, const QString &user = QString());
     void acknowledgeAllEvents(const QString &user = QString());
-    
+
     // Event retrieval
     QList<IndustrialEvent> getEvents(IndustrialEvent::EventType minType = IndustrialEvent::Info) const;
     QList<IndustrialEvent> getUnacknowledgedEvents() const;
     QList<IndustrialEvent> getEventsBySource(const QString &source) const;
     QList<IndustrialEvent> getEventsByCategory(IndustrialEvent::EventCategory category) const;
-    
+
     // Statistics
     int totalEventCount() const;
     int unacknowledgedCount() const;
@@ -110,16 +112,16 @@ private slots:
 private:
     void pruneOldEvents();
     bool shouldRaiseAlarm(const QString &source, const QString &tag, const QVariant &value);
-    
+
     QList<IndustrialEvent> m_events;
     QQueue<IndustrialEvent> m_eventQueue;
     QTimer *m_processTimer;
     QTimer *m_autoAckTimer;
     QMutex m_eventsMutex;
-    
+
     int m_maxEvents;
     int m_autoAckTimeout;
-    QMap<QString, QVariant> m_lastValues; // For change detection
+    QMap<QString, QVariant> m_lastValues;      // For change detection
     QMap<QString, QDateTime> m_lastAlarmTimes; // Alarm debouncing
 };
 

@@ -1,0 +1,10 @@
+/workspaces/qpcetu/build-linux-x64/CMakeFiles/ModernSciFiHMI.dir
+/workspaces/qpcetu/build-linux-x64/CMakeFiles/mockudpservice.dir
+/workspaces/qpcetu/build-linux-x64/CMakeFiles/edit_cache.dir
+/workspaces/qpcetu/build-linux-x64/CMakeFiles/rebuild_cache.dir
+/workspaces/qpcetu/build-linux-x64/CMakeFiles/ModernSciFiHMI_autogen.dir
+/workspaces/qpcetu/build-linux-x64/CMakeFiles/mockudpservice_autogen.dir
+/workspaces/qpcetu/build-linux-x64/deps/external/libmodbus/src/CMakeFiles/libmodbus.dir
+/workspaces/qpcetu/build-linux-x64/deps/external/libmodbus/src/CMakeFiles/edit_cache.dir
+/workspaces/qpcetu/build-linux-x64/deps/external/libmodbus/src/CMakeFiles/rebuild_cache.dir
+/workspaces/qpcetu/build-linux-x64/deps/external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir

@@ -18,7 +18,15 @@ public:
     // Methods to update dashboard data
     void updateData();
     void updateSystemStatus();
+
+public:
     void simulateAlert();
+private:
+    void setupEEGLayout();
+    QWidget *createTopBar();
+    QWidget *createGraphArea();
+    QWidget *createDataWidgetRow();
+    QWidget *createBottomBar();
 
 private:
     // Status indicators

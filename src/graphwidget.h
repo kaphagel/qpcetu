@@ -28,39 +28,29 @@ public:
     void addDataPoint(qreal value);
     void setColor(const QColor &color);
     void setRange(qreal min, qreal max);
-
-protected:
     void paintEvent(QPaintEvent *event) override;
 
-private slots:
-    void generateData();
-
 private:
+    QString m_title;
     void setupUI();
     void drawGrid(QPainter &painter, const QRect &graphRect);
     void drawGraph(QPainter &painter, const QRect &graphRect);
     qreal generateNextValue();
-    qreal generateInitialValue();
-    
-    QString m_title;
-    GraphType m_graphType;
     QVector<qreal> m_dataPoints;
+    int m_maxDataPoints;
+    int m_bufferHead = -1;
     QColor m_graphColor;
     QColor m_gridColor;
-    qreal m_minValue;
-    qreal m_maxValue;
-    int m_maxDataPoints;
-    
-    QTimer *m_updateTimer;
-    QLabel *m_titleLabel;
     QVBoxLayout *m_layout;
+    QLabel *m_titleLabel;
+    qreal m_minValue = 0;
+    qreal m_maxValue = 100;
+    GraphType m_graphType;
+    int m_stepSize = 24; // Increased step size (pixels)
+public:
+    void setStepSize(int step) { m_stepSize = step; update(); }
+    // ...existing code...
     
-    // Graph generation state
-    qreal m_time;
-    qreal m_lastValue;
-    qreal m_amplitude;
-    qreal m_frequency;
-    qreal m_offset;
 };
 
 #endif // GRAPHWIDGET_H

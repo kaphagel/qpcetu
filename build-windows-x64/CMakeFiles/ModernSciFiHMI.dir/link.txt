@@ -1,0 +1,3 @@
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/bin/cmake -E rm -f CMakeFiles/ModernSciFiHMI.dir/objects.a
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-ar qc CMakeFiles/ModernSciFiHMI.dir/objects.a @CMakeFiles/ModernSciFiHMI.dir/objects1.rsp
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ -O3 -DNDEBUG -mwindows -Wl,--whole-archive CMakeFiles/ModernSciFiHMI.dir/objects.a -Wl,--no-whole-archive -o bin/ModernSciFiHMI.exe -Wl,--out-implib,libModernSciFiHMI.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/ModernSciFiHMI.dir/linkLibs.rsp

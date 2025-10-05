@@ -1,0 +1,95 @@
+{
+	"BUILD_DIR" : "/workspaces/qpcetu/build-linux-x64/external/libmodbus/src/libmodbus_autogen",
+	"CMAKE_BINARY_DIR" : "/workspaces/qpcetu/build-linux-x64",
+	"CMAKE_CURRENT_BINARY_DIR" : "/workspaces/qpcetu/build-linux-x64/external/libmodbus/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/workspaces/qpcetu/external/libmodbus/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/workspaces/qpcetu/external/libmodbus/src/CMakeLists.txt",
+		"/workspaces/qpcetu/build-linux-x64/CMakeFiles/3.22.1/CMakeCCompiler.cmake",
+		"/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake",
+		"/usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake",
+		"/usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake",
+		"/usr/share/cmake-3.22/Modules/Compiler/GNU.cmake",
+		"/usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake",
+		"/usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake",
+		"/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/workspaces/qpcetu",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/workspaces/qpcetu/external/libmodbus/src/modbus-rtu.h",
+			"Mu",
+			"EWIEGA46WW/moc_modbus-rtu.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/external/libmodbus/src/modbus-tcp.h",
+			"Mu",
+			"EWIEGA46WW/moc_modbus-tcp.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/external/libmodbus/src/modbus.h",
+			"Mu",
+			"EWIEGA46WW/moc_modbus.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/workspaces/qpcetu/build-linux-x64/external/libmodbus/src/libmodbus_autogen/include",
+	"MOC_COMPILATION_FILE" : "/workspaces/qpcetu/build-linux-x64/external/libmodbus/src/libmodbus_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "_GNU_SOURCE" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/workspaces/qpcetu/external/libmodbus/src",
+		"/usr/include/c++/11",
+		"/usr/include/x86_64-linux-gnu/c++/11",
+		"/usr/include/c++/11/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/workspaces/qpcetu/build-linux-x64/external/libmodbus/src/libmodbus_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 14,
+	"PARSE_CACHE_FILE" : "/workspaces/qpcetu/build-linux-x64/external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/workspaces/qpcetu/build-linux-x64/external/libmodbus/src/CMakeFiles/libmodbus_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/workspaces/qpcetu/external/libmodbus/src/modbus-data.c", "Mu", null ],
+		[ "/workspaces/qpcetu/external/libmodbus/src/modbus-rtu.c", "Mu", null ],
+		[ "/workspaces/qpcetu/external/libmodbus/src/modbus-tcp.c", "Mu", null ],
+		[ "/workspaces/qpcetu/external/libmodbus/src/modbus.c", "Mu", null ]
+	],
+	"VERBOSITY" : 0
+}

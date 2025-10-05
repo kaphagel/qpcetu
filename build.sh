@@ -25,12 +25,12 @@ if ! command -v cmake &> /dev/null; then
 fi
 
 # Create build directory
-if [ ! -d "build" ]; then
+if [ ! -d "build-linux-x64" ]; then
     echo "📁 Creating build directory..."
-    mkdir build
+    mkdir build-linux-x64
 fi
 
-cd build
+cd build-linux-x64
 
 # Configure with CMake
 echo "⚙️  Configuring with CMake..."
@@ -50,7 +50,7 @@ echo ""
 echo "✅ Build completed successfully!"
 echo ""
 echo "🎯 To run the application:"
-echo "   cd build"
+echo "   cd build-linux-x64"
 echo "   ./bin/SciFiDataScreen"
 echo ""
 echo "🌟 Enjoy your futuristic sci-fi data screen!"

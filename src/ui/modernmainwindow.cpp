@@ -361,173 +361,173 @@ void ModernMainWindow::toggleTheme()
 void ModernMainWindow::onThemeChanged()
 {
     ThemeManager *tm = ThemeManager::instance();
-    
+
     // Get current theme colors for clean, borderless design
     QString mainBg = tm->colorString(ThemeManager::MainBackground);
     QString secondaryBg = tm->colorString(ThemeManager::SecondaryBackground);
     QString headerBg = tm->colorString(ThemeManager::HeaderBackground);
     QString cardBg = tm->colorString(ThemeManager::CardBackground);
     QString statusBg = tm->colorString(ThemeManager::StatusStripBackground);
-    
+
     QString primaryText = tm->colorString(ThemeManager::PrimaryText);
     QString secondaryText = tm->colorString(ThemeManager::SecondaryText);
     QString accentText = tm->colorString(ThemeManager::AccentText);
     QString statusText = tm->colorString(ThemeManager::StatusText);
-    
+
     QString buttonBg = tm->colorString(ThemeManager::ButtonBackground);
     QString buttonHover = tm->colorString(ThemeManager::ButtonHover);
     QString buttonPressed = tm->colorString(ThemeManager::ButtonPressed);
 
     // Clean, borderless base styles
     QString baseStyles = QString(
-        "QMainWindow { "
-        "  background-color: %1; "
-        "  color: %2; "
-        "} "
-        "QWidget { "
-        "  background-color: %1; "
-        "  color: %2; "
-        "  border: none; "
-        "} "
-        "QWidget#headerBar { "
-        "  background-color: %3; "
-        "  border: none; "
-        "} "
-        "QWidget#statusStrip { "
-        "  background-color: %4; "
-        "  border: none; "
-        "} "
-        "QWidget#mainContent { "
-        "  background-color: %1; "
-        "  border: none; "
-        "} "
-        "QScrollArea { "
-        "  background-color: %1; "
-        "  border: none; "
-        "} "
-        "QScrollBar:vertical { "
-        "  background-color: %4; "
-        "  border: none; "
-        "  width: 12px; "
-        "} "
-        "QScrollBar::handle:vertical { "
-        "  background-color: %5; "
-        "  border: none; "
-        "  border-radius: 6px; "
-        "} ")
-        .arg(mainBg)        // %1
-        .arg(primaryText)   // %2
-        .arg(headerBg)      // %3
-        .arg(statusBg)      // %4
-        .arg(secondaryText); // %5
+                             "QMainWindow { "
+                             "  background-color: %1; "
+                             "  color: %2; "
+                             "} "
+                             "QWidget { "
+                             "  background-color: %1; "
+                             "  color: %2; "
+                             "  border: none; "
+                             "} "
+                             "QWidget#headerBar { "
+                             "  background-color: %3; "
+                             "  border: none; "
+                             "} "
+                             "QWidget#statusStrip { "
+                             "  background-color: %4; "
+                             "  border: none; "
+                             "} "
+                             "QWidget#mainContent { "
+                             "  background-color: %1; "
+                             "  border: none; "
+                             "} "
+                             "QScrollArea { "
+                             "  background-color: %1; "
+                             "  border: none; "
+                             "} "
+                             "QScrollBar:vertical { "
+                             "  background-color: %4; "
+                             "  border: none; "
+                             "  width: 12px; "
+                             "} "
+                             "QScrollBar::handle:vertical { "
+                             "  background-color: %5; "
+                             "  border: none; "
+                             "  border-radius: 6px; "
+                             "} ")
+                             .arg(mainBg)         // %1
+                             .arg(primaryText)    // %2
+                             .arg(headerBg)       // %3
+                             .arg(statusBg)       // %4
+                             .arg(secondaryText); // %5
 
     // Clean theme-aware component styles (no borders)
     QString customStyles = QString(
-        "QPushButton#themeToggleBtn { "
-        "  background-color: %1; "
-        "  color: %2; "
-        "  border: none; "
-        "  border-radius: 8px; "
-        "  font-size: 20px; "
-        "  font-weight: bold; "
-        "  padding: 8px 16px; "
-        "}"
-        "QPushButton#themeToggleBtn:hover { "
-        "  background-color: %3; "
-        "}"
-        "QPushButton#themeToggleBtn:pressed { "
-        "  background-color: %4; "
-        "}"
-        "QPushButton#addControllerCard { "
-        "  background-color: %5; "
-        "  color: %6; "
-        "  border: none; "
-        "  border-radius: 12px; "
-        "  font-size: 18px; "
-        "  font-weight: bold; "
-        "  padding: 16px; "
-        "}"
-        "QPushButton#addControllerCard:hover { "
-        "  background-color: %3; "
-        "}"
-        "QPushButton#addControllerCard:pressed { "
-        "  background-color: %4; "
-        "}"
-        "QWidget#quickActionsPanel { "
-        "  background-color: %6; "
-        "  border: none; "
-        "  border-radius: 12px; "
-        "  padding: 16px; "
-        "} "
-        "QGroupBox { "
-        "  font-size: 18px; "
-        "  font-weight: bold; "
-        "  color: %2; "
-        "  border: none; "
-        "  border-radius: 12px; "
-        "  padding-top: 16px; "
-        "} "
-        "QLabel#sectionTitle { "
-        "  font-size: 22px; "
-        "  font-weight: 700; "
-        "  color: %2; "
-        "} "
-        "QLabel#alertLabel { "
-        "  font-size: 17px; "
-        "  font-weight: 400; "
-        "  color: %7; "
-        "  padding: 8px; "
-        "} "
-        "QPushButton#quickActionButton { "
-        "  background-color: %5; "
-        "  color: %2; "
-        "  border: none; "
-        "  border-radius: 8px; "
-        "  font-size: 16px; "
-        "  padding: 12px 16px; "
-        "}"
-        "QPushButton#quickActionButton:hover { "
-        "  background-color: %3; "
-        "}"
-        "QPushButton#quickActionButton:pressed { "
-        "  background-color: %4; "
-        "}"
-        "QPushButton#actionButton { "
-        "  background-color: %8; "
-        "  color: %9; "
-        "  border: none; "
-        "  border-radius: 8px; "
-        "  font-size: 16px; "
-        "  font-weight: 600; "
-        "  padding: 12px 24px; "
-        "}"
-        "QPushButton#actionButton:hover { "
-        "  background-color: %10; "
-        "}"
-        "QPushButton#actionButton:pressed { "
-        "  background-color: %11; "
-        "}"
-        "QWidget#bottomStatusBar { "
-        "  background-color: %6; "
-        "  border: none; "
-        "  border-radius: 8px; "
-        "} "
-        "QLabel#statusBarLabel { "
-        "  font-size: 15px; "
-        "  color: %7; "
-        "  font-weight: 400; "
-        "}")
-        .arg(buttonBg)        // %1 - theme toggle background
-        .arg(primaryText)     // %2 - primary text
-        .arg(buttonHover)     // %3 - hover state
-        .arg(buttonPressed)   // %4 - pressed state
-        .arg(cardBg)          // %5 - card background
-        .arg(secondaryBg)     // %6 - secondary background
-        .arg(secondaryText)   // %7 - secondary text
-        .arg(tm->colorString(ThemeManager::Primary))     // %8 - primary button bg
-        .arg(primaryText)     // %9 - primary button text
-        .arg(buttonHover)     // %10 - primary button hover
-        .arg(buttonPressed);  // %11 - primary button pressed
+                               "QPushButton#themeToggleBtn { "
+                               "  background-color: %1; "
+                               "  color: %2; "
+                               "  border: none; "
+                               "  border-radius: 8px; "
+                               "  font-size: 20px; "
+                               "  font-weight: bold; "
+                               "  padding: 8px 16px; "
+                               "}"
+                               "QPushButton#themeToggleBtn:hover { "
+                               "  background-color: %3; "
+                               "}"
+                               "QPushButton#themeToggleBtn:pressed { "
+                               "  background-color: %4; "
+                               "}"
+                               "QPushButton#addControllerCard { "
+                               "  background-color: %5; "
+                               "  color: %6; "
+                               "  border: none; "
+                               "  border-radius: 12px; "
+                               "  font-size: 18px; "
+                               "  font-weight: bold; "
+                               "  padding: 16px; "
+                               "}"
+                               "QPushButton#addControllerCard:hover { "
+                               "  background-color: %3; "
+                               "}"
+                               "QPushButton#addControllerCard:pressed { "
+                               "  background-color: %4; "
+                               "}"
+                               "QWidget#quickActionsPanel { "
+                               "  background-color: %6; "
+                               "  border: none; "
+                               "  border-radius: 12px; "
+                               "  padding: 16px; "
+                               "} "
+                               "QGroupBox { "
+                               "  font-size: 18px; "
+                               "  font-weight: bold; "
+                               "  color: %2; "
+                               "  border: none; "
+                               "  border-radius: 12px; "
+                               "  padding-top: 16px; "
+                               "} "
+                               "QLabel#sectionTitle { "
+                               "  font-size: 22px; "
+                               "  font-weight: 700; "
+                               "  color: %2; "
+                               "} "
+                               "QLabel#alertLabel { "
+                               "  font-size: 17px; "
+                               "  font-weight: 400; "
+                               "  color: %7; "
+                               "  padding: 8px; "
+                               "} "
+                               "QPushButton#quickActionButton { "
+                               "  background-color: %5; "
+                               "  color: %2; "
+                               "  border: none; "
+                               "  border-radius: 8px; "
+                               "  font-size: 16px; "
+                               "  padding: 12px 16px; "
+                               "}"
+                               "QPushButton#quickActionButton:hover { "
+                               "  background-color: %3; "
+                               "}"
+                               "QPushButton#quickActionButton:pressed { "
+                               "  background-color: %4; "
+                               "}"
+                               "QPushButton#actionButton { "
+                               "  background-color: %8; "
+                               "  color: %9; "
+                               "  border: none; "
+                               "  border-radius: 8px; "
+                               "  font-size: 16px; "
+                               "  font-weight: 600; "
+                               "  padding: 12px 24px; "
+                               "}"
+                               "QPushButton#actionButton:hover { "
+                               "  background-color: %10; "
+                               "}"
+                               "QPushButton#actionButton:pressed { "
+                               "  background-color: %11; "
+                               "}"
+                               "QWidget#bottomStatusBar { "
+                               "  background-color: %6; "
+                               "  border: none; "
+                               "  border-radius: 8px; "
+                               "} "
+                               "QLabel#statusBarLabel { "
+                               "  font-size: 15px; "
+                               "  color: %7; "
+                               "  font-weight: 400; "
+                               "}")
+                               .arg(buttonBg)                               // %1 - theme toggle background
+                               .arg(primaryText)                            // %2 - primary text
+                               .arg(buttonHover)                            // %3 - hover state
+                               .arg(buttonPressed)                          // %4 - pressed state
+                               .arg(cardBg)                                 // %5 - card background
+                               .arg(secondaryBg)                            // %6 - secondary background
+                               .arg(secondaryText)                          // %7 - secondary text
+                               .arg(tm->colorString(ThemeManager::Primary)) // %8 - primary button bg
+                               .arg(primaryText)                            // %9 - primary button text
+                               .arg(buttonHover)                            // %10 - primary button hover
+                               .arg(buttonPressed);                         // %11 - primary button pressed
 
     // Apply the complete stylesheet
     setStyleSheet(baseStyles + customStyles);

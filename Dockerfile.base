@@ -1,0 +1,45 @@
+# SciFi Data Screen - Development Base Image
+# This creates a reusable base image with MXE Qt5 cross-compilation environment
+
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=UTC
+
+# Install all required packages
+RUN apt-get update && apt-get install -y \
+    build-essential cmake git wget curl unzip pkg-config \
+    qtbase5-dev qttools5-dev libqt5svg5-dev libqt5network5 libqt5widgets5 \
+    libmodbus-dev mingw-w64 g++-mingw-w64-x86-64 \
+    autoconf automake autotools-dev libtool autopoint gettext \
+    gperf bison flex intltool gdk-pixbuf2.0-dev p7zip-full lzip \
+    python3-mako python3 file tree vim \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create compatibility symlinks
+RUN ln -sf /usr/bin/libtoolize /usr/bin/libtool && \
+    ln -sf /usr/bin/python3 /usr/bin/python
+
+# Build MXE for Qt5 Windows cross-compilation
+RUN git clone https://github.com/mxe/mxe.git /opt/mxe
+WORKDIR /opt/mxe
+RUN make MXE_TARGETS='x86_64-w64-mingw32.static' qtbase qtsvg qtwidgets -j$(nproc)
+
+# Build libmodbus for Windows
+WORKDIR /tmp
+RUN git clone https://github.com/stephane/libmodbus.git && \
+    cd libmodbus && \
+    export PATH="/opt/mxe/usr/bin:$PATH" && \
+    ./autogen.sh && \
+    ./configure --host=x86_64-w64-mingw32.static \
+                --prefix=/opt/libmodbus-windows \
+                --enable-static --disable-shared && \
+    make -j$(nproc) && make install && \
+    cd / && rm -rf /tmp/libmodbus
+
+# Set environment
+ENV PATH="/opt/mxe/usr/bin:$PATH"
+ENV PKG_CONFIG_PATH="/opt/mxe/usr/x86_64-w64-mingw32.static/lib/pkgconfig"
+
+WORKDIR /app
+CMD ["/bin/bash"]

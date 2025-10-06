@@ -1,0 +1,219 @@
+# Professional Docker Configuration for CI/CD
+# Multi-stage build for Qt5 Industrial HMI Application
+
+# Stage 1: Build Environment
+FROM ubuntu:22.04 AS build-env
+
+# Prevent interactive prompts during package installation
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y \
+    # Build tools
+    build-essential \
+    cmake \
+    git \
+    pkg-config \
+    # Qt5 development
+    qtbase5-dev \
+    qtdeclarative5-dev \
+    libqt5svg5-dev \
+    libqt5network5 \
+    # Testing and analysis tools
+    qttools5-dev \
+    lcov \
+    valgrind \
+    cppcheck \
+    clang-tidy \
+    # Additional dependencies
+    libmodbus-dev \
+    python3 \
+    python3-pip \
+    # Clean up
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python packages for analysis
+RUN pip3 install --no-cache-dir \
+    coverage \
+    pytest \
+    mypy
+
+# Set working directory
+WORKDIR /workspace
+
+# Stage 2: Development Environment
+FROM build-env AS dev-env
+
+# Install additional development tools
+RUN apt-get update && apt-get install -y \
+    gdb \
+    strace \
+    htop \
+    vim \
+    curl \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create non-root user for development
+RUN useradd -m -s /bin/bash developer && \
+    echo 'developer ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER developer
+WORKDIR /home/developer
+
+# Stage 3: CI/CD Environment
+FROM build-env AS ci-env
+
+# Copy project source
+COPY . /workspace/
+
+# Set up CI environment
+RUN chmod +x /workspace/scripts/*.sh
+
+# Configure Git (needed for some CI operations)
+RUN git config --global user.email "ci@example.com" && \
+    git config --global user.name "CI Builder"
+
+# Default command for CI
+CMD ["/workspace/scripts/run-tests.sh", "--coverage", "--xml-output", "--clean"]
+
+# Stage 4: Windows Cross-Compilation Environment
+FROM ubuntu:22.04 AS windows-build-env
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install MXE dependencies
+RUN apt-get update && apt-get install -y \
+    autoconf \
+    automake \
+    autopoint \
+    bash \
+    bison \
+    bzip2 \
+    cmake \
+    flex \
+    g++ \
+    g++-multilib \
+    gettext \
+    git \
+    gperf \
+    intltool \
+    libc6-dev-i386 \
+    libgdk-pixbuf2.0-dev \
+    libltdl-dev \
+    libssl-dev \
+    libtool-bin \
+    libxml-parser-perl \
+    lzip \
+    make \
+    openssl \
+    p7zip-full \
+    patch \
+    perl \
+    pkg-config \
+    python3 \
+    ruby \
+    sed \
+    unzip \
+    wget \
+    xz-utils \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+# Copy project and build Windows version
+COPY . /workspace/
+RUN chmod +x /workspace/scripts/build-windows.sh
+
+# Default command for Windows build
+CMD ["/workspace/scripts/build-windows.sh"]
+
+# Stage 5: Documentation Generation
+FROM ubuntu:22.04 AS docs-env
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install documentation tools
+RUN apt-get update && apt-get install -y \
+    doxygen \
+    graphviz \
+    plantuml \
+    python3 \
+    python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python documentation tools
+RUN pip3 install --no-cache-dir \
+    mkdocs \
+    mkdocs-material \
+    pymdown-extensions
+
+WORKDIR /workspace
+
+# Copy project
+COPY . /workspace/
+
+# Generate documentation
+RUN mkdir -p /workspace/docs/api/html && \
+    echo "# API Documentation" > /workspace/docs/api/html/index.html
+
+# Default command for documentation
+CMD ["python3", "-m", "http.server", "8000", "--directory", "/workspace/docs"]
+
+# Stage 6: Production Runtime (Minimal)
+FROM ubuntu:22.04 AS runtime
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install only runtime dependencies
+RUN apt-get update && apt-get install -y \
+    libqt5core5a \
+    libqt5gui5 \
+    libqt5widgets5 \
+    libqt5network5 \
+    libqt5svg5 \
+    libmodbus5 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create application user
+RUN useradd -m -s /bin/bash hmiuser
+
+# Copy built application
+COPY --from=ci-env /workspace/build-linux-x64/bin/ModernSciFiHMI /usr/local/bin/
+COPY --from=ci-env /workspace/resources/ /usr/local/share/modernscifihmi/
+
+# Set permissions
+RUN chmod +x /usr/local/bin/ModernSciFiHMI
+
+USER hmiuser
+WORKDIR /home/hmiuser
+
+# Default command
+CMD ["/usr/local/bin/ModernSciFiHMI"]
+
+# Stage 7: Security Scanning
+FROM ubuntu:22.04 AS security-scan
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install security scanning tools
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    curl \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install security tools
+RUN pip3 install --no-cache-dir \
+    bandit \
+    safety \
+    semgrep
+
+WORKDIR /workspace
+
+# Copy project
+COPY . /workspace/
+
+# Default command for security scanning
+CMD ["semgrep", "--config=auto", "/workspace/src/"]

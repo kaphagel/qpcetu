@@ -430,7 +430,7 @@ void TestUdpIntegration::testControllerConnectionFailures()
     QVERIFY(errorSpy.count() >= 1);
     
     // Other controller should work
-    QCOMPARE(m_mockControllers[1]->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockControllers[1]->getCurrentState(), IndustrialController::ONLINE);
 }
 
 void TestUdpIntegration::setupMultipleControllers(int count)

@@ -296,7 +296,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
- /workspaces/qpcetu/src/pages/../mainwindow.h \
+ /workspaces/qpcetu/src/pages/../ui/modernmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
@@ -311,33 +311,6 @@ CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrandom.h \
- /usr/include/c++/11/random /usr/include/c++/11/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/tr1/gamma.tcc \
- /usr/include/c++/11/tr1/special_function_util.h \
- /usr/include/c++/11/tr1/bessel_function.tcc \
- /usr/include/c++/11/tr1/beta_function.tcc \
- /usr/include/c++/11/tr1/ell_integral.tcc \
- /usr/include/c++/11/tr1/exp_integral.tcc \
- /usr/include/c++/11/tr1/hypergeometric.tcc \
- /usr/include/c++/11/tr1/legendre_function.tcc \
- /usr/include/c++/11/tr1/modified_bessel_func.tcc \
- /usr/include/c++/11/tr1/poly_hermite.tcc \
- /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /usr/include/c++/11/bits/random.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
- /usr/include/c++/11/bits/random.tcc \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
@@ -347,7 +320,16 @@ CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgroupbox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedwidget.h \
- /workspaces/qpcetu/src/pages/../udpservice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollArea \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QPropertyAnimation \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpropertyanimation.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariantanimation.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qeasingcurve.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractanimation.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsDropShadowEffect \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicseffect.h \
+ /workspaces/qpcetu/src/pages/../ui/../udpservice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QUdpSocket \
@@ -365,12 +347,12 @@ CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkinterface.h \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QHostAddress \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
- /workspaces/qpcetu/src/pages/../controllermanager.h \
+ /workspaces/qpcetu/src/pages/../ui/../controllermanager.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QAbstractListModel \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QHash \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
- /workspaces/qpcetu/src/pages/../industrialcontroller.h \
+ /workspaces/qpcetu/src/pages/../ui/../industrialcontroller.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime \
@@ -383,5 +365,17 @@ CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
+ /workspaces/qpcetu/src/pages/../ui/../navigation/navigationmanager.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStack \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /workspaces/qpcetu/src/pages/../ui/../navigation/breadcrumbwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsOpacityEffect \
+ /workspaces/qpcetu/src/pages/../navigation/navigationmanager.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QTextCursor \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h

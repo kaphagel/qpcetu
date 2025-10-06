@@ -37,9 +37,21 @@ if(WIN32)
     list(APPEND TEST_LIBRARIES ${LIBMODBUS_LIBRARY})
     include_directories(${LIBMODBUS_INCLUDE_DIR})
 else()
-    # Linux: Use bundled libmodbus from deps
-    add_subdirectory(${CMAKE_SOURCE_DIR}/deps/external/libmodbus/src ${CMAKE_BINARY_DIR}/libmodbus)
-    list(APPEND TEST_LIBRARIES libmodbus bsd)
+    # Linux: Use system libmodbus for tests (simpler and avoids conflicts)
+    find_package(PkgConfig QUIET)
+    if(PkgConfig_FOUND)
+        pkg_check_modules(LIBMODBUS QUIET libmodbus)
+        if(LIBMODBUS_FOUND)
+            list(APPEND TEST_LIBRARIES ${LIBMODBUS_LIBRARIES})
+            include_directories(${LIBMODBUS_INCLUDE_DIRS})
+        else()
+            # Fallback to manual linking
+            list(APPEND TEST_LIBRARIES modbus)
+        endif()
+    else()
+        # Fallback to manual linking
+        list(APPEND TEST_LIBRARIES modbus)
+    endif()
 endif()
 
 # Mock Objects for Testing
@@ -65,6 +77,8 @@ add_test(NAME UnitTest_IndustrialController COMMAND test_industrialcontroller)
 add_executable(test_udpservice
     unit/test_udpservice.cpp
     ${CMAKE_SOURCE_DIR}/src/udpservice.cpp
+    ${CMAKE_SOURCE_DIR}/src/controllermanager.cpp
+    ${CMAKE_SOURCE_DIR}/src/industrialcontroller.cpp
 )
 target_link_libraries(test_udpservice ${TEST_LIBRARIES} TestMocks)
 add_test(NAME UnitTest_UdpService COMMAND test_udpservice)

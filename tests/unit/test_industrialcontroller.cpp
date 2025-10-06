@@ -67,7 +67,7 @@ private:
     
     // Test helpers
     void waitForSignal(QObject *sender, const char *signal, int timeout = 5000);
-    void verifyStateTransition(IndustrialController::State from, IndustrialController::State to);
+    void verifyStateTransition(IndustrialController::ConnectionStatus from, IndustrialController::ConnectionStatus to);
 };
 
 void TestIndustrialController::initTestCase()
@@ -109,7 +109,7 @@ void TestIndustrialController::cleanup()
 
 void TestIndustrialController::testInitialState()
 {
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Disconnected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::OFFLINE);
     QCOMPARE(m_mockController->getConnectionAttempts(), 0);
     QCOMPARE(m_mockController->getDataRequestCount(), 0);
 }
@@ -120,17 +120,17 @@ void TestIndustrialController::testStateTransitions()
     
     // Test normal connection flow
     m_mockController->simulateConnecting();
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connecting);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::DISCOVERING);
     QCOMPARE(stateSpy.count(), 1);
     
     // Wait for connection to complete
     waitForSignal(m_mockController, SIGNAL(connected()));
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::ONLINE);
     QCOMPARE(stateSpy.count(), 2);
     
     // Test disconnection
     m_mockController->simulateDisconnected();
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Disconnected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::OFFLINE);
     QCOMPARE(stateSpy.count(), 3);
 }
 
@@ -138,11 +138,11 @@ void TestIndustrialController::testInvalidStateTransitions()
 {
     // Test that invalid transitions are rejected
     m_mockController->simulateConnected(); // Should not work from Disconnected
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::ONLINE);
     
     // Reset and test proper sequence
     m_mockController->resetMock();
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Disconnected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::OFFLINE);
 }
 
 void TestIndustrialController::testStateTransitionSignals()
@@ -171,13 +171,13 @@ void TestIndustrialController::testConnectionEstablishment()
     m_mockController->simulateConnecting();
     
     // Should not be connected immediately
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connecting);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::DISCOVERING);
     QCOMPARE(connectedSpy.count(), 0);
     
     // Wait for connection
     waitForSignal(m_mockController, SIGNAL(connected()));
     QCOMPARE(connectedSpy.count(), 1);
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::ONLINE);
 }
 
 void TestIndustrialController::testConnectionFailure()
@@ -191,7 +191,7 @@ void TestIndustrialController::testConnectionFailure()
     waitForSignal(m_mockController, SIGNAL(errorOccurred(QString)));
     
     QCOMPARE(errorSpy.count(), 1);
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Error);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::COMM_ERROR);
     QVERIFY(m_mockController->getConnectionAttempts() > 0);
 }
 
@@ -202,7 +202,7 @@ void TestIndustrialController::testConnectionTimeout()
     
     // Simulate timeout by checking state after reasonable time
     QTimer::singleShot(500, [this]() {
-        QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connecting);
+        QCOMPARE(m_mockController->getCurrentState(), IndustrialController::DISCOVERING);
     });
     
     QTest::qWait(600);
@@ -218,12 +218,12 @@ void TestIndustrialController::testReconnectionLogic()
     
     // Simulate connection loss and reconnection
     m_mockController->simulateConnectionLoss();
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Disconnected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::OFFLINE);
     
     m_mockController->simulateReconnection();
     waitForSignal(m_mockController, SIGNAL(connected()));
     
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::ONLINE);
     QVERIFY(m_mockController->getConnectionAttempts() > initialAttempts);
 }
 
@@ -312,17 +312,17 @@ void TestIndustrialController::testErrorRecovery()
     
     // Cause error
     m_mockController->simulateFault("Test error");
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Error);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::COMM_ERROR);
     QCOMPARE(errorSpy.count(), 1);
     
     // Test recovery
     m_mockController->resetMock();
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Disconnected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::OFFLINE);
     
     // Should be able to reconnect after reset
     m_mockController->simulateConnecting();
     waitForSignal(m_mockController, SIGNAL(connected()));
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::ONLINE);
 }
 
 void TestIndustrialController::testMultipleErrors()
@@ -335,21 +335,21 @@ void TestIndustrialController::testMultipleErrors()
     m_mockController->simulateFault("Error 3");
     
     QVERIFY(errorSpy.count() >= 1); // At least first error should be received
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Error);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::COMM_ERROR);
 }
 
 void TestIndustrialController::testErrorStatePersistence()
 {
     m_mockController->simulateFault("Persistent error");
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Error);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::COMM_ERROR);
     
     // Error state should persist until explicitly cleared
     QTest::qWait(100);
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Error);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::COMM_ERROR);
     
     // Only reset should clear error
     m_mockController->resetMock();
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Disconnected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::OFFLINE);
 }
 
 void TestIndustrialController::testErrorSignalEmission()
@@ -441,7 +441,7 @@ void TestIndustrialController::testMemoryManagement()
     
     // Memory management verification would need memory profiling tools
     // For unit test, just verify functionality continues
-    QVERIFY(m_mockController->getCurrentState() != IndustrialController::Error);
+    QVERIFY(m_mockController->getCurrentState() != IndustrialController::COMM_ERROR);
 }
 
 void TestIndustrialController::testConcurrentOperations()
@@ -460,7 +460,7 @@ void TestIndustrialController::testConcurrentOperations()
     }
     
     // Should handle concurrent operations without error
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::ONLINE);
 }
 
 void TestIndustrialController::testNullData()
@@ -486,7 +486,7 @@ void TestIndustrialController::testEmptyResponses()
     m_mockController->injectTestData(emptyResponse);
     
     // Should not cause error state in mock
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Connected);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::ONLINE);
 }
 
 void TestIndustrialController::testMalformedData()
@@ -498,7 +498,7 @@ void TestIndustrialController::testMalformedData()
     m_mockController->injectFaultCondition("MALFORMED_DATA");
     
     QVERIFY(errorSpy.count() > 0);
-    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::Error);
+    QCOMPARE(m_mockController->getCurrentState(), IndustrialController::COMM_ERROR);
 }
 
 void TestIndustrialController::testResourceExhaustion()
@@ -522,7 +522,7 @@ void TestIndustrialController::waitForSignal(QObject *sender, const char *signal
     }
 }
 
-void TestIndustrialController::verifyStateTransition(IndustrialController::State from, IndustrialController::State to)
+void TestIndustrialController::verifyStateTransition(IndustrialController::ConnectionStatus from, IndustrialController::ConnectionStatus to)
 {
     // Helper to verify valid state transitions
     // Implementation would check against state machine rules

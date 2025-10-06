@@ -24,17 +24,22 @@ if ! command -v cmake &> /dev/null; then
     exit 1
 fi
 
-# Create build directory (relative to project root)
-if [ ! -d "../build-linux-x64" ]; then
+# Get the project root directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+BUILD_DIR="$PROJECT_ROOT/build-linux-x64"
+
+# Create build directory
+if [ ! -d "$BUILD_DIR" ]; then
     echo "📁 Creating build directory..."
-    mkdir ../build-linux-x64
+    mkdir -p "$BUILD_DIR"
 fi
 
-cd ../build-linux-x64
+cd "$BUILD_DIR"
 
 # Configure with CMake
 echo "⚙️  Configuring with CMake..."
-if ! cmake ..; then
+if ! cmake "$PROJECT_ROOT"; then
     echo "❌ CMake configuration failed!"
     exit 1
 fi

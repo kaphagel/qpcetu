@@ -6,6 +6,8 @@
 #include "../pages/graphspage.h"
 #include "../pages/settingspage.h"
 #include "../pages/udpresponsepage.h"
+#include "../navigation/navigationmanager.h"
+#include "../navigation/breadcrumbwidget.h"
 
 #include <QApplication>
 #include <QDateTime>
@@ -16,7 +18,20 @@
 #include <QStyle>
 
 ModernMainWindow::ModernMainWindow(QWidget *parent)
-    : QMainWindow(parent), m_udpService(nullptr), m_dashboardPage(nullptr), m_graphsPage(nullptr), m_settingsPage(nullptr), m_udpResponsePage(nullptr), m_discoveredControllers(0)
+    : QMainWindow(parent)
+    , m_udpService(nullptr)
+    , m_navigationManager(nullptr)
+    , m_breadcrumbWidget(nullptr)
+    , m_dashboardPage(nullptr)
+    , m_graphsPage(nullptr)
+    , m_settingsPage(nullptr)
+    , m_udpResponsePage(nullptr)
+    , m_overviewBtn(nullptr)
+    , m_dashboardBtn(nullptr)
+    , m_graphsBtn(nullptr)
+    , m_settingsBtn(nullptr)
+    , m_networkBtn(nullptr)
+    , m_discoveredControllers(0)
 {
     qDebug() << "ModernMainWindow constructor start";
 
@@ -25,6 +40,7 @@ ModernMainWindow::ModernMainWindow(QWidget *parent)
     resize(1600, 1000);
 
     setupUI();
+    setupNavigation();
     setupStyling();
 
     // Connect to theme system
@@ -38,6 +54,17 @@ ModernMainWindow::ModernMainWindow(QWidget *parent)
     connect(m_udpService, &UdpService::controllersChanged,
             this, [this]()
             { onControllerCountChanged(m_udpService->discoveredControllers()); });
+
+    // Connect UDP service to UdpResponsePage for displaying responses
+    if (m_udpService && m_udpResponsePage) {
+        connect(m_udpService, &UdpService::moduleDiscovered,
+                m_udpResponsePage, &UdpResponsePage::addResponse);
+        qDebug() << "✅ Connected UDP service to UdpResponsePage for response display";
+    } else {
+        qDebug() << "❌ Failed to connect UDP service to UdpResponsePage:" 
+                 << "UDP service:" << (m_udpService ? "OK" : "NULL")
+                 << "UDP Response Page:" << (m_udpResponsePage ? "OK" : "NULL");
+    }
 
     // Start discovery
     m_udpService->startBroadcast();
@@ -78,14 +105,19 @@ void ModernMainWindow::setupUI()
 
     // Create main UI components
     createHeaderBar();
+    createBreadcrumbNavigation();
     createSystemStatusStrip();
     createMainContentArea();
     createStatusBar();
 
     // Add to main layout
     mainLayout->addWidget(m_headerBar);
+    mainLayout->addWidget(m_breadcrumbWidget);
     mainLayout->addWidget(m_statusStrip);
-    mainLayout->addWidget(m_mainContent, 1);
+    
+    // Create stacked widget here instead of in setupNavigation
+    m_stackedWidget = new QStackedWidget(this);
+    mainLayout->addWidget(m_stackedWidget, 1);
     mainLayout->addWidget(m_bottomStatusBar);
 }
 
@@ -123,8 +155,44 @@ void ModernMainWindow::createHeaderBar()
     themeToggleBtn->setToolTip("Tap to switch theme (Dark/Light/High Contrast/Apple Light/Apple Dark)");
     connect(themeToggleBtn, &QPushButton::clicked, this, &ModernMainWindow::toggleTheme);
 
+    // Create navigation buttons
+    m_overviewBtn = new QPushButton("🏠 Overview");
+    m_overviewBtn->setObjectName("navButton");
+    m_overviewBtn->setMinimumSize(140, 60); // Touch-friendly size
+    m_overviewBtn->setMaximumSize(140, 60);
+    m_overviewBtn->setToolTip("Go to System Overview");
+    
+    m_dashboardBtn = new QPushButton("📊 Dashboard");
+    m_dashboardBtn->setObjectName("navButton");
+    m_dashboardBtn->setMinimumSize(140, 60);
+    m_dashboardBtn->setMaximumSize(140, 60);
+    m_dashboardBtn->setToolTip("Go to Controller Dashboard");
+    
+    m_graphsBtn = new QPushButton("📈 Graphs");
+    m_graphsBtn->setObjectName("navButton");
+    m_graphsBtn->setMinimumSize(140, 60);
+    m_graphsBtn->setMaximumSize(140, 60);
+    m_graphsBtn->setToolTip("View Real-time Graphs");
+    
+    m_settingsBtn = new QPushButton("⚙️ Settings");
+    m_settingsBtn->setObjectName("navButton");
+    m_settingsBtn->setMinimumSize(140, 60);
+    m_settingsBtn->setMaximumSize(140, 60);
+    m_settingsBtn->setToolTip("Application Settings");
+    
+    m_networkBtn = new QPushButton("🌐 Network");
+    m_networkBtn->setObjectName("navButton");
+    m_networkBtn->setMinimumSize(140, 60);
+    m_networkBtn->setMaximumSize(140, 60);
+    m_networkBtn->setToolTip("Network Discovery");
+
     headerLayout->addWidget(m_titleLabel);
     headerLayout->addStretch();
+    headerLayout->addWidget(m_overviewBtn);
+    headerLayout->addWidget(m_dashboardBtn);
+    headerLayout->addWidget(m_graphsBtn);
+    headerLayout->addWidget(m_settingsBtn);
+    headerLayout->addWidget(m_networkBtn);
     headerLayout->addWidget(themeToggleBtn);
     headerLayout->addWidget(m_connectionStatusLabel);
     headerLayout->addWidget(m_userLabel);
@@ -288,10 +356,12 @@ void ModernMainWindow::createQuickActionsPanel()
     }
 
     // Connect action buttons
-    connect(dashboardBtn, &QPushButton::clicked, this, [this]()
-            { navigateToPage(1); });
-    connect(settingsBtn, &QPushButton::clicked, this, [this]()
-            { navigateToPage(3); });
+    connect(dashboardBtn, &QPushButton::clicked, this, [this]() {
+        navigateToPage(NavigationManager::PageId::Dashboard);
+    });
+    connect(settingsBtn, &QPushButton::clicked, this, [this]() {
+        navigateToPage(NavigationManager::PageId::Settings);
+    });
     connect(networkBtn, &QPushButton::clicked, this, &ModernMainWindow::refreshControllers);
 
     actionsLayout->addStretch();
@@ -546,7 +616,19 @@ void ModernMainWindow::onThemeChanged()
 
 void ModernMainWindow::navigateToPage(int index)
 {
-    qDebug() << "Navigation to page" << index << "requested";
+    qDebug() << "Legacy navigation to page" << index << "requested";
+    // Convert legacy index to PageId
+    NavigationManager::PageId pageId = static_cast<NavigationManager::PageId>(index);
+    navigateToPage(pageId);
+}
+
+void ModernMainWindow::navigateToPage(NavigationManager::PageId pageId, const QVariantMap &parameters)
+{
+    if (m_navigationManager) {
+        m_navigationManager->navigateToPage(pageId, parameters);
+    } else {
+        qWarning() << "Navigation manager not initialized";
+    }
 }
 
 void ModernMainWindow::onControllerDiscovered(const QString &ip, const QByteArray &data)
@@ -722,4 +804,149 @@ void ModernMainWindow::closeEvent(QCloseEvent *event)
 void ModernMainWindow::resizeEvent(QResizeEvent *event)
 {
     QMainWindow::resizeEvent(event);
+    updateControllerGrid();
+}
+
+void ModernMainWindow::setupNavigation()
+{
+    // Stacked widget is already created in setupUI
+    // Initialize navigation manager
+    m_navigationManager = new NavigationManager(m_stackedWidget, this);
+    
+    // Create pages if they don't exist
+    if (!m_dashboardPage) {
+        m_dashboardPage = new DashboardPage(this);
+    }
+    if (!m_graphsPage) {
+        m_graphsPage = new GraphsPage(this);
+    }
+    if (!m_settingsPage) {
+        m_settingsPage = new SettingsPage(this);
+    }
+    if (!m_udpResponsePage) {
+        m_udpResponsePage = new UdpResponsePage(this);
+    }
+    
+    // Register pages with navigation manager
+    m_navigationManager->registerPage(NavigationManager::PageId::Overview, 
+                                      m_mainContent, "Overview", "🏠");
+    m_navigationManager->registerPage(NavigationManager::PageId::Dashboard, 
+                                      m_dashboardPage, "Dashboard", "📊");
+    m_navigationManager->registerPage(NavigationManager::PageId::Graphs, 
+                                      m_graphsPage, "Graphs", "📈");
+    m_navigationManager->registerPage(NavigationManager::PageId::Settings, 
+                                      m_settingsPage, "Settings", "⚙️");
+    m_navigationManager->registerPage(NavigationManager::PageId::UdpResponse, 
+                                      m_udpResponsePage, "Network", "🌐");
+    
+    // Connect navigation signals
+    connect(m_navigationManager, &NavigationManager::pageChanged,
+            this, [this](NavigationManager::PageId fromPage, NavigationManager::PageId toPage) {
+                qDebug() << "Page changed from" << static_cast<int>(fromPage) 
+                         << "to" << static_cast<int>(toPage);
+            });
+    
+    connect(m_navigationManager, &NavigationManager::breadcrumbsChanged,
+            m_breadcrumbWidget, &BreadcrumbWidget::setBreadcrumbs);
+    
+    connect(m_navigationManager, &NavigationManager::navigationStateChanged,
+            this, &ModernMainWindow::onNavigationStateChanged);
+    
+    // Connect navigation buttons to navigation manager
+    if (m_overviewBtn) {
+        connect(m_overviewBtn, &QPushButton::clicked, this, [this]() {
+            m_navigationManager->navigateToPage(NavigationManager::PageId::Overview);
+        });
+    }
+    
+    if (m_dashboardBtn) {
+        connect(m_dashboardBtn, &QPushButton::clicked, this, [this]() {
+            m_navigationManager->navigateToPage(NavigationManager::PageId::Dashboard);
+        });
+    }
+    
+    if (m_graphsBtn) {
+        connect(m_graphsBtn, &QPushButton::clicked, this, [this]() {
+            m_navigationManager->navigateToPage(NavigationManager::PageId::Graphs);
+        });
+    }
+    
+    if (m_settingsBtn) {
+        connect(m_settingsBtn, &QPushButton::clicked, this, [this]() {
+            m_navigationManager->navigateToPage(NavigationManager::PageId::Settings);
+        });
+    }
+    
+    if (m_networkBtn) {
+        connect(m_networkBtn, &QPushButton::clicked, this, [this]() {
+            m_navigationManager->navigateToPage(NavigationManager::PageId::UdpResponse);
+        });
+    }
+    
+    qDebug() << "Professional navigation system initialized";
+    
+    // Now connect the NavigationManager to the breadcrumb widget
+    if (m_breadcrumbWidget && m_navigationManager) {
+        qDebug() << "Connecting NavigationManager to existing BreadcrumbWidget";
+        m_breadcrumbWidget->setNavigationManager(m_navigationManager);
+    }
+}
+
+void ModernMainWindow::createBreadcrumbNavigation()
+{
+    m_breadcrumbWidget = new BreadcrumbWidget(this);
+    m_breadcrumbWidget->setTouchOptimized(true);
+    m_breadcrumbWidget->setMaxVisibleItems(5);
+    
+    // Connect breadcrumb widget to navigation manager
+    if (m_navigationManager) {
+        qDebug() << "Setting NavigationManager on BreadcrumbWidget";
+        m_breadcrumbWidget->setNavigationManager(m_navigationManager);
+    } else {
+        qDebug() << "WARNING: NavigationManager is null when creating breadcrumb widget!";
+    }
+    
+    // Connect breadcrumb signals
+    connect(m_breadcrumbWidget, &BreadcrumbWidget::breadcrumbClicked,
+            this, &ModernMainWindow::onBreadcrumbClicked);
+    connect(m_breadcrumbWidget, &BreadcrumbWidget::homeClicked,
+            this, [this]() {
+                if (m_navigationManager) {
+                    m_navigationManager->goHome();
+                }
+            });
+    connect(m_breadcrumbWidget, &BreadcrumbWidget::backClicked,
+            this, [this]() {
+                qDebug() << "Back button clicked in ModernMainWindow!";
+                if (m_navigationManager) {
+                    qDebug() << "Calling NavigationManager::goBack()";
+                    m_navigationManager->goBack();
+                } else {
+                    qDebug() << "NavigationManager is null!";
+                }
+            });
+    
+    qDebug() << "Breadcrumb navigation created";
+}
+
+void ModernMainWindow::onBreadcrumbClicked(int index)
+{
+    qDebug() << "Breadcrumb clicked at index:" << index;
+    
+    if (m_navigationManager) {
+        // Get the navigation history to determine which page the breadcrumb represents
+        QStringList breadcrumbs = m_navigationManager->breadcrumbPath();
+        if (index >= 0 && index < breadcrumbs.size()) {
+            // Navigate back to the clicked breadcrumb level
+            m_navigationManager->navigateToHistoryIndex(index);
+        }
+    }
+}
+
+void ModernMainWindow::onNavigationStateChanged()
+{
+    // Update UI based on navigation state
+    if (m_navigationManager && m_breadcrumbWidget) {
+        m_breadcrumbWidget->setBreadcrumbs(m_navigationManager->breadcrumbPath());
+    }
 }

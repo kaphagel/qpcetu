@@ -1,0 +1,46 @@
+# EditorConfig Configuration
+# Professional code formatting standards for Qt5 Industrial HMI
+
+root = true
+
+# All files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+# C++ source files
+[*.{cpp,h,hpp,cc,cxx}]
+indent_size = 4
+max_line_length = 120
+
+# CMake files
+[{CMakeLists.txt,*.cmake}]
+indent_size = 2
+
+# YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = 80
+
+# Shell scripts
+[*.sh]
+indent_size = 4
+
+# Qt Resource files
+[*.qrc]
+indent_size = 2
+
+# Qt UI files
+[*.ui]
+indent_size = 1

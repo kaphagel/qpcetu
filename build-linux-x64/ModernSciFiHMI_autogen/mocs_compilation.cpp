@@ -6,6 +6,8 @@
 #include "UVLADIE3JM/moc_graphwidget.cpp"
 #include "UVLADIE3JM/moc_industrialcontroller.cpp"
 #include "UVLADIE3JM/moc_mainwindow.cpp"
+#include "DKENSKBYO5/moc_breadcrumbwidget.cpp"
+#include "DKENSKBYO5/moc_navigationmanager.cpp"
 #include "V5LNE4NMWJ/moc_dashboardpage.cpp"
 #include "V5LNE4NMWJ/moc_graphspage.cpp"
 #include "V5LNE4NMWJ/moc_overviewpage.cpp"

@@ -1,0 +1,246 @@
+# Professional Docker Compose Configuration
+# Complete CI/CD Pipeline for Qt5 Industrial HMI Application
+
+version: '3.8'
+
+services:
+  # Development Environment
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: dev-env
+    container_name: qt5-hmi-dev
+    volumes:
+      - .:/workspace
+      - dev_cache:/home/developer/.cache
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+    networks:
+      - hmi_network
+    command: ["bash"]
+    tty: true
+    stdin_open: true
+
+  # CI/CD Build and Test
+  ci-build:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: ci-env
+    container_name: qt5-hmi-ci-build
+    volumes:
+      - .:/workspace
+      - ci_cache:/workspace/build-linux-x64
+      - test_results:/workspace/test-results
+    environment:
+      - CMAKE_BUILD_TYPE=Release
+      - ENABLE_TESTING=ON
+    networks:
+      - hmi_network
+    command: ["./scripts/build-linux.sh"]
+
+  # Unit Testing
+  ci-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: ci-env
+    container_name: qt5-hmi-ci-test
+    depends_on:
+      - ci-build
+    volumes:
+      - .:/workspace
+      - ci_cache:/workspace/build-linux-x64
+      - test_results:/workspace/test-results
+    environment:
+      - ENABLE_COVERAGE=true
+      - OUTPUT_FORMAT=xml
+    networks:
+      - hmi_network
+    command: ["./scripts/run-tests.sh", "--coverage", "--xml-output", "--clean"]
+
+  # Quality Assurance
+  qa-analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: ci-env
+    container_name: qt5-hmi-qa
+    depends_on:
+      - ci-test
+    volumes:
+      - .:/workspace
+      - qa_reports:/workspace/qa-reports
+    environment:
+      - QA_MODE=full
+    networks:
+      - hmi_network
+    command: ["./scripts/qa-validation.sh"]
+
+  # Windows Cross-Compilation
+  windows-build:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: windows-build-env
+    container_name: qt5-hmi-windows
+    volumes:
+      - .:/workspace
+      - windows_cache:/workspace/build-windows-x64
+      - mxe_cache:/workspace/deps/toolchain/mxe-lite
+    environment:
+      - MXE_TARGETS=x86_64-w64-mingw32.static
+    networks:
+      - hmi_network
+    command: ["./scripts/build-windows.sh"]
+
+  # Documentation Generation
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: docs-env
+    container_name: qt5-hmi-docs
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/workspace
+      - docs_output:/workspace/docs/api/html
+    networks:
+      - hmi_network
+    command: ["python3", "-m", "http.server", "8000", "--directory", "/workspace/docs"]
+
+  # Security Scanning
+  security-scan:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: security-scan
+    container_name: qt5-hmi-security
+    volumes:
+      - .:/workspace
+      - security_reports:/workspace/security-reports
+    networks:
+      - hmi_network
+    command: ["semgrep", "--config=auto", "--json", "--output=/workspace/security-reports/semgrep.json", "/workspace/src/"]
+
+  # Performance Testing
+  performance-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: ci-env
+    container_name: qt5-hmi-performance
+    depends_on:
+      - ci-build
+    volumes:
+      - .:/workspace
+      - ci_cache:/workspace/build-linux-x64
+      - perf_results:/workspace/performance-results
+    environment:
+      - PERFORMANCE_MODE=benchmark
+    networks:
+      - hmi_network
+    command: ["./scripts/run-tests.sh", "--performance", "--timeout=600"]
+
+  # Production Runtime
+  runtime:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      target: runtime
+    container_name: qt5-hmi-runtime
+    depends_on:
+      - ci-build
+    ports:
+      - "3250:3250/udp"  # UDP discovery port
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+      - QT_QPA_PLATFORM=${QT_QPA_PLATFORM:-offscreen}
+    networks:
+      - hmi_network
+    command: ["/usr/local/bin/ModernSciFiHMI", "--no-gui"]
+
+  # Test Database (for integration tests)
+  test-db:
+    image: postgres:13-alpine
+    container_name: qt5-hmi-testdb
+    environment:
+      - POSTGRES_DB=hmi_test
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=test_pass
+    volumes:
+      - test_db_data:/var/lib/postgresql/data
+    networks:
+      - hmi_network
+    ports:
+      - "5432:5432"
+
+  # Redis for caching (optional)
+  cache:
+    image: redis:7-alpine
+    container_name: qt5-hmi-cache
+    volumes:
+      - cache_data:/data
+    networks:
+      - hmi_network
+    ports:
+      - "6379:6379"
+
+# Networks
+networks:
+  hmi_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# Volumes
+volumes:
+  dev_cache:
+    driver: local
+  ci_cache:
+    driver: local
+  test_results:
+    driver: local
+  qa_reports:
+    driver: local
+  windows_cache:
+    driver: local
+  mxe_cache:
+    driver: local
+  docs_output:
+    driver: local
+  security_reports:
+    driver: local
+  perf_results:
+    driver: local
+  test_db_data:
+    driver: local
+  cache_data:
+    driver: local
+
+# Additional compose configurations for different environments
+x-common-variables: &common-variables
+  PROJECT_NAME: qt5-industrial-hmi
+  BUILD_VERSION: ${BUILD_VERSION:-latest}
+  GIT_COMMIT: ${GIT_COMMIT:-unknown}
+  BUILD_DATE: ${BUILD_DATE:-unknown}
+
+# Development overrides
+x-development: &development
+  environment:
+    <<: *common-variables
+    ENVIRONMENT: development
+    DEBUG_MODE: true
+    LOG_LEVEL: debug
+
+# Production overrides  
+x-production: &production
+  environment:
+    <<: *common-variables
+    ENVIRONMENT: production
+    DEBUG_MODE: false
+    LOG_LEVEL: info
+  restart: unless-stopped

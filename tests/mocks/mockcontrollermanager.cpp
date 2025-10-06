@@ -81,7 +81,7 @@ void MockControllerManager::simulateControllerFailure(const QString &address)
 void MockControllerManager::simulateControllerRecovery(const QString &address)
 {
     for (auto *controller : m_mockControllers) {
-        if (controller->getCurrentState() == IndustrialController::Error) {
+        if (controller->getCurrentState() == IndustrialController::COMM_ERROR) {
             controller->resetMock();
             controller->simulateConnecting();
             break;
@@ -144,7 +144,7 @@ void MockControllerManager::resetMock()
     }
 }
 
-void MockControllerManager::onControllerStateChanged(IndustrialController::State state)
+void MockControllerManager::onControllerStateChanged(IndustrialController::ConnectionStatus state)
 {
     auto *controller = qobject_cast<MockIndustrialController*>(sender());
     if (!controller) {
@@ -156,13 +156,13 @@ void MockControllerManager::onControllerStateChanged(IndustrialController::State
     QString address = QString("192.168.1.%1").arg(100 + index);
     
     switch (state) {
-    case IndustrialController::Connected:
+    case IndustrialController::ONLINE:
         emit controllerConnected(address);
         break;
-    case IndustrialController::Disconnected:
+    case IndustrialController::OFFLINE:
         emit controllerDisconnected(address);
         break;
-    case IndustrialController::Error:
+    case IndustrialController::COMM_ERROR:
         // Error signal will be handled separately
         break;
     default:

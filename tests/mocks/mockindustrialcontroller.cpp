@@ -12,7 +12,7 @@ MockIndustrialController::MockIndustrialController(QObject *parent)
     , m_failureMode(false)
     , m_connectionDelay(100)
     , m_dataUpdateInterval(1000)
-    , m_currentState(IndustrialController::Disconnected)
+    , m_currentState(IndustrialController::OFFLINE)
     , m_connectionAttempts(0)
     , m_dataRequestCount(0)
 {
@@ -83,12 +83,12 @@ void MockIndustrialController::setDataUpdateInterval(int milliseconds)
 void MockIndustrialController::simulateConnecting()
 {
     m_connectionAttempts++;
-    updateState(IndustrialController::Connecting);
+    updateState(IndustrialController::DISCOVERING);
     
     if (m_failureMode) {
         // Simulate connection failure after delay
         QTimer::singleShot(m_connectionDelay, this, [this]() {
-            updateState(IndustrialController::Error);
+            updateState(IndustrialController::COMM_ERROR);
             emit errorOccurred("Mock connection failure");
         });
     } else {
@@ -100,7 +100,7 @@ void MockIndustrialController::simulateConnecting()
 
 void MockIndustrialController::simulateConnected()
 {
-    updateState(IndustrialController::Connected);
+    updateState(IndustrialController::ONLINE);
     m_dataUpdateTimer->setInterval(m_dataUpdateInterval);
     m_dataUpdateTimer->start();
     m_heartbeatTimer->start();
@@ -109,7 +109,7 @@ void MockIndustrialController::simulateConnected()
 
 void MockIndustrialController::simulateDisconnected()
 {
-    updateState(IndustrialController::Disconnected);
+    updateState(IndustrialController::OFFLINE);
     m_dataUpdateTimer->stop();
     m_heartbeatTimer->stop();
     emit disconnected();
@@ -117,7 +117,7 @@ void MockIndustrialController::simulateDisconnected()
 
 void MockIndustrialController::simulateFault(const QString &error)
 {
-    updateState(IndustrialController::Error);
+    updateState(IndustrialController::COMM_ERROR);
     m_lastError = error;
     m_dataUpdateTimer->stop();
     m_heartbeatTimer->stop();
@@ -126,15 +126,15 @@ void MockIndustrialController::simulateFault(const QString &error)
 
 void MockIndustrialController::simulateConnectionLoss()
 {
-    if (m_currentState == IndustrialController::Connected) {
+    if (m_currentState == IndustrialController::ONLINE) {
         simulateDisconnected();
     }
 }
 
 void MockIndustrialController::simulateReconnection()
 {
-    if (m_currentState == IndustrialController::Disconnected || 
-        m_currentState == IndustrialController::Error) {
+    if (m_currentState == IndustrialController::OFFLINE || 
+        m_currentState == IndustrialController::COMM_ERROR) {
         simulateConnecting();
     }
 }
@@ -142,14 +142,14 @@ void MockIndustrialController::simulateReconnection()
 void MockIndustrialController::injectTestData(const QVariantMap &data)
 {
     m_currentData = data;
-    if (m_currentState == IndustrialController::Connected) {
+    if (m_currentState == IndustrialController::ONLINE) {
         emit dataReceived(data);
     }
 }
 
 void MockIndustrialController::injectHeartbeat()
 {
-    if (m_currentState == IndustrialController::Connected) {
+    if (m_currentState == IndustrialController::ONLINE) {
         emit heartbeatReceived();
     }
 }
@@ -180,7 +180,7 @@ QStringList MockIndustrialController::getReceivedCommands() const
     return m_receivedCommands;
 }
 
-IndustrialController::State MockIndustrialController::getCurrentState() const
+IndustrialController::ConnectionStatus MockIndustrialController::getCurrentState() const
 {
     return m_currentState;
 }
@@ -197,7 +197,7 @@ void MockIndustrialController::resetMock()
     m_dataUpdateTimer->stop();
     m_heartbeatTimer->stop();
     
-    updateState(IndustrialController::Disconnected);
+    updateState(IndustrialController::OFFLINE);
     generateTestData();
 }
 
@@ -220,7 +220,7 @@ void MockIndustrialController::onHeartbeatTimer()
     emit heartbeatReceived();
 }
 
-void MockIndustrialController::updateState(IndustrialController::State newState)
+void MockIndustrialController::updateState(IndustrialController::ConnectionStatus newState)
 {
     if (m_currentState != newState) {
         m_currentState = newState;

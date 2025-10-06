@@ -1,0 +1,2 @@
+/usr/bin/ar qc libTestMocks.a CMakeFiles/TestMocks.dir/TestMocks_autogen/mocs_compilation.cpp.o CMakeFiles/TestMocks.dir/mocks/mockindustrialcontroller.cpp.o CMakeFiles/TestMocks.dir/mocks/mockudpservice.cpp.o CMakeFiles/TestMocks.dir/mocks/mockcontrollermanager.cpp.o
+/usr/bin/ranlib libTestMocks.a

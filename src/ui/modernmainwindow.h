@@ -18,6 +18,8 @@
 #include <QGraphicsDropShadowEffect>
 
 #include "../udpservice.h"
+#include "../navigation/navigationmanager.h"
+#include "../navigation/breadcrumbwidget.h"
 
 // Forward declarations for page classes
 class DashboardPage;
@@ -45,7 +47,8 @@ public:
     ~ModernMainWindow();
 
 public slots:
-    void navigateToPage(int index);
+    void navigateToPage(NavigationManager::PageId pageId, const QVariantMap &parameters = QVariantMap());
+    void navigateToPage(int index); // Legacy support
     void onControllerDiscovered(const QString &ip, const QByteArray &data);
     void onControllerCountChanged(int count);
 
@@ -56,6 +59,8 @@ private slots:
     void refreshControllers();
     void toggleTheme();
     void onThemeChanged();
+    void onBreadcrumbClicked(int index);
+    void onNavigationStateChanged();
 
 protected:
     void closeEvent(QCloseEvent *event) override;
@@ -63,8 +68,10 @@ protected:
 
 private:
     void setupUI();
+    void setupNavigation();
     void setupStyling();
     void createHeaderBar();
+    void createBreadcrumbNavigation();
     void createSystemStatusStrip();
     void createMainContentArea();
     void createControllerGrid();
@@ -76,6 +83,8 @@ private:
 
     // Core services
     UdpService *m_udpService;
+    NavigationManager *m_navigationManager;
+    BreadcrumbWidget *m_breadcrumbWidget;
 
     // Pages
     DashboardPage *m_dashboardPage;
@@ -93,6 +102,13 @@ private:
     QLabel *m_connectionStatusLabel;
     QLabel *m_userLabel;
     QLabel *m_dateTimeLabel;
+    
+    // Navigation buttons
+    QPushButton *m_overviewBtn;
+    QPushButton *m_dashboardBtn;
+    QPushButton *m_graphsBtn;
+    QPushButton *m_settingsBtn;
+    QPushButton *m_networkBtn;
 
     // System status strip
     QWidget *m_statusStrip;

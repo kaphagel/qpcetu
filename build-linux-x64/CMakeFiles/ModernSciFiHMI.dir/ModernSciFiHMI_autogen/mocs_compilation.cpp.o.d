@@ -417,6 +417,17 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkInterface \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkinterface.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/controllermanager.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/DKENSKBYO5/moc_breadcrumbwidget.cpp \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/DKENSKBYO5/../../../src/navigation/breadcrumbwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsOpacityEffect \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/DKENSKBYO5/moc_navigationmanager.cpp \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/DKENSKBYO5/../../../src/navigation/navigationmanager.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStack \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_dashboardpage.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/dashboardpage.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_graphspage.cpp \
@@ -482,8 +493,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/MKDT3456JX/moc_controllerstrategy.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/MKDT3456JX/../../../src/strategies/controllerstrategy.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/MKDT3456JX/../../../src/strategies/../industrialcontroller.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/UVLADIE3JM/moc_udpservice.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/udpservice.h \
@@ -501,6 +510,8 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollArea \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../udpservice.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/navigationmanager.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/breadcrumbwidget.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_thememanager.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \

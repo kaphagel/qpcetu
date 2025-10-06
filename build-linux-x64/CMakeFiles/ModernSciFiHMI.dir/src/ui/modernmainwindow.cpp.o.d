@@ -361,9 +361,18 @@ CMakeFiles/ModernSciFiHMI.dir/src/ui/modernmainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
- /workspaces/qpcetu/src/ui/controllercardwidget.h \
+ /workspaces/qpcetu/src/ui/../navigation/navigationmanager.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStack \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstack.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariantMap \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /workspaces/qpcetu/src/ui/../navigation/breadcrumbwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsOpacityEffect \
+ /workspaces/qpcetu/src/ui/controllercardwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \

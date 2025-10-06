@@ -87,6 +87,9 @@ set(SOURCES
     src/pages/overviewpage.cpp
     src/pages/dragdroppage_simple.cpp
     src/pages/controlleroverview.cpp
+    # Navigation System
+    src/navigation/navigationmanager.cpp
+    src/navigation/breadcrumbwidget.cpp
     # Architecture Pattern Implementations
     src/strategies/controllerstrategy.cpp
     src/commands/command.cpp
@@ -108,6 +111,9 @@ set(HEADERS
     src/pages/udpresponsepage.h
     src/pages/dragdroppage_simple.h
     src/pages/controlleroverview.h
+    # Navigation System Headers
+    src/navigation/navigationmanager.h
+    src/navigation/breadcrumbwidget.h
     # Architecture Pattern Headers
     src/strategies/controllerstrategy.h
     src/commands/command.h
@@ -150,6 +156,9 @@ set(MODERN_SOURCES
     src/ui/thememanager.cpp
     src/ui/themesettingswidget.cpp
     src/ui/applestyle.cpp
+    # Navigation System
+    src/navigation/navigationmanager.cpp
+    src/navigation/breadcrumbwidget.cpp
     # Architecture Pattern Implementations
     src/strategies/controllerstrategy.cpp
     src/commands/command.cpp

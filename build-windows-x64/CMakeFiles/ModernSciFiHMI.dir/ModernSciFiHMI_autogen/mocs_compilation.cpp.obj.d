@@ -410,6 +410,17 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkInterface \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkinterface.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/controllermanager.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/DKENSKBYO5/moc_breadcrumbwidget.cpp \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/DKENSKBYO5/../../../src/navigation/breadcrumbwidget.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QStringList \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qstringlist.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsOpacityEffect \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/DKENSKBYO5/moc_navigationmanager.cpp \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/DKENSKBYO5/../../../src/navigation/navigationmanager.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QStack \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qstack.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariantMap \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qvariant.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_dashboardpage.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/dashboardpage.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_graphspage.cpp \
@@ -679,8 +690,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qstate.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/MKDT3456JX/moc_controllerstrategy.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/MKDT3456JX/../../../src/strategies/controllerstrategy.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariantMap \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qvariant.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/MKDT3456JX/../../../src/strategies/../industrialcontroller.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/UVLADIE3JM/moc_udpservice.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/udpservice.h \
@@ -698,6 +707,8 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QScrollArea \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qscrollarea.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../udpservice.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/navigationmanager.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/breadcrumbwidget.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_thememanager.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QColor \

@@ -389,11 +389,41 @@ CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.s"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/ui/applestyle.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.s
 
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/flags.make
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj: /workspaces/qpcetu/src/navigation/navigationmanager.cpp
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj"
+	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj -c /workspaces/qpcetu/src/navigation/navigationmanager.cpp
+
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.i"
+	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/navigation/navigationmanager.cpp > CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.i
+
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.s"
+	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/navigation/navigationmanager.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.s
+
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/flags.make
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj: /workspaces/qpcetu/src/navigation/breadcrumbwidget.cpp
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj"
+	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj -c /workspaces/qpcetu/src/navigation/breadcrumbwidget.cpp
+
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.i"
+	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/navigation/breadcrumbwidget.cpp > CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.i
+
+CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.s"
+	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/navigation/breadcrumbwidget.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.s
+
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/flags.make
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj: /workspaces/qpcetu/src/strategies/controllerstrategy.cpp
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj -c /workspaces/qpcetu/src/strategies/controllerstrategy.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.i: cmake_force
@@ -408,7 +438,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj: CMakeFiles/ModernSci
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj: /workspaces/qpcetu/src/commands/command.cpp
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj -c /workspaces/qpcetu/src/commands/command.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.i: cmake_force
@@ -423,7 +453,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj: C
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj: /workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj -c /workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.i: cmake_force
@@ -438,7 +468,7 @@ CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj: CMakeFiles/ModernSciFiHMI.di
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj: qrc_overview.cpp
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.obj -c /workspaces/qpcetu/build-windows-x64/qrc_overview.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.i: cmake_force
@@ -453,7 +483,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin_Import.cpp.i: cmake_force
@@ -468,7 +498,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin_Import.cpp.i: cmake_force
@@ -483,7 +513,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin_Import.cpp.i: cmake_force
@@ -498,7 +528,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp.i: cmake_force
@@ -513,7 +543,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin_Import.cpp.i: cmake_force
@@ -528,7 +558,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin_Import.cpp.i: cmake_force
@@ -543,7 +573,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin_Import.cpp.i: cmake_force
@@ -558,7 +588,7 @@ CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.sta
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/includes_CXX.rsp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj"
 	/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/bin/x86_64-w64-mingw32.static-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj -MF CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj.d -o CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.obj -c /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin_Import.cpp.i: cmake_force
@@ -591,6 +621,8 @@ ModernSciFiHMI_OBJECTS = \
 "CMakeFiles/ModernSciFiHMI.dir/src/ui/thememanager.cpp.obj" \
 "CMakeFiles/ModernSciFiHMI.dir/src/ui/themesettingswidget.cpp.obj" \
 "CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.obj" \
+"CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj" \
+"CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj" \
 "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj" \
 "CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj" \
 "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj" \
@@ -627,6 +659,8 @@ bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/ui/controllercardwidge
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/ui/thememanager.cpp.obj
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/ui/themesettingswidget.cpp.obj
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.obj
+bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj
+bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.obj
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.obj
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj
@@ -741,7 +775,7 @@ bin/ModernSciFiHMI.exe: /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w6
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/linkLibs.rsp
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/objects1.rsp
 bin/ModernSciFiHMI.exe: CMakeFiles/ModernSciFiHMI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking CXX executable bin/ModernSciFiHMI.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/qpcetu/build-windows-x64/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable bin/ModernSciFiHMI.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ModernSciFiHMI.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -55,14 +55,14 @@ public:
     int getConnectionAttempts() const;
     int getDataRequestCount() const;
     QStringList getReceivedCommands() const;
-    IndustrialController::State getCurrentState() const;
+    IndustrialController::ConnectionStatus getCurrentState() const;
     
     // Reset for clean test state
     void resetMock();
 
 signals:
     // Mirror real controller signals for testing
-    void stateChanged(IndustrialController::State newState);
+    void stateChanged(IndustrialController::ConnectionStatus newState);
     void dataReceived(const QVariantMap &data);
     void errorOccurred(const QString &error);
     void connected();
@@ -88,7 +88,7 @@ private:
     int m_dataUpdateInterval;
     
     // Mock State
-    IndustrialController::State m_currentState;
+    IndustrialController::ConnectionStatus m_currentState;
     QVariantMap m_currentData;
     QString m_lastError;
     
@@ -103,7 +103,7 @@ private:
     QTimer *m_heartbeatTimer;
     
     // Internal helpers
-    void updateState(IndustrialController::State newState);
+    void updateState(IndustrialController::ConnectionStatus newState);
     void generateTestData();
 };
 

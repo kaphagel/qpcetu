@@ -51,7 +51,7 @@ signals:
     void discoveryFinished();
 
 private slots:
-    void onControllerStateChanged(IndustrialController::State state);
+    void onControllerStateChanged(IndustrialController::ConnectionStatus state);
     void onControllerError(const QString &error);
 
 private:

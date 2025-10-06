@@ -18,6 +18,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/qpcetu/src/industrialcontroller.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/industrialcontroller.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/industrialcontroller.cpp.o.d"
   "/workspaces/qpcetu/src/main_modern.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/main_modern.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/main_modern.cpp.o.d"
   "/workspaces/qpcetu/src/mainwindow.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/mainwindow.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/mainwindow.cpp.o.d"
+  "/workspaces/qpcetu/src/navigation/breadcrumbwidget.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.o.d"
+  "/workspaces/qpcetu/src/navigation/navigationmanager.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.o.d"
   "/workspaces/qpcetu/src/pages/dashboardpage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/dashboardpage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/dashboardpage.cpp.o.d"
   "/workspaces/qpcetu/src/pages/graphspage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/graphspage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/graphspage.cpp.o.d"
   "/workspaces/qpcetu/src/pages/overviewpage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/overviewpage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/overviewpage.cpp.o.d"

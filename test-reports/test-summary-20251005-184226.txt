@@ -1,0 +1,19 @@
+Industrial HMI Test Suite Report
+Generated: Sun Oct  5 06:42:26 PM UTC 2025
+Build Directory: /workspaces/qpcetu/build-tests
+
+Test Results:
+=============
+UpdateCTestConfiguration  from :/workspaces/qpcetu/build-tests/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/workspaces/qpcetu/build-tests/DartConfiguration.tcl
+Test project /workspaces/qpcetu/build-tests
+Constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+No tests were found!!!
+equirements
+Checking test dependency graph...
+Checking test dependency graph end
+No tests were found!!!

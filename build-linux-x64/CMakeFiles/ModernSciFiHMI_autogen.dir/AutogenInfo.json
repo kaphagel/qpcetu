@@ -123,6 +123,18 @@
 			null
 		],
 		[
+			"/workspaces/qpcetu/src/navigation/breadcrumbwidget.h",
+			"Mu",
+			"DKENSKBYO5/moc_breadcrumbwidget.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/src/navigation/navigationmanager.h",
+			"Mu",
+			"DKENSKBYO5/moc_navigationmanager.cpp",
+			null
+		],
+		[
 			"/workspaces/qpcetu/src/pages/dashboardpage.h",
 			"Mu",
 			"V5LNE4NMWJ/moc_dashboardpage.cpp",
@@ -276,6 +288,8 @@
 		[ "/workspaces/qpcetu/src/industrialcontroller.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/main_modern.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/mainwindow.cpp", "Mu", null ],
+		[ "/workspaces/qpcetu/src/navigation/breadcrumbwidget.cpp", "Mu", null ],
+		[ "/workspaces/qpcetu/src/navigation/navigationmanager.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/dashboardpage.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/graphspage.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/overviewpage.cpp", "Mu", null ],

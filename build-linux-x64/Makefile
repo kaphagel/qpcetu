@@ -482,6 +482,54 @@ src/mockudpservice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mockudpservice.dir/build.make CMakeFiles/mockudpservice.dir/src/mockudpservice.cpp.s
 .PHONY : src/mockudpservice.cpp.s
 
+src/navigation/breadcrumbwidget.o: src/navigation/breadcrumbwidget.cpp.o
+.PHONY : src/navigation/breadcrumbwidget.o
+
+# target to build an object file
+src/navigation/breadcrumbwidget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.o
+.PHONY : src/navigation/breadcrumbwidget.cpp.o
+
+src/navigation/breadcrumbwidget.i: src/navigation/breadcrumbwidget.cpp.i
+.PHONY : src/navigation/breadcrumbwidget.i
+
+# target to preprocess a source file
+src/navigation/breadcrumbwidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.i
+.PHONY : src/navigation/breadcrumbwidget.cpp.i
+
+src/navigation/breadcrumbwidget.s: src/navigation/breadcrumbwidget.cpp.s
+.PHONY : src/navigation/breadcrumbwidget.s
+
+# target to generate assembly for a file
+src/navigation/breadcrumbwidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/navigation/breadcrumbwidget.cpp.s
+.PHONY : src/navigation/breadcrumbwidget.cpp.s
+
+src/navigation/navigationmanager.o: src/navigation/navigationmanager.cpp.o
+.PHONY : src/navigation/navigationmanager.o
+
+# target to build an object file
+src/navigation/navigationmanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.o
+.PHONY : src/navigation/navigationmanager.cpp.o
+
+src/navigation/navigationmanager.i: src/navigation/navigationmanager.cpp.i
+.PHONY : src/navigation/navigationmanager.i
+
+# target to preprocess a source file
+src/navigation/navigationmanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.i
+.PHONY : src/navigation/navigationmanager.cpp.i
+
+src/navigation/navigationmanager.s: src/navigation/navigationmanager.cpp.s
+.PHONY : src/navigation/navigationmanager.s
+
+# target to generate assembly for a file
+src/navigation/navigationmanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.s
+.PHONY : src/navigation/navigationmanager.cpp.s
+
 src/pages/dashboardpage.o: src/pages/dashboardpage.cpp.o
 .PHONY : src/pages/dashboardpage.o
 
@@ -868,6 +916,12 @@ help:
 	@echo "... src/mockudpservice.o"
 	@echo "... src/mockudpservice.i"
 	@echo "... src/mockudpservice.s"
+	@echo "... src/navigation/breadcrumbwidget.o"
+	@echo "... src/navigation/breadcrumbwidget.i"
+	@echo "... src/navigation/breadcrumbwidget.s"
+	@echo "... src/navigation/navigationmanager.o"
+	@echo "... src/navigation/navigationmanager.i"
+	@echo "... src/navigation/navigationmanager.s"
 	@echo "... src/pages/dashboardpage.o"
 	@echo "... src/pages/dashboardpage.i"
 	@echo "... src/pages/dashboardpage.s"

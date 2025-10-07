@@ -374,6 +374,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qvariant.h \
  /workspaces/qpcetu/src/pages/../ui/../navigation/breadcrumbwidget.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsOpacityEffect \
+ /workspaces/qpcetu/src/pages/../ui/hamburgermenu.h \
  /workspaces/qpcetu/src/pages/../navigation/navigationmanager.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QIcon \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qicon.h \

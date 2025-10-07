@@ -268,6 +268,15 @@ CMakeFiles/ModernSciFiHMI.dir/src/main_modern.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcontiguouscache.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qsharedpointer.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qsharedpointer_impl.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QLibraryInfo \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qlibraryinfo.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qdatetime.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qversionnumber.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QDir \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qdir.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qfileinfo.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qfile.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qfiledevice.h \
  /workspaces/qpcetu/src/ui/modernmainwindow.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QMainWindow \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qmainwindow.h \
@@ -367,7 +376,6 @@ CMakeFiles/ModernSciFiHMI.dir/src/main_modern.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qjsonobject.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qjsonvalue.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcborvalue.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qdatetime.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcborcommon.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/quuid.h \
@@ -381,4 +389,5 @@ CMakeFiles/ModernSciFiHMI.dir/src/main_modern.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariantMap \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qvariant.h \
  /workspaces/qpcetu/src/ui/../navigation/breadcrumbwidget.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsOpacityEffect
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsOpacityEffect \
+ /workspaces/qpcetu/src/ui/hamburgermenu.h

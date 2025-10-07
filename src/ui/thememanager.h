@@ -20,11 +20,8 @@ class ThemeManager : public QObject
 public:
     enum Theme
     {
-        Dark,
         Light,
-        HighContrast,
-        AppleLight,
-        AppleDark
+        Dark
     };
     Q_ENUM(Theme)
 

@@ -14,7 +14,7 @@ ThemeManager *ThemeManager::instance()
 }
 
 ThemeManager::ThemeManager(QObject *parent)
-    : QObject(parent), m_currentTheme(Dark), m_settings(new QSettings("QuantumTactical", "SciFiHMI", this))
+    : QObject(parent), m_currentTheme(Light), m_settings(new QSettings("QuantumTactical", "SciFiHMI", this))
 {
     initializeThemes();
     loadTheme(); // Load saved theme preference
@@ -22,170 +22,71 @@ ThemeManager::ThemeManager(QObject *parent)
 
 void ThemeManager::initializeThemes()
 {
-    // Dark Theme (Current sci-fi aesthetic) - Optimized for low-light industrial environments
-    QMap<ColorRole, QColor> darkTheme;
-    darkTheme[MainBackground] = QColor("#0F1419");
-    darkTheme[SecondaryBackground] = QColor("#1E2328");
-    darkTheme[HeaderBackground] = QColor("#1E2328");
-    darkTheme[CardBackground] = QColor("#252A2E");
-    darkTheme[StatusStripBackground] = QColor("#0F1419");
-
-    darkTheme[PrimaryText] = QColor("#FFFFFF");
-    darkTheme[SecondaryText] = QColor("#B0BEC5");
-    darkTheme[AccentText] = QColor("#00E5FF");
-    darkTheme[StatusText] = QColor("#78909C");
-
-    darkTheme[Primary] = QColor("#00E5FF");
-    darkTheme[Success] = QColor("#4CAF50");
-    darkTheme[Warning] = QColor("#FF9800");
-    darkTheme[Error] = QColor("#F44336");
-
-    darkTheme[ButtonBackground] = QColor("#2D3748");
-    darkTheme[ButtonHover] = QColor("#4A5568");
-    darkTheme[ButtonPressed] = QColor("#2B6CB0");
-    darkTheme[BorderColor] = QColor("#4A5568");
-    darkTheme[FocusColor] = QColor("#00E5FF");
-
-    darkTheme[ControllerActive] = QColor("#4CAF50");
-    darkTheme[ControllerInactive] = QColor("#616161");
-    darkTheme[ControllerFault] = QColor("#F44336");
-    darkTheme[DataGood] = QColor("#4CAF50");
-    darkTheme[DataStale] = QColor("#FF9800");
-    darkTheme[DataError] = QColor("#F44336");
-
-    m_themes[Dark] = darkTheme;
-
-    // Light Theme - Optimized for bright industrial environments
+    // Light Theme - Clean iPhone-like design for industrial HMI
     QMap<ColorRole, QColor> lightTheme;
-    lightTheme[MainBackground] = QColor("#FAFAFA");
-    lightTheme[SecondaryBackground] = QColor("#FFFFFF");
-    lightTheme[HeaderBackground] = QColor("#E3F2FD");
-    lightTheme[CardBackground] = QColor("#FFFFFF");
-    lightTheme[StatusStripBackground] = QColor("#F5F5F5");
+    lightTheme[MainBackground] = QColor("#F2F2F7");      // systemGroupedBackground
+    lightTheme[SecondaryBackground] = QColor("#FFFFFF"); // systemBackground
+    lightTheme[HeaderBackground] = QColor("#F2F2F7");    // same as main for seamless look
+    lightTheme[CardBackground] = QColor("#FFFFFF");      // systemBackground
+    lightTheme[StatusStripBackground] = QColor("#F2F2F7");
 
-    lightTheme[PrimaryText] = QColor("#212121");
-    lightTheme[SecondaryText] = QColor("#757575");
-    lightTheme[AccentText] = QColor("#1976D2");
-    lightTheme[StatusText] = QColor("#666666");
+    lightTheme[PrimaryText] = QColor("#000000");   // label
+    lightTheme[SecondaryText] = QColor("#3C3C43"); // secondaryLabel
+    lightTheme[AccentText] = QColor("#007AFF");    // systemBlue
+    lightTheme[StatusText] = QColor("#8E8E93");    // tertiaryLabel
 
-    lightTheme[Primary] = QColor("#1976D2");
-    lightTheme[Success] = QColor("#388E3C");
-    lightTheme[Warning] = QColor("#F57C00");
-    lightTheme[Error] = QColor("#D32F2F");
+    lightTheme[Primary] = QColor("#007AFF"); // systemBlue
+    lightTheme[Success] = QColor("#34C759"); // systemGreen
+    lightTheme[Warning] = QColor("#FF9500"); // systemOrange
+    lightTheme[Error] = QColor("#FF3B30");   // systemRed
 
-    lightTheme[ButtonBackground] = QColor("#E0E0E0");
-    lightTheme[ButtonHover] = QColor("#BDBDBD");
-    lightTheme[ButtonPressed] = QColor("#1976D2");
-    lightTheme[BorderColor] = QColor("#BDBDBD");
-    lightTheme[FocusColor] = QColor("#1976D2");
+    lightTheme[ButtonBackground] = QColor("#007AFF"); // systemBlue
+    lightTheme[ButtonHover] = QColor("#0056CC");      // darker systemBlue
+    lightTheme[ButtonPressed] = QColor("#003D99");    // pressed systemBlue
+    lightTheme[BorderColor] = QColor("#C6C6C8");      // separator (not used in borderless design)
+    lightTheme[FocusColor] = QColor("#007AFF");       // systemBlue
 
-    lightTheme[ControllerActive] = QColor("#388E3C");
-    lightTheme[ControllerInactive] = QColor("#9E9E9E");
-    lightTheme[ControllerFault] = QColor("#D32F2F");
-    lightTheme[DataGood] = QColor("#388E3C");
-    lightTheme[DataStale] = QColor("#F57C00");
-    lightTheme[DataError] = QColor("#D32F2F");
+    lightTheme[ControllerActive] = QColor("#34C759");   // systemGreen
+    lightTheme[ControllerInactive] = QColor("#8E8E93"); // systemGray
+    lightTheme[ControllerFault] = QColor("#FF3B30");    // systemRed
+    lightTheme[DataGood] = QColor("#34C759");
+    lightTheme[DataStale] = QColor("#FF9500");
+    lightTheme[DataError] = QColor("#FF3B30");
 
     m_themes[Light] = lightTheme;
 
-    // High Contrast Theme - For accessibility and harsh lighting conditions
-    QMap<ColorRole, QColor> highContrastTheme;
-    highContrastTheme[MainBackground] = QColor("#000000");
-    highContrastTheme[SecondaryBackground] = QColor("#1A1A1A");
-    highContrastTheme[HeaderBackground] = QColor("#000000");
-    highContrastTheme[CardBackground] = QColor("#1A1A1A");
-    highContrastTheme[StatusStripBackground] = QColor("#000000");
+    // Dark Theme - Clean iPhone-like dark design for industrial HMI
+    QMap<ColorRole, QColor> darkTheme;
+    darkTheme[MainBackground] = QColor("#000000");      // systemBackground
+    darkTheme[SecondaryBackground] = QColor("#1C1C1E"); // systemGroupedBackground
+    darkTheme[HeaderBackground] = QColor("#000000");    // same as main for seamless look
+    darkTheme[CardBackground] = QColor("#2C2C2E");      // secondarySystemGroupedBackground
+    darkTheme[StatusStripBackground] = QColor("#000000");
 
-    highContrastTheme[PrimaryText] = QColor("#FFFFFF");
-    highContrastTheme[SecondaryText] = QColor("#CCCCCC");
-    highContrastTheme[AccentText] = QColor("#00FFFF");
-    highContrastTheme[StatusText] = QColor("#AAAAAA");
+    darkTheme[PrimaryText] = QColor("#FFFFFF");   // label
+    darkTheme[SecondaryText] = QColor("#EBEBF5"); // secondaryLabel
+    darkTheme[AccentText] = QColor("#0A84FF");    // systemBlue (dark)
+    darkTheme[StatusText] = QColor("#8E8E93");    // tertiaryLabel
 
-    highContrastTheme[Primary] = QColor("#00FFFF");
-    highContrastTheme[Success] = QColor("#00FF00");
-    highContrastTheme[Warning] = QColor("#FFFF00");
-    highContrastTheme[Error] = QColor("#FF0000");
+    darkTheme[Primary] = QColor("#0A84FF"); // systemBlue (dark)
+    darkTheme[Success] = QColor("#30D158"); // systemGreen (dark)
+    darkTheme[Warning] = QColor("#FF9F0A"); // systemOrange (dark)
+    darkTheme[Error] = QColor("#FF453A");   // systemRed (dark)
 
-    highContrastTheme[ButtonBackground] = QColor("#333333");
-    highContrastTheme[ButtonHover] = QColor("#666666");
-    highContrastTheme[ButtonPressed] = QColor("#00FFFF");
-    highContrastTheme[BorderColor] = QColor("#FFFFFF");
-    highContrastTheme[FocusColor] = QColor("#00FFFF");
+    darkTheme[ButtonBackground] = QColor("#0A84FF"); // systemBlue (dark)
+    darkTheme[ButtonHover] = QColor("#409CFF");      // lighter systemBlue
+    darkTheme[ButtonPressed] = QColor("#64B5F6");    // pressed systemBlue
+    darkTheme[BorderColor] = QColor("#38383A");      // separator (not used in borderless design)
+    darkTheme[FocusColor] = QColor("#0A84FF");       // systemBlue (dark)
 
-    highContrastTheme[ControllerActive] = QColor("#00FF00");
-    highContrastTheme[ControllerInactive] = QColor("#808080");
-    highContrastTheme[ControllerFault] = QColor("#FF0000");
-    highContrastTheme[DataGood] = QColor("#00FF00");
-    highContrastTheme[DataStale] = QColor("#FFFF00");
-    highContrastTheme[DataError] = QColor("#FF0000");
+    darkTheme[ControllerActive] = QColor("#30D158");   // systemGreen (dark)
+    darkTheme[ControllerInactive] = QColor("#8E8E93"); // systemGray
+    darkTheme[ControllerFault] = QColor("#FF453A");    // systemRed (dark)
+    darkTheme[DataGood] = QColor("#30D158");
+    darkTheme[DataStale] = QColor("#FF9F0A");
+    darkTheme[DataError] = QColor("#FF453A");
 
-    m_themes[HighContrast] = highContrastTheme;
-
-    // Apple Light Theme - iOS/iPadOS inspired design
-    QMap<ColorRole, QColor> appleLightTheme;
-    appleLightTheme[MainBackground] = QColor("#F2F2F7");      // systemGroupedBackground
-    appleLightTheme[SecondaryBackground] = QColor("#FFFFFF"); // systemBackground
-    appleLightTheme[HeaderBackground] = QColor("#F9F9F9");    // systemBackground with slight tint
-    appleLightTheme[CardBackground] = QColor("#FFFFFF");      // systemBackground
-    appleLightTheme[StatusStripBackground] = QColor("#F2F2F7");
-
-    appleLightTheme[PrimaryText] = QColor("#000000");   // label
-    appleLightTheme[SecondaryText] = QColor("#3C3C43"); // secondaryLabel
-    appleLightTheme[AccentText] = QColor("#007AFF");    // systemBlue
-    appleLightTheme[StatusText] = QColor("#8E8E93");    // tertiaryLabel
-
-    appleLightTheme[Primary] = QColor("#007AFF"); // systemBlue
-    appleLightTheme[Success] = QColor("#34C759"); // systemGreen
-    appleLightTheme[Warning] = QColor("#FF9500"); // systemOrange
-    appleLightTheme[Error] = QColor("#FF3B30");   // systemRed
-
-    appleLightTheme[ButtonBackground] = QColor("#007AFF"); // systemBlue
-    appleLightTheme[ButtonHover] = QColor("#0056CC");      // darker systemBlue
-    appleLightTheme[ButtonPressed] = QColor("#003D99");    // pressed systemBlue
-    appleLightTheme[BorderColor] = QColor("#C6C6C8");      // separator
-    appleLightTheme[FocusColor] = QColor("#007AFF");       // systemBlue
-
-    appleLightTheme[ControllerActive] = QColor("#34C759");   // systemGreen
-    appleLightTheme[ControllerInactive] = QColor("#8E8E93"); // systemGray
-    appleLightTheme[ControllerFault] = QColor("#FF3B30");    // systemRed
-    appleLightTheme[DataGood] = QColor("#34C759");
-    appleLightTheme[DataStale] = QColor("#FF9500");
-    appleLightTheme[DataError] = QColor("#FF3B30");
-
-    m_themes[AppleLight] = appleLightTheme;
-
-    // Apple Dark Theme - iOS/iPadOS Dark Mode inspired
-    QMap<ColorRole, QColor> appleDarkTheme;
-    appleDarkTheme[MainBackground] = QColor("#000000");      // systemBackground
-    appleDarkTheme[SecondaryBackground] = QColor("#1C1C1E"); // systemGroupedBackground
-    appleDarkTheme[HeaderBackground] = QColor("#1C1C1E");    // systemGroupedBackground
-    appleDarkTheme[CardBackground] = QColor("#2C2C2E");      // secondarySystemGroupedBackground
-    appleDarkTheme[StatusStripBackground] = QColor("#000000");
-
-    appleDarkTheme[PrimaryText] = QColor("#FFFFFF");   // label
-    appleDarkTheme[SecondaryText] = QColor("#EBEBF5"); // secondaryLabel
-    appleDarkTheme[AccentText] = QColor("#0A84FF");    // systemBlue (dark)
-    appleDarkTheme[StatusText] = QColor("#8E8E93");    // tertiaryLabel
-
-    appleDarkTheme[Primary] = QColor("#0A84FF"); // systemBlue (dark)
-    appleDarkTheme[Success] = QColor("#30D158"); // systemGreen (dark)
-    appleDarkTheme[Warning] = QColor("#FF9F0A"); // systemOrange (dark)
-    appleDarkTheme[Error] = QColor("#FF453A");   // systemRed (dark)
-
-    appleDarkTheme[ButtonBackground] = QColor("#0A84FF"); // systemBlue (dark)
-    appleDarkTheme[ButtonHover] = QColor("#409CFF");      // lighter systemBlue
-    appleDarkTheme[ButtonPressed] = QColor("#64B5F6");    // pressed systemBlue
-    appleDarkTheme[BorderColor] = QColor("#38383A");      // separator (dark)
-    appleDarkTheme[FocusColor] = QColor("#0A84FF");       // systemBlue (dark)
-
-    appleDarkTheme[ControllerActive] = QColor("#30D158");   // systemGreen (dark)
-    appleDarkTheme[ControllerInactive] = QColor("#8E8E93"); // systemGray
-    appleDarkTheme[ControllerFault] = QColor("#FF453A");    // systemRed (dark)
-    appleDarkTheme[DataGood] = QColor("#30D158");
-    appleDarkTheme[DataStale] = QColor("#FF9F0A");
-    appleDarkTheme[DataError] = QColor("#FF453A");
-
-    m_themes[AppleDark] = appleDarkTheme;
+    m_themes[Dark] = darkTheme;
 
     // Load initial theme
     loadThemeColors(m_currentTheme);
@@ -207,18 +108,12 @@ QString ThemeManager::themeName() const
 {
     switch (m_currentTheme)
     {
-    case Dark:
-        return "Dark";
     case Light:
         return "Light";
-    case HighContrast:
-        return "High Contrast";
-    case AppleLight:
-        return "Apple Light";
-    case AppleDark:
-        return "Apple Dark";
+    case Dark:
+        return "Dark";
     default:
-        return "Unknown";
+        return "Light"; // Default to light theme
     }
 }
 
@@ -304,7 +199,7 @@ QString ThemeManager::generateButtonStyle(const QString &objectName) const
     return QString(
                "%1 { "
                "  background-color: %2; "
-               "  border: 2px solid %3; "
+               "  border: none; "
                "  border-radius: 12px; "
                "  color: %4; "
                "  font-size: 16px; "
@@ -314,21 +209,16 @@ QString ThemeManager::generateButtonStyle(const QString &objectName) const
                "}"
                "%1:hover { "
                "  background-color: %5; "
-               "  border-color: %6; "
                "}"
                "%1:pressed { "
                "  background-color: %7; "
-               "  border-color: %8; "
                "}")
         .arg(
             selector,
             colorString(ButtonBackground), // %2
-            colorString(BorderColor),      // %3
             colorString(PrimaryText),      // %4
             colorString(ButtonHover),      // %5
-            colorString(Primary),          // %6
-            colorString(ButtonPressed),    // %7
-            colorString(FocusColor)        // %8
+            colorString(ButtonPressed)     // %7
         );
 }
 

@@ -3,7 +3,10 @@ project(SciFiDataScreen VERSION 1.0.0 LANGUAGES CXX)
 
 # C++17 is optimal for Qt5.15 - provides best template support
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXelse()
+    # target_link_libraries(SciFiDataScreen Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg libmodbus bsd)
+    target_link_libraries(ModernSciFiHMI Qt5::Core Qt5::Widgets Qt5::QuickWidgets Qt5::Network Qt5::Svg libmodbus bsd Qt5VirtualKeyboard)
+endif()ANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)  # Disable GNU extensions for portability
 
 # Professional Testing Framework Integration
@@ -87,9 +90,12 @@ set(SOURCES
     src/pages/overviewpage.cpp
     src/pages/dragdroppage_simple.cpp
     src/pages/controlleroverview.cpp
+    src/pages/industrialdatapage.cpp
     # Navigation System
     src/navigation/navigationmanager.cpp
     src/navigation/breadcrumbwidget.cpp
+    # Services
+    src/services/controllerxmlservice.cpp
     # Architecture Pattern Implementations
     src/strategies/controllerstrategy.cpp
     src/commands/command.cpp
@@ -111,9 +117,12 @@ set(HEADERS
     src/pages/udpresponsepage.h
     src/pages/dragdroppage_simple.h
     src/pages/controlleroverview.h
+    src/pages/industrialdatapage.h
     # Navigation System Headers
     src/navigation/navigationmanager.h
     src/navigation/breadcrumbwidget.h
+    # Services Headers
+    src/services/controllerxmlservice.h
     # Architecture Pattern Headers
     src/strategies/controllerstrategy.h
     src/commands/command.h
@@ -145,6 +154,7 @@ set(MODERN_SOURCES
     src/pages/udpresponsepage.cpp
     src/pages/overviewpage.cpp
     src/pages/simpledragdroppage.cpp
+    src/pages/industrialdatapage.cpp
     # Original widget dependencies
     src/mainwindow.cpp
     src/datawidget.cpp
@@ -156,9 +166,13 @@ set(MODERN_SOURCES
     src/ui/thememanager.cpp
     src/ui/themesettingswidget.cpp
     src/ui/applestyle.cpp
+    src/ui/hamburgermenu.cpp
+    src/ui/virtualkeyboard.cpp
     # Navigation System
     src/navigation/navigationmanager.cpp
     src/navigation/breadcrumbwidget.cpp
+    # Services
+    src/services/controllerxmlservice.cpp
     # Architecture Pattern Implementations
     src/strategies/controllerstrategy.cpp
     src/commands/command.cpp

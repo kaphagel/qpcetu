@@ -43,32 +43,23 @@ void ThemeSettingsWidget::setupUI()
 
     m_themeGroup = new QButtonGroup(this);
 
-    // Dark Theme Button
-    m_darkThemeBtn = new QPushButton();
-    m_darkThemeBtn->setCheckable(true);
-    m_darkThemeBtn->setObjectName("themeButton");
-    m_darkThemeBtn->setText("🌙 Dark Theme\nOptimized for low-light industrial environments");
-    m_darkThemeBtn->setMinimumHeight(80);
-    m_themeGroup->addButton(m_darkThemeBtn, static_cast<int>(ThemeManager::Dark));
-    groupLayout->addWidget(m_darkThemeBtn);
-
-    // Light Theme Button
+    // Light Theme Button (default)
     m_lightThemeBtn = new QPushButton();
     m_lightThemeBtn->setCheckable(true);
     m_lightThemeBtn->setObjectName("themeButton");
-    m_lightThemeBtn->setText("☀️ Light Theme\nOptimized for bright industrial environments");
+    m_lightThemeBtn->setText("☀️ Light Theme\nClean iPhone-like design for bright environments");
     m_lightThemeBtn->setMinimumHeight(80);
     m_themeGroup->addButton(m_lightThemeBtn, static_cast<int>(ThemeManager::Light));
     groupLayout->addWidget(m_lightThemeBtn);
 
-    // High Contrast Theme Button
-    m_highContrastBtn = new QPushButton();
-    m_highContrastBtn->setCheckable(true);
-    m_highContrastBtn->setObjectName("themeButton");
-    m_highContrastBtn->setText("🔆 High Contrast\nMaximum visibility and accessibility");
-    m_highContrastBtn->setMinimumHeight(80);
-    m_themeGroup->addButton(m_highContrastBtn, static_cast<int>(ThemeManager::HighContrast));
-    groupLayout->addWidget(m_highContrastBtn);
+    // Dark Theme Button
+    m_darkThemeBtn = new QPushButton();
+    m_darkThemeBtn->setCheckable(true);
+    m_darkThemeBtn->setObjectName("themeButton");
+    m_darkThemeBtn->setText("🌙 Dark Theme\nClean iPhone-like design for low-light environments");
+    m_darkThemeBtn->setMinimumHeight(80);
+    m_themeGroup->addButton(m_darkThemeBtn, static_cast<int>(ThemeManager::Dark));
+    groupLayout->addWidget(m_darkThemeBtn);
 
     m_mainLayout->addWidget(themeGroup);
 
@@ -191,7 +182,6 @@ void ThemeSettingsWidget::updateThemeButtons()
 {
     ThemeManager::Theme currentTheme = ThemeManager::instance()->currentTheme();
 
-    m_darkThemeBtn->setChecked(currentTheme == ThemeManager::Dark);
     m_lightThemeBtn->setChecked(currentTheme == ThemeManager::Light);
-    m_highContrastBtn->setChecked(currentTheme == ThemeManager::HighContrast);
+    m_darkThemeBtn->setChecked(currentTheme == ThemeManager::Dark);
 }

@@ -668,6 +668,64 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/qos.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus-tcp.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../graphwidget.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_industrialdatapage.cpp \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/industrialdatapage.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QScrollArea \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qscrollarea.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QComboBox \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qcombobox.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../services/controllerxmlservice.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkAccessManager \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkaccessmanager.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkrequest.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QSharedDataPointer \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qshareddata.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QString \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QUrl \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qurl.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariant \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVector \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QObject \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslConfiguration \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslconfiguration.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslsocket.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtcpsocket.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslerror.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslcertificate.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcryptographichash.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qssl.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QFlags \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qflags.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMetaType \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qmetatype.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkReply \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkreply.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QIODevice \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qiodevice.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkRequest \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkrequest.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkAccessManager \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QXmlStreamReader \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qxmlstream.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QUrl \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMap \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qmap.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariant \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../ui/virtualkeyboard.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QBoxLayout \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QFocusEvent \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qevent.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcoreevent.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qfile.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qfiledevice.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_overviewpage.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/overviewpage.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QIcon \
@@ -678,6 +736,8 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.obj: \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/simpledragdroppage.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_udpresponsepage.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/udpresponsepage.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/GQ6NBGVJMG/moc_controllerxmlservice.cpp \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/GQ6NBGVJMG/../../../src/services/controllerxmlservice.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/QQMEBWJXMO/moc_controllerstatemachine.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/QQMEBWJXMO/../../../src/statemachine/controllerstatemachine.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QStateMachine \
@@ -685,7 +745,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qstate.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qabstractstate.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qmetaobject.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcoreevent.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QState \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qstate.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/MKDT3456JX/moc_controllerstrategy.cpp \
@@ -697,28 +756,24 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.obj: \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/controllercardwidget.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsDropShadowEffect \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QMouseEvent \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qevent.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qfile.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qfiledevice.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_hamburgermenu.cpp \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/hamburgermenu.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_modernmainwindow.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/modernmainwindow.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QScrollArea \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qscrollarea.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../udpservice.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/navigationmanager.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/breadcrumbwidget.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/hamburgermenu.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_thememanager.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QColor \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qcolor.h \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMap \
- /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qmap.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QSettings \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qsettings.h \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_themesettingswidget.cpp \
  /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/themesettingswidget.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
- /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_virtualkeyboard.cpp \
+ /workspaces/qpcetu/build-windows-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/virtualkeyboard.h

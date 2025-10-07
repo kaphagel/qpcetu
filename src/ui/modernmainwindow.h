@@ -20,12 +20,14 @@
 #include "../udpservice.h"
 #include "../navigation/navigationmanager.h"
 #include "../navigation/breadcrumbwidget.h"
+#include "hamburgermenu.h"
 
 // Forward declarations for page classes
 class DashboardPage;
 class GraphsPage;
 class SettingsPage;
 class UdpResponsePage;
+class IndustrialDataPage;
 class ControllerCardWidget;
 
 /**
@@ -78,6 +80,7 @@ private:
     void createQuickActionsPanel();
     void createStatusBar();
     void updateControllerGrid();
+    void updateHeaderButtons();
     void addControllerCard(const QString &ip, const QString &type, const QString &status);
     void animateCardEntry(QWidget *card);
 
@@ -91,6 +94,7 @@ private:
     GraphsPage *m_graphsPage;
     SettingsPage *m_settingsPage;
     UdpResponsePage *m_udpResponsePage;
+    IndustrialDataPage *m_industrialDataPage;
 
     // UI Structure
     QWidget *m_centralWidget;
@@ -99,17 +103,14 @@ private:
     // Header components
     QWidget *m_headerBar;
     QLabel *m_titleLabel;
+    QPushButton *m_hamburgerButton;
+    QPushButton *m_backButton;
+    QPushButton *m_homeButton;
+    HamburgerMenu *m_hamburgerMenu;
     QLabel *m_connectionStatusLabel;
     QLabel *m_userLabel;
     QLabel *m_dateTimeLabel;
     
-    // Navigation buttons
-    QPushButton *m_overviewBtn;
-    QPushButton *m_dashboardBtn;
-    QPushButton *m_graphsBtn;
-    QPushButton *m_settingsBtn;
-    QPushButton *m_networkBtn;
-
     // System status strip
     QWidget *m_statusStrip;
     QLabel *m_discoveryStatus;

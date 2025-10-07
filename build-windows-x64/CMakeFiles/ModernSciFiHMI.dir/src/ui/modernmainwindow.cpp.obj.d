@@ -373,6 +373,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/ui/modernmainwindow.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qvariant.h \
  /workspaces/qpcetu/src/ui/../navigation/breadcrumbwidget.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsOpacityEffect \
+ /workspaces/qpcetu/src/ui/hamburgermenu.h \
  /workspaces/qpcetu/src/ui/controllercardwidget.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QMouseEvent \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qevent.h \
@@ -661,6 +662,61 @@ CMakeFiles/ModernSciFiHMI.dir/src/ui/modernmainwindow.cpp.obj: \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/bits/random.tcc \
  /workspaces/qpcetu/src/ui/../pages/settingspage.h \
  /workspaces/qpcetu/src/ui/../pages/udpresponsepage.h \
+ /workspaces/qpcetu/src/ui/../pages/industrialdatapage.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QComboBox \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qcombobox.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+ /workspaces/qpcetu/src/ui/../pages/../services/controllerxmlservice.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkAccessManager \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkaccessmanager.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkrequest.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QSharedDataPointer \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qshareddata.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QString \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QUrl \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qurl.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariant \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVector \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QObject \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslConfiguration \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslconfiguration.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslsocket.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtcpsocket.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslerror.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslcertificate.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcryptographichash.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qssl.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QFlags \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qflags.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMetaType \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qmetatype.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkReply \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkreply.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QIODevice \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qiodevice.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkRequest \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkrequest.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkAccessManager \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QXmlStreamReader \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qxmlstream.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QUrl \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariant \
+ /workspaces/qpcetu/src/ui/../pages/../ui/virtualkeyboard.h \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QBoxLayout \
+ /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QFocusEvent \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \

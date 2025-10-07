@@ -1,53 +1,132 @@
-# Docker ignore file for SciFi Data Screen
+# Modern Industrial HMI - Docker Build Optimization
+# Exclude development artifacts and build directories to optimize build context
 
-# Build outputs
+# Build artifacts - exclude development builds but keep source
 build/
-build-*/
-*.exe
-*.app
-*.dmg
+**/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/*.o
+**/*.so
+**/*.dll
+**/*.exe
+**/*.a
+**/*.dylib
+**/*_autogen/
 
-# IDE files
+# Development environment - not needed in container
 .vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS files
-.DS_Store
-Thumbs.db
-*.tmp
-
-# Git
+.devcontainer/
 .git/
 .gitignore
+**/.DS_Store
+**/*.swp
+**/*.swo
+**/*~
 
-# Docker
-Dockerfile*
-docker-compose*
-.dockerignore
-
-# Documentation (keep only essential docs)
+# Documentation - keep only essential
+docs/
+screenshots/
+DESIGN.md
+ARCHITECTURE.md
+TODO.md
 *.md
 !README.md
 
-# Test outputs
+# Test artifacts - not needed for production build
+**/test_*
+testing/
+coverage/
+**/*_test
+**/*_tests
 test-output/
 logs/
 *.log
 
-# Qt generated files
-moc_*
-ui_*
-qrc_*
-*_autogen/
+# IDE and editor files
+*.user
+*.pro.user*
+*.vcxproj*
+*.sln
+*.suo
+*.ncb
+*.aps
+*.plg
+*.opt
+*.clw
+*.pdb
+*.idb
+*.ilk
 
-# Temporary files
+# Dependencies that will be rebuilt in container
+deps/
+external/libmodbus/
+mxe/
 libmodbus-windows/
-mxe-lite/
 windows-test/
 windows-full/
+
+# Exclude MXE lite built environment (will build fresh in container)
+mxe-lite/usr/
+mxe-lite/log/
+mxe-lite/tmp/
+mxe-lite/.ccache/
+
+# Temporary files and logs
+*.tmp
+*.temp
+/tmp/
+**/tmp/
+*.log
+
+# Package files
+*.tar.gz
+*.zip
+*.7z
+*.dmg
+*.iso
+
+# Qt specific generated files
+ui_*.h
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+*.moc
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.qmlc
+*.jsc
+Makefile*
+*.qm
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Docker files - avoid recursion
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Professional build optimization - include only source and essential configs
+output/
+dist/
+release/
+debug/
+bin/
+lib/
+obj/
 docker-output/
 
 # Package manager

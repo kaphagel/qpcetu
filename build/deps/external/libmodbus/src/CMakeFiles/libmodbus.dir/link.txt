@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibmodbus.a CMakeFiles/libmodbus.dir/libmodbus_autogen/mocs_compilation.cpp.o CMakeFiles/libmodbus.dir/modbus.c.o CMakeFiles/libmodbus.dir/modbus-data.c.o CMakeFiles/libmodbus.dir/modbus-rtu.c.o CMakeFiles/libmodbus.dir/modbus-tcp.c.o
+/usr/bin/ranlib liblibmodbus.a

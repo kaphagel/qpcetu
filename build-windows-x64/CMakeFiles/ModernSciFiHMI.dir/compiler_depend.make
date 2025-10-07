@@ -546,21 +546,28 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/wtypesbase.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QDateTime \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QFlags \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QHash \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QIODevice \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QJsonObject \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMap \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMetaType \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QObject \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QPropertyAnimation \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QRandomGenerator \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QSettings \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QSharedDataPointer \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QStack \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QState \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QStateMachine \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QString \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QStringList \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QTimer \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QUrl \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariant \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariantMap \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVector \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QXmlStreamReader \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qabstractanimation.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qabstractstate.h \
@@ -581,6 +588,7 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcontainertools_impl.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcontiguouscache.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcoreevent.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcryptographichash.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qdatastream.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qdatetime.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qdebug.h \
@@ -649,7 +657,9 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qvarlengtharray.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qvector.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qversiontagging.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qxmlstream.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QColor \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QFocusEvent \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QIcon \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QMouseEvent \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QPainter \
@@ -687,15 +697,32 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qwindowdefs.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qwindowdefs_win.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QHostAddress \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkAccessManager \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkInterface \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkReply \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkRequest \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslConfiguration \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslPreSharedKeyAuthenticator \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QUdpSocket \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qabstractsocket.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qhostaddress.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkaccessmanager.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkinterface.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkreply.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkrequest.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qssl.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslcertificate.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslconfiguration.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslerror.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslsocket.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtcpsocket.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtnetwork-config.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtnetworkglobal.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qudpsocket.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QBoxLayout \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QComboBox \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsDropShadowEffect \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsEffect \
@@ -704,6 +731,7 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGroupBox \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QMainWindow \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QProgressBar \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
@@ -714,11 +742,13 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qcombobox.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qgraphicseffect.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
@@ -726,6 +756,7 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+  /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qmainwindow.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qprogressbar.h \
   /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
@@ -820,6 +851,8 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/src/pages/dashboardpage.h \
   /workspaces/qpcetu/src/pages/graphspage.cpp \
   /workspaces/qpcetu/src/pages/graphspage.h \
+  /workspaces/qpcetu/src/pages/industrialdatapage.cpp \
+  /workspaces/qpcetu/src/pages/industrialdatapage.h \
   /workspaces/qpcetu/src/pages/overviewpage.cpp \
   /workspaces/qpcetu/src/pages/overviewpage.h \
   /workspaces/qpcetu/src/pages/settingspage.cpp \
@@ -828,6 +861,8 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/src/pages/simpledragdroppage.h \
   /workspaces/qpcetu/src/pages/udpresponsepage.cpp \
   /workspaces/qpcetu/src/pages/udpresponsepage.h \
+  /workspaces/qpcetu/src/services/controllerxmlservice.cpp \
+  /workspaces/qpcetu/src/services/controllerxmlservice.h \
   /workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp \
   /workspaces/qpcetu/src/statemachine/controllerstatemachine.h \
   /workspaces/qpcetu/src/strategies/controllerstrategy.cpp \
@@ -838,15 +873,27 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
   /workspaces/qpcetu/src/ui/applestyle.h \
   /workspaces/qpcetu/src/ui/controllercardwidget.cpp \
   /workspaces/qpcetu/src/ui/controllercardwidget.h \
+  /workspaces/qpcetu/src/ui/hamburgermenu.cpp \
+  /workspaces/qpcetu/src/ui/hamburgermenu.h \
   /workspaces/qpcetu/src/ui/modernmainwindow.cpp \
   /workspaces/qpcetu/src/ui/modernmainwindow.h \
   /workspaces/qpcetu/src/ui/thememanager.cpp \
   /workspaces/qpcetu/src/ui/thememanager.h \
   /workspaces/qpcetu/src/ui/themesettingswidget.cpp \
-  /workspaces/qpcetu/src/ui/themesettingswidget.h
+  /workspaces/qpcetu/src/ui/themesettingswidget.h \
+  /workspaces/qpcetu/src/ui/virtualkeyboard.cpp \
+  /workspaces/qpcetu/src/ui/virtualkeyboard.h
 
+
+/workspaces/qpcetu/src/ui/virtualkeyboard.h:
+
+/workspaces/qpcetu/src/ui/virtualkeyboard.cpp:
 
 /workspaces/qpcetu/src/ui/thememanager.h:
+
+/workspaces/qpcetu/src/ui/hamburgermenu.h:
+
+/workspaces/qpcetu/src/ui/hamburgermenu.cpp:
 
 /workspaces/qpcetu/src/ui/controllercardwidget.h:
 
@@ -862,13 +909,15 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 
 /workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp:
 
+/workspaces/qpcetu/src/services/controllerxmlservice.h:
+
 /workspaces/qpcetu/src/pages/udpresponsepage.h:
 
 /workspaces/qpcetu/src/pages/simpledragdroppage.cpp:
 
 /workspaces/qpcetu/src/pages/settingspage.cpp:
 
-/workspaces/qpcetu/src/pages/overviewpage.h:
+/workspaces/qpcetu/src/pages/industrialdatapage.h:
 
 /workspaces/qpcetu/src/pages/graphspage.h:
 
@@ -885,8 +934,6 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 /workspaces/qpcetu/src/mainwindow.cpp:
 
 /workspaces/qpcetu/src/datawidget.h:
-
-/workspaces/qpcetu/src/controllermanager.h:
 
 /workspaces/qpcetu/src/animatedprogressbar.h:
 
@@ -936,8 +983,6 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5FontDatabaseSupport/Qt5FontDatabaseSupportConfig.cmake:
 
-/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake:
-
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
@@ -980,13 +1025,15 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qgroupbox.h:
 
-/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h:
-
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qgraphicseffect.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qcombobox.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QWidget:
 
@@ -1008,11 +1055,23 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QGraphicsOpacityEffect:
 
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QComboBox:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QBoxLayout:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qudpsocket.h:
 
-/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtnetwork-config.h:
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslsocket.h:
+
+/workspaces/qpcetu/src/controllermanager.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qssl.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkrequest.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkreply.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkinterface.h:
 
@@ -1021,6 +1080,12 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qabstractsocket.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QUdpSocket:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslConfiguration:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtnetwork-config.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkReply:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkInterface:
 
@@ -1196,9 +1261,13 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qabstractanimation.h:
 
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QXmlStreamReader:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVector:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QUrl:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QTimer:
 
@@ -1216,15 +1285,31 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QStack:
 
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QSharedDataPointer:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QSettings:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QObject:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMetaType:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qimage.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QMap:
 
+/workspaces/qpcetu/src/pages/overviewpage.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QIODevice:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QHash:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QFlags:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QDateTime:
 
@@ -1297,6 +1382,8 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/xsavecintrin.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static/bits/gthr.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qnetworkaccessmanager.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/x86_64-w64-mingw32.static/bits/c++allocator.h:
 
@@ -1398,7 +1485,11 @@ ModernSciFiHMI_autogen/timestamp: /workspaces/qpcetu/CMakeLists.txt \
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/x86gprintrin.h:
 
+/workspaces/qpcetu/src/pages/industrialdatapage.cpp:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/mcx.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QSslPreSharedKeyAuthenticator:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/stdlib.h:
 
@@ -1538,6 +1629,8 @@ CMakeFiles/3.31.8/CMakeRCCompiler.cmake:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/threadpoolapiset.h:
 
+/workspaces/qpcetu/src/services/controllerxmlservice.cpp:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin_Import.cpp:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/bits/align.h:
@@ -1621,6 +1714,8 @@ CMakeFiles/3.31.8/CMakeSystem.cmake:
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/avx512bf16intrin.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/avx512vlbwintrin.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslconfiguration.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/bits/locale_classes.h:
 
@@ -1767,6 +1862,8 @@ CMakeFiles/3.31.8/CMakeSystem.cmake:
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/bits/stl_heap.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include-fixed/syslimits.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/QVariant:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/vector:
 
@@ -2040,6 +2137,8 @@ ModernSciFiHMI_autogen/moc_predefs.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake:
 
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslerror.h:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineRCCompiler.cmake:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:
@@ -2071,6 +2170,10 @@ ModernSciFiHMI_autogen/moc_predefs.h:
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeSystem.cmake.in:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslpresharedkeyauthenticator.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qxmlstream.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/x86intrin.h:
 
@@ -2111,6 +2214,8 @@ ModernSciFiHMI_autogen/moc_predefs.h:
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/virtdisk.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkRequest:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
 
@@ -2187,6 +2292,10 @@ ModernSciFiHMI_autogen/moc_predefs.h:
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-pc-linux-gnu/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qtcpsocket.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/qtgui-config.h:
 
@@ -2402,6 +2511,10 @@ ModernSciFiHMI_autogen/moc_predefs.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/psdk_inc/_ws1_undef.h:
 
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/qsslcertificate.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtCore/qcryptographichash.h:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/winreg.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/bits/concept_check.h:
@@ -2448,6 +2561,8 @@ ModernSciFiHMI_autogen/moc_predefs.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/sec_api/wchar_s.h:
 
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtNetwork/QNetworkAccessManager:
+
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/f16cintrin.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/securityappcontainer.h:
@@ -2489,6 +2604,8 @@ ModernSciFiHMI_autogen/moc_predefs.h:
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/lib/gcc/x86_64-w64-mingw32.static/11.5.0/include/c++/bits/shared_ptr_atomic.h:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/wchar.h:
+
+/workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/qt5/include/QtGui/QFocusEvent:
 
 /workspaces/qpcetu/deps/toolchain/mxe-lite/usr/x86_64-w64-mingw32.static/include/sdkddkver.h:
 

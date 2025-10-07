@@ -6,6 +6,7 @@
 #include "../pages/graphspage.h"
 #include "../pages/settingspage.h"
 #include "../pages/udpresponsepage.h"
+#include "../pages/industrialdatapage.h"
 #include "../navigation/navigationmanager.h"
 #include "../navigation/breadcrumbwidget.h"
 
@@ -26,11 +27,11 @@ ModernMainWindow::ModernMainWindow(QWidget *parent)
     , m_graphsPage(nullptr)
     , m_settingsPage(nullptr)
     , m_udpResponsePage(nullptr)
-    , m_overviewBtn(nullptr)
-    , m_dashboardBtn(nullptr)
-    , m_graphsBtn(nullptr)
-    , m_settingsBtn(nullptr)
-    , m_networkBtn(nullptr)
+    , m_industrialDataPage(nullptr)
+    , m_hamburgerButton(nullptr)
+    , m_backButton(nullptr)
+    , m_homeButton(nullptr)
+    , m_hamburgerMenu(nullptr)
     , m_discoveredControllers(0)
 {
     qDebug() << "ModernMainWindow constructor start";
@@ -105,14 +106,12 @@ void ModernMainWindow::setupUI()
 
     // Create main UI components
     createHeaderBar();
-    createBreadcrumbNavigation();
     createSystemStatusStrip();
     createMainContentArea();
     createStatusBar();
 
     // Add to main layout
     mainLayout->addWidget(m_headerBar);
-    mainLayout->addWidget(m_breadcrumbWidget);
     mainLayout->addWidget(m_statusStrip);
     
     // Create stacked widget here instead of in setupNavigation
@@ -130,6 +129,89 @@ void ModernMainWindow::createHeaderBar()
     QHBoxLayout *headerLayout = new QHBoxLayout(m_headerBar);
     headerLayout->setContentsMargins(24, 16, 24, 16); // Increased margins
     headerLayout->setSpacing(32);                     // Increased spacing for touch
+
+    // Hamburger menu button
+    m_hamburgerButton = new QPushButton("☰");
+    m_hamburgerButton->setObjectName("hamburgerButton");
+    m_hamburgerButton->setMinimumSize(60, 60); // Touch-friendly size
+    m_hamburgerButton->setMaximumSize(60, 60);
+    m_hamburgerButton->setToolTip("Open Navigation Menu");
+    m_hamburgerButton->setStyleSheet(
+        "QPushButton {"
+        "    background: transparent;"
+        "    border: none;"
+        "    font-size: 24px;"
+        "    font-weight: bold;"
+        "}"
+        "QPushButton:hover {"
+        "    background: rgba(255, 255, 255, 0.1);"
+        "}"
+        "QPushButton:pressed {"
+        "    background: rgba(255, 255, 255, 0.2);"
+        "}"
+    );
+    connect(m_hamburgerButton, &QPushButton::clicked, this, [this]() {
+        if (m_hamburgerMenu) {
+            m_hamburgerMenu->toggleMenu();
+        }
+    });
+
+    // Back button
+    m_backButton = new QPushButton("←");
+    m_backButton->setObjectName("backButton");
+    m_backButton->setMinimumSize(50, 60); // Slightly smaller than hamburger
+    m_backButton->setMaximumSize(50, 60);
+    m_backButton->setToolTip("Go Back");
+    m_backButton->setStyleSheet(
+        "QPushButton {"
+        "    background: transparent;"
+        "    border: none;"
+        "    font-size: 20px;"
+        "    font-weight: bold;"
+        "}"
+        "QPushButton:hover {"
+        "    background: rgba(255, 255, 255, 0.1);"
+        "}"
+        "QPushButton:pressed {"
+        "    background: rgba(255, 255, 255, 0.2);"
+        "}"
+        "QPushButton:disabled {"
+        "    color: rgba(255, 255, 255, 0.3);"
+        "}"
+    );
+    connect(m_backButton, &QPushButton::clicked, this, [this]() {
+        qDebug() << "Header back button clicked!";
+        if (m_navigationManager) {
+            m_navigationManager->goBack();
+        }
+    });
+
+    // Home button
+    m_homeButton = new QPushButton("🏠");
+    m_homeButton->setObjectName("homeButton");
+    m_homeButton->setMinimumSize(50, 60); // Slightly smaller than hamburger
+    m_homeButton->setMaximumSize(50, 60);
+    m_homeButton->setToolTip("Go Home");
+    m_homeButton->setStyleSheet(
+        "QPushButton {"
+        "    background: transparent;"
+        "    border: none;"
+        "    font-size: 16px;"
+        "    font-weight: bold;"
+        "}"
+        "QPushButton:hover {"
+        "    background: rgba(255, 255, 255, 0.1);"
+        "}"
+        "QPushButton:pressed {"
+        "    background: rgba(255, 255, 255, 0.2);"
+        "}"
+    );
+    connect(m_homeButton, &QPushButton::clicked, this, [this]() {
+        qDebug() << "Header home button clicked!";
+        if (m_navigationManager) {
+            m_navigationManager->goHome();
+        }
+    });
 
     // Title with icon
     m_titleLabel = new QLabel("🛸 SciFi Data Screen");
@@ -155,48 +237,20 @@ void ModernMainWindow::createHeaderBar()
     themeToggleBtn->setToolTip("Tap to switch theme (Dark/Light/High Contrast/Apple Light/Apple Dark)");
     connect(themeToggleBtn, &QPushButton::clicked, this, &ModernMainWindow::toggleTheme);
 
-    // Create navigation buttons
-    m_overviewBtn = new QPushButton("🏠 Overview");
-    m_overviewBtn->setObjectName("navButton");
-    m_overviewBtn->setMinimumSize(140, 60); // Touch-friendly size
-    m_overviewBtn->setMaximumSize(140, 60);
-    m_overviewBtn->setToolTip("Go to System Overview");
-    
-    m_dashboardBtn = new QPushButton("📊 Dashboard");
-    m_dashboardBtn->setObjectName("navButton");
-    m_dashboardBtn->setMinimumSize(140, 60);
-    m_dashboardBtn->setMaximumSize(140, 60);
-    m_dashboardBtn->setToolTip("Go to Controller Dashboard");
-    
-    m_graphsBtn = new QPushButton("📈 Graphs");
-    m_graphsBtn->setObjectName("navButton");
-    m_graphsBtn->setMinimumSize(140, 60);
-    m_graphsBtn->setMaximumSize(140, 60);
-    m_graphsBtn->setToolTip("View Real-time Graphs");
-    
-    m_settingsBtn = new QPushButton("⚙️ Settings");
-    m_settingsBtn->setObjectName("navButton");
-    m_settingsBtn->setMinimumSize(140, 60);
-    m_settingsBtn->setMaximumSize(140, 60);
-    m_settingsBtn->setToolTip("Application Settings");
-    
-    m_networkBtn = new QPushButton("🌐 Network");
-    m_networkBtn->setObjectName("navButton");
-    m_networkBtn->setMinimumSize(140, 60);
-    m_networkBtn->setMaximumSize(140, 60);
-    m_networkBtn->setToolTip("Network Discovery");
-
+    // Layout: Hamburger + Back + Home + Title on left, then status info on right
+    headerLayout->addWidget(m_hamburgerButton);
+    headerLayout->addWidget(m_backButton);
+    headerLayout->addWidget(m_homeButton);
     headerLayout->addWidget(m_titleLabel);
     headerLayout->addStretch();
-    headerLayout->addWidget(m_overviewBtn);
-    headerLayout->addWidget(m_dashboardBtn);
-    headerLayout->addWidget(m_graphsBtn);
-    headerLayout->addWidget(m_settingsBtn);
-    headerLayout->addWidget(m_networkBtn);
     headerLayout->addWidget(themeToggleBtn);
     headerLayout->addWidget(m_connectionStatusLabel);
     headerLayout->addWidget(m_userLabel);
     headerLayout->addWidget(m_dateTimeLabel);
+    
+    // Create hamburger menu
+    m_hamburgerMenu = new HamburgerMenu(this);
+    m_hamburgerMenu->setTouchOptimized(true);
 }
 
 void ModernMainWindow::createSystemStatusStrip()
@@ -407,23 +461,17 @@ void ModernMainWindow::toggleTheme()
     ThemeManager *tm = ThemeManager::instance();
     ThemeManager::Theme currentTheme = tm->currentTheme();
 
-    // Cycle through themes: Dark -> Light -> High Contrast -> Apple Light -> Apple Dark -> Dark
+    // Simple toggle between Light and Dark themes
     switch (currentTheme)
     {
+    case ThemeManager::Light:
+        tm->setTheme(ThemeManager::Dark);
+        break;
     case ThemeManager::Dark:
         tm->setTheme(ThemeManager::Light);
         break;
-    case ThemeManager::Light:
-        tm->setTheme(ThemeManager::HighContrast);
-        break;
-    case ThemeManager::HighContrast:
-        tm->setTheme(ThemeManager::AppleLight);
-        break;
-    case ThemeManager::AppleLight:
-        tm->setTheme(ThemeManager::AppleDark);
-        break;
-    case ThemeManager::AppleDark:
-        tm->setTheme(ThemeManager::Dark);
+    default:
+        tm->setTheme(ThemeManager::Light);
         break;
     }
 }
@@ -460,7 +508,7 @@ void ModernMainWindow::onThemeChanged()
                              "  border: none; "
                              "} "
                              "QWidget#headerBar { "
-                             "  background-color: %3; "
+                             "  background-color: %1; "
                              "  border: none; "
                              "} "
                              "QWidget#statusStrip { "
@@ -476,20 +524,19 @@ void ModernMainWindow::onThemeChanged()
                              "  border: none; "
                              "} "
                              "QScrollBar:vertical { "
-                             "  background-color: %4; "
+                             "  background-color: %3; "
                              "  border: none; "
                              "  width: 12px; "
                              "} "
                              "QScrollBar::handle:vertical { "
-                             "  background-color: %5; "
+                             "  background-color: %4; "
                              "  border: none; "
                              "  border-radius: 6px; "
                              "} ")
                              .arg(mainBg)         // %1
                              .arg(primaryText)    // %2
-                             .arg(headerBg)       // %3
-                             .arg(statusBg)       // %4
-                             .arg(secondaryText); // %5
+                             .arg(statusBg)       // %3 (was headerBg, now statusBg since headerBg uses %1)
+                             .arg(secondaryText); // %4 (was %5, now %4)
 
     // Clean theme-aware component styles (no borders)
     QString customStyles = QString(
@@ -713,7 +760,34 @@ void ModernMainWindow::updateDateTime()
 
 void ModernMainWindow::showControllerDetails(const QString &ip)
 {
-    qDebug() << "Show controller details for:" << ip;
+    qDebug() << "=== CONTROLLER DETAILS DEBUG ===";
+    qDebug() << "Show controller details for IP:" << ip;
+    qDebug() << "IP length:" << ip.length();
+    qDebug() << "IP contains IPv6 prefix:" << ip.contains("::ffff:");
+    
+    // Clean up IPv6-mapped IPv4 addresses if needed
+    QString cleanedIp = ip;
+    if (ip.startsWith("::ffff:")) {
+        cleanedIp = ip.mid(7); // Remove "::ffff:" prefix
+        qDebug() << "Cleaned IPv6-mapped address to:" << cleanedIp;
+    }
+    
+    // Ensure the Industrial Data Page is initialized
+    if (!m_industrialDataPage) {
+        m_industrialDataPage = new IndustrialDataPage(this);
+    }
+    
+    // Set the controller URL and load the XML
+    QString controllerUrl = QString("http://%1").arg(cleanedIp);
+    qDebug() << "Setting controller URL to:" << controllerUrl;
+    m_industrialDataPage->setControllerUrl(controllerUrl);
+    m_industrialDataPage->loadXmlFile("unit/p_operation.xml");
+    
+    // Navigate to the page
+    QVariantMap parameters;
+    parameters["controllerIp"] = cleanedIp;
+    navigateToPage(NavigationManager::PageId::ControllerDetails, parameters);
+    qDebug() << "=== END CONTROLLER DETAILS DEBUG ===";
 }
 
 void ModernMainWindow::refreshControllers()
@@ -805,6 +879,11 @@ void ModernMainWindow::resizeEvent(QResizeEvent *event)
 {
     QMainWindow::resizeEvent(event);
     updateControllerGrid();
+    
+    // Update hamburger menu size to fill the entire window
+    if (m_hamburgerMenu) {
+        m_hamburgerMenu->setGeometry(0, 0, width(), height());
+    }
 }
 
 void ModernMainWindow::setupNavigation()
@@ -826,6 +905,12 @@ void ModernMainWindow::setupNavigation()
     if (!m_udpResponsePage) {
         m_udpResponsePage = new UdpResponsePage(this);
     }
+    if (!m_industrialDataPage) {
+        m_industrialDataPage = new IndustrialDataPage(this);
+        // Set up controller connection
+        m_industrialDataPage->setControllerUrl("http://192.168.10.243");
+        m_industrialDataPage->loadXmlFile("unit/p_operation.xml");
+    }
     
     // Register pages with navigation manager
     m_navigationManager->registerPage(NavigationManager::PageId::Overview, 
@@ -838,6 +923,8 @@ void ModernMainWindow::setupNavigation()
                                       m_settingsPage, "Settings", "⚙️");
     m_navigationManager->registerPage(NavigationManager::PageId::UdpResponse, 
                                       m_udpResponsePage, "Network", "🌐");
+    m_navigationManager->registerPage(NavigationManager::PageId::ControllerDetails, 
+                                      m_industrialDataPage, "Industrial", "🏭");
     
     // Connect navigation signals
     connect(m_navigationManager, &NavigationManager::pageChanged,
@@ -846,50 +933,23 @@ void ModernMainWindow::setupNavigation()
                          << "to" << static_cast<int>(toPage);
             });
     
-    connect(m_navigationManager, &NavigationManager::breadcrumbsChanged,
-            m_breadcrumbWidget, &BreadcrumbWidget::setBreadcrumbs);
-    
     connect(m_navigationManager, &NavigationManager::navigationStateChanged,
             this, &ModernMainWindow::onNavigationStateChanged);
     
-    // Connect navigation buttons to navigation manager
-    if (m_overviewBtn) {
-        connect(m_overviewBtn, &QPushButton::clicked, this, [this]() {
-            m_navigationManager->navigateToPage(NavigationManager::PageId::Overview);
-        });
+    // Connect hamburger menu to navigation manager
+    if (m_hamburgerMenu) {
+        qDebug() << "Connecting HamburgerMenu to NavigationManager";
+        m_hamburgerMenu->setNavigationManager(m_navigationManager);
     }
     
-    if (m_dashboardBtn) {
-        connect(m_dashboardBtn, &QPushButton::clicked, this, [this]() {
-            m_navigationManager->navigateToPage(NavigationManager::PageId::Dashboard);
-        });
-    }
+    // Connect navigation state changes to update header buttons
+    connect(m_navigationManager, &NavigationManager::navigationStateChanged,
+            this, &ModernMainWindow::updateHeaderButtons);
     
-    if (m_graphsBtn) {
-        connect(m_graphsBtn, &QPushButton::clicked, this, [this]() {
-            m_navigationManager->navigateToPage(NavigationManager::PageId::Graphs);
-        });
-    }
-    
-    if (m_settingsBtn) {
-        connect(m_settingsBtn, &QPushButton::clicked, this, [this]() {
-            m_navigationManager->navigateToPage(NavigationManager::PageId::Settings);
-        });
-    }
-    
-    if (m_networkBtn) {
-        connect(m_networkBtn, &QPushButton::clicked, this, [this]() {
-            m_navigationManager->navigateToPage(NavigationManager::PageId::UdpResponse);
-        });
-    }
+    // Initial button state update
+    updateHeaderButtons();
     
     qDebug() << "Professional navigation system initialized";
-    
-    // Now connect the NavigationManager to the breadcrumb widget
-    if (m_breadcrumbWidget && m_navigationManager) {
-        qDebug() << "Connecting NavigationManager to existing BreadcrumbWidget";
-        m_breadcrumbWidget->setNavigationManager(m_navigationManager);
-    }
 }
 
 void ModernMainWindow::createBreadcrumbNavigation()
@@ -929,6 +989,24 @@ void ModernMainWindow::createBreadcrumbNavigation()
     qDebug() << "Breadcrumb navigation created";
 }
 
+void ModernMainWindow::updateHeaderButtons()
+{
+    if (!m_navigationManager) return;
+    
+    // Update back button state
+    bool canGoBack = m_navigationManager->canGoBack();
+    if (m_backButton) {
+        m_backButton->setEnabled(canGoBack);
+        qDebug() << "Header back button enabled:" << canGoBack;
+    }
+    
+    // Home button is always enabled (could be disabled if already at home)
+    if (m_homeButton) {
+        bool isAtHome = (m_navigationManager->currentPage() == NavigationManager::PageId::Overview);
+        m_homeButton->setEnabled(!isAtHome);
+    }
+}
+
 void ModernMainWindow::onBreadcrumbClicked(int index)
 {
     qDebug() << "Breadcrumb clicked at index:" << index;
@@ -945,8 +1023,6 @@ void ModernMainWindow::onBreadcrumbClicked(int index)
 
 void ModernMainWindow::onNavigationStateChanged()
 {
-    // Update UI based on navigation state
-    if (m_navigationManager && m_breadcrumbWidget) {
-        m_breadcrumbWidget->setBreadcrumbs(m_navigationManager->breadcrumbPath());
-    }
+    // Update header buttons based on navigation state
+    updateHeaderButtons();
 }

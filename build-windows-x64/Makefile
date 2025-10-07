@@ -773,6 +773,30 @@ src/pages/graphspage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/graphspage.cpp.s
 .PHONY : src/pages/graphspage.cpp.s
 
+src/pages/industrialdatapage.obj: src/pages/industrialdatapage.cpp.obj
+.PHONY : src/pages/industrialdatapage.obj
+
+# target to build an object file
+src/pages/industrialdatapage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/industrialdatapage.cpp.obj
+.PHONY : src/pages/industrialdatapage.cpp.obj
+
+src/pages/industrialdatapage.i: src/pages/industrialdatapage.cpp.i
+.PHONY : src/pages/industrialdatapage.i
+
+# target to preprocess a source file
+src/pages/industrialdatapage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/industrialdatapage.cpp.i
+.PHONY : src/pages/industrialdatapage.cpp.i
+
+src/pages/industrialdatapage.s: src/pages/industrialdatapage.cpp.s
+.PHONY : src/pages/industrialdatapage.s
+
+# target to generate assembly for a file
+src/pages/industrialdatapage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/industrialdatapage.cpp.s
+.PHONY : src/pages/industrialdatapage.cpp.s
+
 src/pages/overviewpage.obj: src/pages/overviewpage.cpp.obj
 .PHONY : src/pages/overviewpage.obj
 
@@ -868,6 +892,30 @@ src/pages/udpresponsepage.s: src/pages/udpresponsepage.cpp.s
 src/pages/udpresponsepage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.s
 .PHONY : src/pages/udpresponsepage.cpp.s
+
+src/services/controllerxmlservice.obj: src/services/controllerxmlservice.cpp.obj
+.PHONY : src/services/controllerxmlservice.obj
+
+# target to build an object file
+src/services/controllerxmlservice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.obj
+.PHONY : src/services/controllerxmlservice.cpp.obj
+
+src/services/controllerxmlservice.i: src/services/controllerxmlservice.cpp.i
+.PHONY : src/services/controllerxmlservice.i
+
+# target to preprocess a source file
+src/services/controllerxmlservice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.i
+.PHONY : src/services/controllerxmlservice.cpp.i
+
+src/services/controllerxmlservice.s: src/services/controllerxmlservice.cpp.s
+.PHONY : src/services/controllerxmlservice.s
+
+# target to generate assembly for a file
+src/services/controllerxmlservice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.s
+.PHONY : src/services/controllerxmlservice.cpp.s
 
 src/statemachine/controllerstatemachine.obj: src/statemachine/controllerstatemachine.cpp.obj
 .PHONY : src/statemachine/controllerstatemachine.obj
@@ -989,6 +1037,30 @@ src/ui/controllercardwidget.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/controllercardwidget.cpp.s
 .PHONY : src/ui/controllercardwidget.cpp.s
 
+src/ui/hamburgermenu.obj: src/ui/hamburgermenu.cpp.obj
+.PHONY : src/ui/hamburgermenu.obj
+
+# target to build an object file
+src/ui/hamburgermenu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/hamburgermenu.cpp.obj
+.PHONY : src/ui/hamburgermenu.cpp.obj
+
+src/ui/hamburgermenu.i: src/ui/hamburgermenu.cpp.i
+.PHONY : src/ui/hamburgermenu.i
+
+# target to preprocess a source file
+src/ui/hamburgermenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/hamburgermenu.cpp.i
+.PHONY : src/ui/hamburgermenu.cpp.i
+
+src/ui/hamburgermenu.s: src/ui/hamburgermenu.cpp.s
+.PHONY : src/ui/hamburgermenu.s
+
+# target to generate assembly for a file
+src/ui/hamburgermenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/hamburgermenu.cpp.s
+.PHONY : src/ui/hamburgermenu.cpp.s
+
 src/ui/modernmainwindow.obj: src/ui/modernmainwindow.cpp.obj
 .PHONY : src/ui/modernmainwindow.obj
 
@@ -1060,6 +1132,30 @@ src/ui/themesettingswidget.s: src/ui/themesettingswidget.cpp.s
 src/ui/themesettingswidget.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/themesettingswidget.cpp.s
 .PHONY : src/ui/themesettingswidget.cpp.s
+
+src/ui/virtualkeyboard.obj: src/ui/virtualkeyboard.cpp.obj
+.PHONY : src/ui/virtualkeyboard.obj
+
+# target to build an object file
+src/ui/virtualkeyboard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.obj
+.PHONY : src/ui/virtualkeyboard.cpp.obj
+
+src/ui/virtualkeyboard.i: src/ui/virtualkeyboard.cpp.i
+.PHONY : src/ui/virtualkeyboard.i
+
+# target to preprocess a source file
+src/ui/virtualkeyboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.i
+.PHONY : src/ui/virtualkeyboard.cpp.i
+
+src/ui/virtualkeyboard.s: src/ui/virtualkeyboard.cpp.s
+.PHONY : src/ui/virtualkeyboard.s
+
+# target to generate assembly for a file
+src/ui/virtualkeyboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.s
+.PHONY : src/ui/virtualkeyboard.cpp.s
 
 # Help Target
 help:
@@ -1147,6 +1243,9 @@ help:
 	@echo "... src/pages/graphspage.obj"
 	@echo "... src/pages/graphspage.i"
 	@echo "... src/pages/graphspage.s"
+	@echo "... src/pages/industrialdatapage.obj"
+	@echo "... src/pages/industrialdatapage.i"
+	@echo "... src/pages/industrialdatapage.s"
 	@echo "... src/pages/overviewpage.obj"
 	@echo "... src/pages/overviewpage.i"
 	@echo "... src/pages/overviewpage.s"
@@ -1159,6 +1258,9 @@ help:
 	@echo "... src/pages/udpresponsepage.obj"
 	@echo "... src/pages/udpresponsepage.i"
 	@echo "... src/pages/udpresponsepage.s"
+	@echo "... src/services/controllerxmlservice.obj"
+	@echo "... src/services/controllerxmlservice.i"
+	@echo "... src/services/controllerxmlservice.s"
 	@echo "... src/statemachine/controllerstatemachine.obj"
 	@echo "... src/statemachine/controllerstatemachine.i"
 	@echo "... src/statemachine/controllerstatemachine.s"
@@ -1174,6 +1276,9 @@ help:
 	@echo "... src/ui/controllercardwidget.obj"
 	@echo "... src/ui/controllercardwidget.i"
 	@echo "... src/ui/controllercardwidget.s"
+	@echo "... src/ui/hamburgermenu.obj"
+	@echo "... src/ui/hamburgermenu.i"
+	@echo "... src/ui/hamburgermenu.s"
 	@echo "... src/ui/modernmainwindow.obj"
 	@echo "... src/ui/modernmainwindow.i"
 	@echo "... src/ui/modernmainwindow.s"
@@ -1183,6 +1288,9 @@ help:
 	@echo "... src/ui/themesettingswidget.obj"
 	@echo "... src/ui/themesettingswidget.i"
 	@echo "... src/ui/themesettingswidget.s"
+	@echo "... src/ui/virtualkeyboard.obj"
+	@echo "... src/ui/virtualkeyboard.i"
+	@echo "... src/ui/virtualkeyboard.s"
 .PHONY : help
 
 

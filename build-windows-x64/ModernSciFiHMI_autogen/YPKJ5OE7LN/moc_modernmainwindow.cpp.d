@@ -363,4 +363,5 @@
   /workspaces/qpcetu/src/industrialcontroller.h \
   /workspaces/qpcetu/src/navigation/breadcrumbwidget.h \
   /workspaces/qpcetu/src/navigation/navigationmanager.h \
-  /workspaces/qpcetu/src/udpservice.h
+  /workspaces/qpcetu/src/udpservice.h \
+  /workspaces/qpcetu/src/ui/hamburgermenu.h

@@ -38,9 +38,8 @@ private:
     QHBoxLayout *m_buttonsLayout;
     QButtonGroup *m_themeGroup;
 
-    QPushButton *m_darkThemeBtn;
     QPushButton *m_lightThemeBtn;
-    QPushButton *m_highContrastBtn;
+    QPushButton *m_darkThemeBtn;
 
     QFrame *m_previewFrame;
     QLabel *m_previewLabel;

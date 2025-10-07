@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QScrollArea>
 #include <QTimer>
+#include <QPushButton>
 #include "../controllermanager.h"
 #include "../industrialcontroller.h"
 
@@ -26,6 +27,10 @@ public slots:
     void onControllerAdded(IndustrialController *controller);
     void onControllerRemoved(IndustrialController *controller);
     void onControllerUpdated(IndustrialController *controller);
+    void onToolButtonClicked(const QString &ipAddress);
+
+signals:
+    void navigateToIndustrialPage(const QString &ipAddress);
 
 private:
     ControllerManager *m_controllerManager;
@@ -58,9 +63,11 @@ public:
 public slots:
     void updateDisplay();
     void onControllerClicked();
+    void onToolButtonClicked();
 
 signals:
     void controllerSelected(IndustrialController *controller);
+    void toolButtonClicked(const QString &ipAddress);
 
 private:
     IndustrialController *m_controller;
@@ -70,6 +77,7 @@ private:
     QLabel *m_hostnameLabel;
     QLabel *m_lastSeenLabel;
     QLabel *m_signalLabel;
+    QPushButton *m_toolButton;
 
     void setupUI();
     void setupConnections();

@@ -31,18 +31,22 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/qpcetu/src/navigation/navigationmanager.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/navigation/navigationmanager.cpp.obj.d"
   "/workspaces/qpcetu/src/pages/dashboardpage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/dashboardpage.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/dashboardpage.cpp.obj.d"
   "/workspaces/qpcetu/src/pages/graphspage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/graphspage.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/graphspage.cpp.obj.d"
+  "/workspaces/qpcetu/src/pages/industrialdatapage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/industrialdatapage.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/industrialdatapage.cpp.obj.d"
   "/workspaces/qpcetu/src/pages/overviewpage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/overviewpage.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/overviewpage.cpp.obj.d"
   "/workspaces/qpcetu/src/pages/settingspage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/settingspage.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/settingspage.cpp.obj.d"
   "/workspaces/qpcetu/src/pages/simpledragdroppage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/simpledragdroppage.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/simpledragdroppage.cpp.obj.d"
   "/workspaces/qpcetu/src/pages/udpresponsepage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.obj.d"
+  "/workspaces/qpcetu/src/services/controllerxmlservice.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.obj.d"
   "/workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.obj.d"
   "/workspaces/qpcetu/src/strategies/controllerstrategy.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.obj.d"
   "/workspaces/qpcetu/src/udpservice.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/udpservice.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/udpservice.cpp.obj.d"
   "/workspaces/qpcetu/src/ui/applestyle.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.obj.d"
   "/workspaces/qpcetu/src/ui/controllercardwidget.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/controllercardwidget.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/controllercardwidget.cpp.obj.d"
+  "/workspaces/qpcetu/src/ui/hamburgermenu.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/hamburgermenu.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/hamburgermenu.cpp.obj.d"
   "/workspaces/qpcetu/src/ui/modernmainwindow.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/modernmainwindow.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/modernmainwindow.cpp.obj.d"
   "/workspaces/qpcetu/src/ui/thememanager.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/thememanager.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/thememanager.cpp.obj.d"
   "/workspaces/qpcetu/src/ui/themesettingswidget.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/themesettingswidget.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/themesettingswidget.cpp.obj.d"
+  "/workspaces/qpcetu/src/ui/virtualkeyboard.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.obj" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -147,6 +147,12 @@
 			null
 		],
 		[
+			"/workspaces/qpcetu/src/pages/industrialdatapage.h",
+			"Mu",
+			"V5LNE4NMWJ/moc_industrialdatapage.cpp",
+			null
+		],
+		[
 			"/workspaces/qpcetu/src/pages/overviewpage.h",
 			"Mu",
 			"V5LNE4NMWJ/moc_overviewpage.cpp",
@@ -168,6 +174,12 @@
 			"/workspaces/qpcetu/src/pages/udpresponsepage.h",
 			"Mu",
 			"V5LNE4NMWJ/moc_udpresponsepage.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/src/services/controllerxmlservice.h",
+			"Mu",
+			"GQ6NBGVJMG/moc_controllerxmlservice.cpp",
 			null
 		],
 		[
@@ -201,6 +213,12 @@
 			null
 		],
 		[
+			"/workspaces/qpcetu/src/ui/hamburgermenu.h",
+			"Mu",
+			"YPKJ5OE7LN/moc_hamburgermenu.cpp",
+			null
+		],
+		[
 			"/workspaces/qpcetu/src/ui/modernmainwindow.h",
 			"Mu",
 			"YPKJ5OE7LN/moc_modernmainwindow.cpp",
@@ -216,6 +234,12 @@
 			"/workspaces/qpcetu/src/ui/themesettingswidget.h",
 			"Mu",
 			"YPKJ5OE7LN/moc_themesettingswidget.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/src/ui/virtualkeyboard.h",
+			"Mu",
+			"YPKJ5OE7LN/moc_virtualkeyboard.cpp",
 			null
 		]
 	],
@@ -292,10 +316,16 @@
 		[ "/workspaces/qpcetu/src/navigation/navigationmanager.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/dashboardpage.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/graphspage.cpp", "Mu", null ],
+		[ "/workspaces/qpcetu/src/pages/industrialdatapage.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/overviewpage.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/settingspage.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/simpledragdroppage.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/pages/udpresponsepage.cpp", "Mu", null ],
+		[
+			"/workspaces/qpcetu/src/services/controllerxmlservice.cpp",
+			"Mu",
+			null
+		],
 		[
 			"/workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp",
 			"Mu",
@@ -309,9 +339,11 @@
 		[ "/workspaces/qpcetu/src/udpservice.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/ui/applestyle.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/ui/controllercardwidget.cpp", "Mu", null ],
+		[ "/workspaces/qpcetu/src/ui/hamburgermenu.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/ui/modernmainwindow.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/ui/thememanager.cpp", "Mu", null ],
-		[ "/workspaces/qpcetu/src/ui/themesettingswidget.cpp", "Mu", null ]
+		[ "/workspaces/qpcetu/src/ui/themesettingswidget.cpp", "Mu", null ],
+		[ "/workspaces/qpcetu/src/ui/virtualkeyboard.cpp", "Mu", null ]
 	],
 	"VERBOSITY" : 0
 }

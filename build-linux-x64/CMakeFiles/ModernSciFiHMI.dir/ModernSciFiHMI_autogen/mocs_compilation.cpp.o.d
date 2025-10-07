@@ -471,6 +471,63 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus-tcp.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus-tcp.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../graphwidget.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_industrialdatapage.cpp \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/industrialdatapage.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollArea \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../services/controllerxmlservice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkAccessManager \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkaccessmanager.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslConfiguration \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslconfiguration.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtcpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslcertificate.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcryptographichash.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qssl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QSslPreSharedKeyAuthenticator \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qsslpresharedkeyauthenticator.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkReply \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkreply.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QIODevice \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkRequest \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkAccessManager \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QXmlStreamReader \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../ui/virtualkeyboard.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QFocusEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_overviewpage.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/overviewpage.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
@@ -481,6 +538,8 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/simpledragdroppage.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_udpresponsepage.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/udpresponsepage.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/GQ6NBGVJMG/moc_controllerxmlservice.cpp \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/GQ6NBGVJMG/../../../src/services/controllerxmlservice.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/QQMEBWJXMO/moc_controllerstatemachine.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/QQMEBWJXMO/../../../src/statemachine/controllerstatemachine.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStateMachine \
@@ -488,7 +547,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractstate.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QState \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/MKDT3456JX/moc_controllerstrategy.cpp \
@@ -500,28 +558,24 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/controllercardwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsDropShadowEffect \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QMouseEvent \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_hamburgermenu.cpp \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/hamburgermenu.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_modernmainwindow.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/modernmainwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollArea \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../udpservice.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/navigationmanager.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/breadcrumbwidget.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/hamburgermenu.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_thememanager.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSettings \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsettings.h \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_themesettingswidget.cpp \
  /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/themesettingswidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QButtonGroup \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h \
- /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_virtualkeyboard.cpp \
+ /workspaces/qpcetu/build-linux-x64/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/virtualkeyboard.h

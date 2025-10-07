@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ThemeManager_t {
-    QByteArrayData data[35];
-    char stringdata0[411];
+    QByteArrayData data[32];
+    char stringdata0[377];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,41 +37,37 @@ QT_MOC_LITERAL(1, 13, 12), // "themeChanged"
 QT_MOC_LITERAL(2, 26, 0), // ""
 QT_MOC_LITERAL(3, 27, 5), // "Theme"
 QT_MOC_LITERAL(4, 33, 8), // "newTheme"
-QT_MOC_LITERAL(5, 42, 4), // "Dark"
-QT_MOC_LITERAL(6, 47, 5), // "Light"
-QT_MOC_LITERAL(7, 53, 12), // "HighContrast"
-QT_MOC_LITERAL(8, 66, 10), // "AppleLight"
-QT_MOC_LITERAL(9, 77, 9), // "AppleDark"
-QT_MOC_LITERAL(10, 87, 9), // "ColorRole"
-QT_MOC_LITERAL(11, 97, 14), // "MainBackground"
-QT_MOC_LITERAL(12, 112, 19), // "SecondaryBackground"
-QT_MOC_LITERAL(13, 132, 16), // "HeaderBackground"
-QT_MOC_LITERAL(14, 149, 14), // "CardBackground"
-QT_MOC_LITERAL(15, 164, 21), // "StatusStripBackground"
-QT_MOC_LITERAL(16, 186, 11), // "PrimaryText"
-QT_MOC_LITERAL(17, 198, 13), // "SecondaryText"
-QT_MOC_LITERAL(18, 212, 10), // "AccentText"
-QT_MOC_LITERAL(19, 223, 10), // "StatusText"
-QT_MOC_LITERAL(20, 234, 7), // "Primary"
-QT_MOC_LITERAL(21, 242, 7), // "Success"
-QT_MOC_LITERAL(22, 250, 7), // "Warning"
-QT_MOC_LITERAL(23, 258, 5), // "Error"
-QT_MOC_LITERAL(24, 264, 16), // "ButtonBackground"
-QT_MOC_LITERAL(25, 281, 11), // "ButtonHover"
-QT_MOC_LITERAL(26, 293, 13), // "ButtonPressed"
-QT_MOC_LITERAL(27, 307, 11), // "BorderColor"
-QT_MOC_LITERAL(28, 319, 10), // "FocusColor"
-QT_MOC_LITERAL(29, 330, 16), // "ControllerActive"
-QT_MOC_LITERAL(30, 347, 18), // "ControllerInactive"
-QT_MOC_LITERAL(31, 366, 15), // "ControllerFault"
-QT_MOC_LITERAL(32, 382, 8), // "DataGood"
-QT_MOC_LITERAL(33, 391, 9), // "DataStale"
-QT_MOC_LITERAL(34, 401, 9) // "DataError"
+QT_MOC_LITERAL(5, 42, 5), // "Light"
+QT_MOC_LITERAL(6, 48, 4), // "Dark"
+QT_MOC_LITERAL(7, 53, 9), // "ColorRole"
+QT_MOC_LITERAL(8, 63, 14), // "MainBackground"
+QT_MOC_LITERAL(9, 78, 19), // "SecondaryBackground"
+QT_MOC_LITERAL(10, 98, 16), // "HeaderBackground"
+QT_MOC_LITERAL(11, 115, 14), // "CardBackground"
+QT_MOC_LITERAL(12, 130, 21), // "StatusStripBackground"
+QT_MOC_LITERAL(13, 152, 11), // "PrimaryText"
+QT_MOC_LITERAL(14, 164, 13), // "SecondaryText"
+QT_MOC_LITERAL(15, 178, 10), // "AccentText"
+QT_MOC_LITERAL(16, 189, 10), // "StatusText"
+QT_MOC_LITERAL(17, 200, 7), // "Primary"
+QT_MOC_LITERAL(18, 208, 7), // "Success"
+QT_MOC_LITERAL(19, 216, 7), // "Warning"
+QT_MOC_LITERAL(20, 224, 5), // "Error"
+QT_MOC_LITERAL(21, 230, 16), // "ButtonBackground"
+QT_MOC_LITERAL(22, 247, 11), // "ButtonHover"
+QT_MOC_LITERAL(23, 259, 13), // "ButtonPressed"
+QT_MOC_LITERAL(24, 273, 11), // "BorderColor"
+QT_MOC_LITERAL(25, 285, 10), // "FocusColor"
+QT_MOC_LITERAL(26, 296, 16), // "ControllerActive"
+QT_MOC_LITERAL(27, 313, 18), // "ControllerInactive"
+QT_MOC_LITERAL(28, 332, 15), // "ControllerFault"
+QT_MOC_LITERAL(29, 348, 8), // "DataGood"
+QT_MOC_LITERAL(30, 357, 9), // "DataStale"
+QT_MOC_LITERAL(31, 367, 9) // "DataError"
 
     },
     "ThemeManager\0themeChanged\0\0Theme\0"
-    "newTheme\0Dark\0Light\0HighContrast\0"
-    "AppleLight\0AppleDark\0ColorRole\0"
+    "newTheme\0Light\0Dark\0ColorRole\0"
     "MainBackground\0SecondaryBackground\0"
     "HeaderBackground\0CardBackground\0"
     "StatusStripBackground\0PrimaryText\0"
@@ -104,39 +100,36 @@ static const uint qt_meta_data_ThemeManager[] = {
     QMetaType::Void, 0x80000000 | 3,    4,
 
  // enums: name, alias, flags, count, data
-       3,    3, 0x0,    5,   32,
-      10,   10, 0x0,   24,   42,
+       3,    3, 0x0,    2,   32,
+       7,    7, 0x0,   24,   36,
 
  // enum data: key, value
-       5, uint(ThemeManager::Dark),
-       6, uint(ThemeManager::Light),
-       7, uint(ThemeManager::HighContrast),
-       8, uint(ThemeManager::AppleLight),
-       9, uint(ThemeManager::AppleDark),
-      11, uint(ThemeManager::MainBackground),
-      12, uint(ThemeManager::SecondaryBackground),
-      13, uint(ThemeManager::HeaderBackground),
-      14, uint(ThemeManager::CardBackground),
-      15, uint(ThemeManager::StatusStripBackground),
-      16, uint(ThemeManager::PrimaryText),
-      17, uint(ThemeManager::SecondaryText),
-      18, uint(ThemeManager::AccentText),
-      19, uint(ThemeManager::StatusText),
-      20, uint(ThemeManager::Primary),
-      21, uint(ThemeManager::Success),
-      22, uint(ThemeManager::Warning),
-      23, uint(ThemeManager::Error),
-      24, uint(ThemeManager::ButtonBackground),
-      25, uint(ThemeManager::ButtonHover),
-      26, uint(ThemeManager::ButtonPressed),
-      27, uint(ThemeManager::BorderColor),
-      28, uint(ThemeManager::FocusColor),
-      29, uint(ThemeManager::ControllerActive),
-      30, uint(ThemeManager::ControllerInactive),
-      31, uint(ThemeManager::ControllerFault),
-      32, uint(ThemeManager::DataGood),
-      33, uint(ThemeManager::DataStale),
-      34, uint(ThemeManager::DataError),
+       5, uint(ThemeManager::Light),
+       6, uint(ThemeManager::Dark),
+       8, uint(ThemeManager::MainBackground),
+       9, uint(ThemeManager::SecondaryBackground),
+      10, uint(ThemeManager::HeaderBackground),
+      11, uint(ThemeManager::CardBackground),
+      12, uint(ThemeManager::StatusStripBackground),
+      13, uint(ThemeManager::PrimaryText),
+      14, uint(ThemeManager::SecondaryText),
+      15, uint(ThemeManager::AccentText),
+      16, uint(ThemeManager::StatusText),
+      17, uint(ThemeManager::Primary),
+      18, uint(ThemeManager::Success),
+      19, uint(ThemeManager::Warning),
+      20, uint(ThemeManager::Error),
+      21, uint(ThemeManager::ButtonBackground),
+      22, uint(ThemeManager::ButtonHover),
+      23, uint(ThemeManager::ButtonPressed),
+      24, uint(ThemeManager::BorderColor),
+      25, uint(ThemeManager::FocusColor),
+      26, uint(ThemeManager::ControllerActive),
+      27, uint(ThemeManager::ControllerInactive),
+      28, uint(ThemeManager::ControllerFault),
+      29, uint(ThemeManager::DataGood),
+      30, uint(ThemeManager::DataStale),
+      31, uint(ThemeManager::DataError),
 
        0        // eod
 };

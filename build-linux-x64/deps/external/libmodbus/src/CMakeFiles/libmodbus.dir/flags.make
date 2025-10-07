@@ -13,5 +13,5 @@ CXX_DEFINES = -D_GNU_SOURCE
 
 CXX_INCLUDES = -I/workspaces/qpcetu/build-linux-x64/deps/external/libmodbus/src/libmodbus_autogen/include -I/workspaces/qpcetu/deps/external/libmodbus/src
 
-CXX_FLAGS = -std=c++17
+CXX_FLAGS = 
 

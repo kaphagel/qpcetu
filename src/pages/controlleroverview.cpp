@@ -112,6 +112,10 @@ void ControllerOverview::onControllerAdded(IndustrialController *controller)
                 qDebug() << "Controller selected:" << ctrl->typeDisplayName() << ctrl->ipAddress();
                 // TODO: Open controller-specific HMI page
             });
+    
+    // Connect tool button to navigation
+    connect(faceplate, &ControllerFaceplate::toolButtonClicked,
+            this, &ControllerOverview::onToolButtonClicked);
 
     // Add to grid layout
     int row = m_controllerWidgets.size() / 3; // 3 columns
@@ -148,11 +152,18 @@ void ControllerOverview::updateSummary()
 {
     int total = m_controllerManager->controllerCount();
     int online = m_controllerManager->onlineCount();
-
-    QString summaryText = QString("Industrial Controller Overview - %1 Controllers (%2 Online)")
-                              .arg(total)
-                              .arg(online);
+    
+    QString summaryText = QString("Controllers: %1 total, %2 online, %3 offline")
+                            .arg(total)
+                            .arg(online)
+                            .arg(total - online);
     m_summaryLabel->setText(summaryText);
+}
+
+void ControllerOverview::onToolButtonClicked(const QString &ipAddress)
+{
+    qDebug() << "Tool button clicked for controller:" << ipAddress;
+    emit navigateToIndustrialPage(ipAddress);
 }
 
 QString ControllerOverview::getStatusColor(IndustrialController::ConnectionStatus status)
@@ -236,7 +247,34 @@ void ControllerFaceplate::setupUI()
     m_typeLabel->setStyleSheet("font-size: 14px; font-weight: bold;");
     m_statusLabel = new QLabel();
     m_statusLabel->setAlignment(Qt::AlignRight);
+    
+    // Tool button for accessing industrial interface
+    m_toolButton = new QPushButton("🔧");
+    m_toolButton->setFixedSize(24, 24);
+    m_toolButton->setToolTip("Open Industrial Interface");
+    m_toolButton->setStyleSheet(
+        "QPushButton {"
+        "  background-color: rgba(0, 255, 65, 0.1);"
+        "  border: 1px solid #00ff41;"
+        "  border-radius: 12px;"
+        "  color: #00ff41;"
+        "  font-size: 12px;"
+        "  font-weight: bold;"
+        "}"
+        "QPushButton:hover {"
+        "  background-color: rgba(0, 255, 65, 0.2);"
+        "  border: 2px solid #00ff41;"
+        "}"
+        "QPushButton:pressed {"
+        "  background-color: rgba(0, 255, 65, 0.3);"
+        "}"
+    );
+    
+    connect(m_toolButton, &QPushButton::clicked, this, &ControllerFaceplate::onToolButtonClicked);
+    
     headerLayout->addWidget(m_typeLabel);
+    headerLayout->addStretch();
+    headerLayout->addWidget(m_toolButton);
     headerLayout->addWidget(m_statusLabel);
     layout->addLayout(headerLayout);
 
@@ -326,4 +364,9 @@ void ControllerFaceplate::leaveEvent(QEvent *event)
 void ControllerFaceplate::onControllerClicked()
 {
     emit controllerSelected(m_controller);
+}
+
+void ControllerFaceplate::onToolButtonClicked()
+{
+    emit toolButtonClicked(m_controller->ipAddress());
 }

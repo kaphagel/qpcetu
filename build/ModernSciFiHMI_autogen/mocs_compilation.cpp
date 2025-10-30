@@ -15,6 +15,7 @@
 #include "V5LNE4NMWJ/moc_settingspage.cpp"
 #include "V5LNE4NMWJ/moc_simpledragdroppage.cpp"
 #include "V5LNE4NMWJ/moc_udpresponsepage.cpp"
+#include "V5LNE4NMWJ/moc_webbrowserpage.cpp"
 #include "GQ6NBGVJMG/moc_controllerxmlservice.cpp"
 #include "QQMEBWJXMO/moc_controllerstatemachine.cpp"
 #include "MKDT3456JX/moc_controllerstrategy.cpp"

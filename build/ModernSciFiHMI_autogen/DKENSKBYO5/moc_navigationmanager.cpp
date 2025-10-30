@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_NavigationManager_t {
-    QByteArrayData data[45];
-    char stringdata0[536];
+    QByteArrayData data[46];
+    char stringdata0[547];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -68,15 +68,16 @@ QT_MOC_LITERAL(32, 418, 17), // "ControllerDetails"
 QT_MOC_LITERAL(33, 436, 11), // "Diagnostics"
 QT_MOC_LITERAL(34, 448, 6), // "Alarms"
 QT_MOC_LITERAL(35, 455, 7), // "Reports"
-QT_MOC_LITERAL(36, 463, 14), // "TransitionType"
-QT_MOC_LITERAL(37, 478, 4), // "None"
-QT_MOC_LITERAL(38, 483, 9), // "SlideLeft"
-QT_MOC_LITERAL(39, 493, 10), // "SlideRight"
-QT_MOC_LITERAL(40, 504, 7), // "SlideUp"
-QT_MOC_LITERAL(41, 512, 9), // "SlideDown"
-QT_MOC_LITERAL(42, 522, 4), // "Fade"
-QT_MOC_LITERAL(43, 527, 4), // "Push"
-QT_MOC_LITERAL(44, 532, 3) // "Pop"
+QT_MOC_LITERAL(36, 463, 10), // "WebBrowser"
+QT_MOC_LITERAL(37, 474, 14), // "TransitionType"
+QT_MOC_LITERAL(38, 489, 4), // "None"
+QT_MOC_LITERAL(39, 494, 9), // "SlideLeft"
+QT_MOC_LITERAL(40, 504, 10), // "SlideRight"
+QT_MOC_LITERAL(41, 515, 7), // "SlideUp"
+QT_MOC_LITERAL(42, 523, 9), // "SlideDown"
+QT_MOC_LITERAL(43, 533, 4), // "Fade"
+QT_MOC_LITERAL(44, 538, 4), // "Push"
+QT_MOC_LITERAL(45, 543, 3) // "Pop"
 
     },
     "NavigationManager\0pageChanged\0\0PageId\0"
@@ -91,9 +92,9 @@ QT_MOC_LITERAL(44, 532, 3) // "Pop"
     "onConfirmationResult\0confirmed\0Overview\0"
     "Dashboard\0Graphs\0Settings\0UdpResponse\0"
     "ControllerDetails\0Diagnostics\0Alarms\0"
-    "Reports\0TransitionType\0None\0SlideLeft\0"
-    "SlideRight\0SlideUp\0SlideDown\0Fade\0"
-    "Push\0Pop"
+    "Reports\0WebBrowser\0TransitionType\0"
+    "None\0SlideLeft\0SlideRight\0SlideUp\0"
+    "SlideDown\0Fade\0Push\0Pop"
 };
 #undef QT_MOC_LITERAL
 
@@ -149,8 +150,8 @@ static const uint qt_meta_data_NavigationManager[] = {
     QMetaType::Void, QMetaType::Bool,   26,
 
  // enums: name, alias, flags, count, data
-       3,    3, 0x2,    9,  144,
-      36,   36, 0x2,    8,  162,
+       3,    3, 0x2,   10,  144,
+      37,   37, 0x2,    8,  164,
 
  // enum data: key, value
       27, uint(NavigationManager::PageId::Overview),
@@ -162,14 +163,15 @@ static const uint qt_meta_data_NavigationManager[] = {
       33, uint(NavigationManager::PageId::Diagnostics),
       34, uint(NavigationManager::PageId::Alarms),
       35, uint(NavigationManager::PageId::Reports),
-      37, uint(NavigationManager::TransitionType::None),
-      38, uint(NavigationManager::TransitionType::SlideLeft),
-      39, uint(NavigationManager::TransitionType::SlideRight),
-      40, uint(NavigationManager::TransitionType::SlideUp),
-      41, uint(NavigationManager::TransitionType::SlideDown),
-      42, uint(NavigationManager::TransitionType::Fade),
-      43, uint(NavigationManager::TransitionType::Push),
-      44, uint(NavigationManager::TransitionType::Pop),
+      36, uint(NavigationManager::PageId::WebBrowser),
+      38, uint(NavigationManager::TransitionType::None),
+      39, uint(NavigationManager::TransitionType::SlideLeft),
+      40, uint(NavigationManager::TransitionType::SlideRight),
+      41, uint(NavigationManager::TransitionType::SlideUp),
+      42, uint(NavigationManager::TransitionType::SlideDown),
+      43, uint(NavigationManager::TransitionType::Fade),
+      44, uint(NavigationManager::TransitionType::Push),
+      45, uint(NavigationManager::TransitionType::Pop),
 
        0        // eod
 };

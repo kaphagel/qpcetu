@@ -539,6 +539,8 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/simpledragdroppage.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_udpresponsepage.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/udpresponsepage.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_webbrowserpage.cpp \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/webbrowserpage.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/GQ6NBGVJMG/moc_controllerxmlservice.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/GQ6NBGVJMG/../../../src/services/controllerxmlservice.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QQMEBWJXMO/moc_controllerstatemachine.cpp \

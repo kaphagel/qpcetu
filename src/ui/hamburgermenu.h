@@ -93,6 +93,7 @@ private:
     QPushButton *m_settingsButton;
     QPushButton *m_networkButton;
     QPushButton *m_industrialButton;
+    QPushButton *m_webBrowserButton;
     
     // Animation
     QPropertyAnimation *m_slideAnimation;

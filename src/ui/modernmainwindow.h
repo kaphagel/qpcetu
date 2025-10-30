@@ -29,6 +29,7 @@ class SettingsPage;
 class UdpResponsePage;
 class IndustrialDataPage;
 class ControllerCardWidget;
+class WebBrowserPage;
 
 /**
  * @brief Modern Industrial HMI MainWindow with card-based controller interface
@@ -95,6 +96,7 @@ private:
     SettingsPage *m_settingsPage;
     UdpResponsePage *m_udpResponsePage;
     IndustrialDataPage *m_industrialDataPage;
+    WebBrowserPage *m_webBrowserPage;
 
     // UI Structure
     QWidget *m_centralWidget;

@@ -66,6 +66,7 @@
 #define __UINTMAX_TYPE__ long unsigned int
 #define __linux 1
 #define __DEC32_EPSILON__ 1E-6DF
+#define QT_QMLMODELS_LIB 1
 #define __FLT_EVAL_METHOD_TS_18661_3__ 0
 #define __unix 1
 #define __UINT32_MAX__ 0xffffffffU
@@ -134,6 +135,7 @@
 #define __DBL_MAX__ double(1.79769313486231570814527423731704357e+308L)
 #define __cpp_raw_strings 200710L
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
+#define QT_WEBENGINEWIDGETS_LIB 1
 #define __DBL_HAS_INFINITY__ 1
 #define __SIZEOF_FLOAT__ 4
 #define __HAVE_SPECULATION_SAFE_VALUE 1
@@ -183,6 +185,7 @@
 #define __cpp_template_auto 201606L
 #define __DBL_MIN__ double(2.22507385850720138309023271733240406e-308L)
 #define __FLT128_EPSILON__ 1.92592994438723585305597794258492732e-34F128
+#define QT_POSITIONING_LIB 1
 #define __FLT64X_NORM_MAX__ 1.18973149535723176502126385303097021e+4932F64x
 #define __SIZEOF_POINTER__ 8
 #define __LP64__ 1
@@ -209,6 +212,7 @@
 #define _STDC_PREDEF_H 1
 #define __INT_LEAST32_MAX__ 0x7fffffff
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
+#define QT_QUICK_LIB 1
 #define __FLT128_MAX_EXP__ 16384
 #define __FLT32_MANT_DIG__ 24
 #define __FLOAT_WORD_ORDER__ __ORDER_LITTLE_ENDIAN__
@@ -278,6 +282,7 @@
 #define QT_NETWORK_LIB 1
 #define __SEG_GS 1
 #define __FLT32_DENORM_MIN__ 1.40129846432481707092372958328991613e-45F32
+#define QT_WEBENGINECORE_LIB 1
 #define __SIG_ATOMIC_WIDTH__ 32
 #define __INT_LEAST64_TYPE__ long int
 #define __INT16_TYPE__ short int
@@ -370,6 +375,7 @@
 #define __STDC_UTF_32__ 1
 #define __INT_FAST8_WIDTH__ 8
 #define __FXSR__ 1
+#define QT_WEBCHANNEL_LIB 1
 #define __FLT32X_MAX__ 1.79769313486231570814527423731704357e+308F32x
 #define __DBL_NORM_MAX__ double(1.79769313486231570814527423731704357e+308L)
 #define __BYTE_ORDER__ __ORDER_LITTLE_ENDIAN__
@@ -414,6 +420,7 @@
 #define __FLT32X_DIG__ 15
 #define __PTRDIFF_TYPE__ long int
 #define __ATOMIC_SEQ_CST 5
+#define QT_QML_LIB 1
 #define __FLT32X_MIN_10_EXP__ (-307)
 #define __UINTPTR_TYPE__ long unsigned int
 #define __DEC64_SUBNORMAL_MIN__ 0.000000000000001E-383DD
@@ -430,6 +437,7 @@
 #define __UINT_FAST16_MAX__ 0xffffffffffffffffUL
 #define __LDBL_NORM_MAX__ 1.18973149535723176502126385303097021e+4932L
 #define __GCC_ATOMIC_SHORT_LOCK_FREE 2
+#define QT_PRINTSUPPORT_LIB 1
 #define __UINT_FAST8_TYPE__ unsigned char
 #define _GNU_SOURCE 1
 #define __cpp_init_captures 201304L

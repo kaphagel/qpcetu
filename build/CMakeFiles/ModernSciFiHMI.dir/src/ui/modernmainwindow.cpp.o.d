@@ -518,6 +518,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/ui/modernmainwindow.cpp.o: \
  /workspaces/qpcetu/src/ui/../pages/../ui/virtualkeyboard.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QFocusEvent \
+ /workspaces/qpcetu/src/ui/../pages/webbrowserpage.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \

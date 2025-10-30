@@ -131,6 +131,7 @@
 #define __DBL_MAX__ double(1.79769313486231570814527423731704357e+308L)
 #define __cpp_raw_strings 200710L
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
+#define QT_WEBENGINEWIDGETS_LIB 1
 #define __DBL_HAS_INFINITY__ 1
 #define __SIZEOF_FLOAT__ 4
 #define __HAVE_SPECULATION_SAFE_VALUE 1

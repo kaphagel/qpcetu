@@ -101,7 +101,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/workspaces/qpcetu/build/deps/external/libmodbus/src/libmodbus_autogen/include",
 	"MOC_COMPILATION_FILE" : "/workspaces/qpcetu/build/deps/external/libmodbus/src/libmodbus_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "_GNU_SOURCE" ],
+	"MOC_DEFINITIONS" : [ "QT_WEBENGINEWIDGETS_LIB", "_GNU_SOURCE" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[

@@ -27,6 +27,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/qpcetu/src/pages/settingspage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/settingspage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/settingspage.cpp.o.d"
   "/workspaces/qpcetu/src/pages/simpledragdroppage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/simpledragdroppage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/simpledragdroppage.cpp.o.d"
   "/workspaces/qpcetu/src/pages/udpresponsepage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o.d"
+  "/workspaces/qpcetu/src/pages/webbrowserpage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.o.d"
   "/workspaces/qpcetu/src/services/controllerxmlservice.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.o.d"
   "/workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o.d"
   "/workspaces/qpcetu/src/strategies/controllerstrategy.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o.d"

@@ -7,6 +7,7 @@
 #include "../pages/settingspage.h"
 #include "../pages/udpresponsepage.h"
 #include "../pages/industrialdatapage.h"
+#include "../pages/webbrowserpage.h"
 #include "../navigation/navigationmanager.h"
 #include "../navigation/breadcrumbwidget.h"
 
@@ -28,6 +29,7 @@ ModernMainWindow::ModernMainWindow(QWidget *parent)
     , m_settingsPage(nullptr)
     , m_udpResponsePage(nullptr)
     , m_industrialDataPage(nullptr)
+    , m_webBrowserPage(nullptr)
     , m_hamburgerButton(nullptr)
     , m_backButton(nullptr)
     , m_homeButton(nullptr)
@@ -911,6 +913,9 @@ void ModernMainWindow::setupNavigation()
         m_industrialDataPage->setControllerUrl("http://192.168.10.243");
         m_industrialDataPage->loadXmlFile("unit/p_operation.xml");
     }
+    if (!m_webBrowserPage) {
+        m_webBrowserPage = new WebBrowserPage(this);
+    }
     
     // Register pages with navigation manager
     m_navigationManager->registerPage(NavigationManager::PageId::Overview, 
@@ -925,6 +930,8 @@ void ModernMainWindow::setupNavigation()
                                       m_udpResponsePage, "Network", "🌐");
     m_navigationManager->registerPage(NavigationManager::PageId::ControllerDetails, 
                                       m_industrialDataPage, "Industrial", "🏭");
+    m_navigationManager->registerPage(NavigationManager::PageId::WebBrowser, 
+                                      m_webBrowserPage, "Web Browser", "🌐");
     
     // Connect navigation signals
     connect(m_navigationManager, &NavigationManager::pageChanged,

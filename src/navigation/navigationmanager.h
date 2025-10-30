@@ -42,7 +42,8 @@ public:
         ControllerDetails = 5,
         Diagnostics = 6,
         Alarms = 7,
-        Reports = 8
+        Reports = 8,
+        WebBrowser = 9       // New: Web browser page
     };
     Q_ENUM(PageId)
 

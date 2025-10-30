@@ -40,6 +40,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ModernSciFiHMI.dir/src/pages/simpledragdroppage.cpp.o.d"
   "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o"
   "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o.d"
+  "CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.o"
+  "CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.o.d"
   "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.o"
   "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.o.d"
   "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o"

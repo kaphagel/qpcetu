@@ -135,6 +135,7 @@ void HamburgerMenu::setupUI()
     m_buttonLayout->addWidget(m_settingsButton);
     m_buttonLayout->addWidget(m_networkButton);
     m_buttonLayout->addWidget(m_industrialButton);
+    m_buttonLayout->addWidget(m_webBrowserButton);
     m_buttonLayout->addStretch(); // Push buttons to top
     
     m_scrollArea->setWidget(buttonContainer);
@@ -212,6 +213,12 @@ void HamburgerMenu::createNavigationButtons()
     m_industrialButton->setFixedHeight(buttonHeight);
     m_industrialButton->setProperty("pageId", 5);
     connect(m_industrialButton, &QPushButton::clicked, this, &HamburgerMenu::onNavigationButtonClicked);
+    
+    // Web Browser button (for testing/comparison)
+    m_webBrowserButton = new QPushButton("🌐 Web Browser");
+    m_webBrowserButton->setFixedHeight(buttonHeight);
+    m_webBrowserButton->setProperty("pageId", 9);
+    connect(m_webBrowserButton, &QPushButton::clicked, this, &HamburgerMenu::onNavigationButtonClicked);
 }
 
 void HamburgerMenu::setNavigationManager(NavigationManager *manager)
@@ -377,6 +384,7 @@ void HamburgerMenu::applyIndustrialStyling()
     if (m_settingsButton) m_settingsButton->setStyleSheet(buttonStyle);
     if (m_networkButton) m_networkButton->setStyleSheet(buttonStyle);
     if (m_industrialButton) m_industrialButton->setStyleSheet(buttonStyle);
+    if (m_webBrowserButton) m_webBrowserButton->setStyleSheet(buttonStyle);
     
     // Close button with special industrial accent
     QString closeButtonStyle = QString(

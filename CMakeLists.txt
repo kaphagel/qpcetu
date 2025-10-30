@@ -55,6 +55,17 @@ endif()
 # Find Qt5 components
 find_package(Qt5 REQUIRED COMPONENTS Core Widgets Network Svg)
 
+# Try to find Qt5WebEngineWidgets (optional for web browser page)
+find_package(Qt5 COMPONENTS WebEngineWidgets QUIET)
+
+if(Qt5WebEngineWidgets_FOUND)
+    message(STATUS "✅ Qt5WebEngineWidgets found - WebBrowserPage will be functional")
+    add_definitions(-DQT_WEBENGINEWIDGETS_LIB)
+else()
+    message(WARNING "⚠️ Qt5WebEngineWidgets not found - WebBrowserPage will show fallback message")
+    message(STATUS "To enable: sudo apt install qtwebengine5-dev libqt5webenginewidgets5")
+endif()
+
 # Enable automatic MOC (Meta-Object Compiler) and RCC (Resource Compiler)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -91,6 +102,7 @@ set(SOURCES
     src/pages/dragdroppage_simple.cpp
     src/pages/controlleroverview.cpp
     src/pages/industrialdatapage.cpp
+    src/pages/webbrowserpage.cpp
     # Navigation System
     src/navigation/navigationmanager.cpp
     src/navigation/breadcrumbwidget.cpp
@@ -118,6 +130,7 @@ set(HEADERS
     src/pages/dragdroppage_simple.h
     src/pages/controlleroverview.h
     src/pages/industrialdatapage.h
+    src/pages/webbrowserpage.h
     # Navigation System Headers
     src/navigation/navigationmanager.h
     src/navigation/breadcrumbwidget.h
@@ -155,6 +168,7 @@ set(MODERN_SOURCES
     src/pages/overviewpage.cpp
     src/pages/simpledragdroppage.cpp
     src/pages/industrialdatapage.cpp
+    src/pages/webbrowserpage.cpp
     # Original widget dependencies
     src/mainwindow.cpp
     src/datawidget.cpp
@@ -194,9 +208,19 @@ endif()
 if(WIN32)
     # target_link_libraries(SciFiDataScreen Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg ${LIBMODBUS_LIBRARY})
     target_link_libraries(ModernSciFiHMI Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg ${LIBMODBUS_LIBRARY})
+    
+    # Add WebEngineWidgets if available
+    if(Qt5WebEngineWidgets_FOUND)
+        target_link_libraries(ModernSciFiHMI Qt5::WebEngineWidgets)
+    endif()
 else()
     # target_link_libraries(SciFiDataScreen Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg libmodbus bsd)
     target_link_libraries(ModernSciFiHMI Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg libmodbus bsd)
+    
+    # Add WebEngineWidgets if available
+    if(Qt5WebEngineWidgets_FOUND)
+        target_link_libraries(ModernSciFiHMI Qt5::WebEngineWidgets)
+    endif()
 endif()
 
 # Set output directory - Only for touch-optimized ModernSciFiHMI

@@ -698,6 +698,30 @@ src/pages/udpresponsepage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.s
 .PHONY : src/pages/udpresponsepage.cpp.s
 
+src/pages/webbrowserpage.o: src/pages/webbrowserpage.cpp.o
+.PHONY : src/pages/webbrowserpage.o
+
+# target to build an object file
+src/pages/webbrowserpage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.o
+.PHONY : src/pages/webbrowserpage.cpp.o
+
+src/pages/webbrowserpage.i: src/pages/webbrowserpage.cpp.i
+.PHONY : src/pages/webbrowserpage.i
+
+# target to preprocess a source file
+src/pages/webbrowserpage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.i
+.PHONY : src/pages/webbrowserpage.cpp.i
+
+src/pages/webbrowserpage.s: src/pages/webbrowserpage.cpp.s
+.PHONY : src/pages/webbrowserpage.s
+
+# target to generate assembly for a file
+src/pages/webbrowserpage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.s
+.PHONY : src/pages/webbrowserpage.cpp.s
+
 src/services/controllerxmlservice.o: src/services/controllerxmlservice.cpp.o
 .PHONY : src/services/controllerxmlservice.o
 
@@ -1039,6 +1063,9 @@ help:
 	@echo "... src/pages/udpresponsepage.o"
 	@echo "... src/pages/udpresponsepage.i"
 	@echo "... src/pages/udpresponsepage.s"
+	@echo "... src/pages/webbrowserpage.o"
+	@echo "... src/pages/webbrowserpage.i"
+	@echo "... src/pages/webbrowserpage.s"
 	@echo "... src/services/controllerxmlservice.o"
 	@echo "... src/services/controllerxmlservice.i"
 	@echo "... src/services/controllerxmlservice.s"

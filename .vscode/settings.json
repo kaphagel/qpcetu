@@ -80,5 +80,10 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit"
-    }
+    },
+    // Disable Qt for Python extension - this is a C++ Qt5 project, not Python
+    "qtForPython.rcc.enable": false,
+    "qtForPython.designer.enable": false,
+    "qtForPython.linguist.enable": false,
+    "qtForPython.autoSaveTasks": false
 }

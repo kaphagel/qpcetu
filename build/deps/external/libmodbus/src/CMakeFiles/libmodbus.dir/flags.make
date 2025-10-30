@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_DEFINES = -D_GNU_SOURCE
+C_DEFINES = -DQT_WEBENGINEWIDGETS_LIB -D_GNU_SOURCE
 
 C_INCLUDES = -I/workspaces/qpcetu/build/deps/external/libmodbus/src/libmodbus_autogen/include -I/workspaces/qpcetu/deps/external/libmodbus/src
 
 C_FLAGS = 
 
-CXX_DEFINES = -D_GNU_SOURCE
+CXX_DEFINES = -DQT_WEBENGINEWIDGETS_LIB -D_GNU_SOURCE
 
 CXX_INCLUDES = -I/workspaces/qpcetu/build/deps/external/libmodbus/src/libmodbus_autogen/include -I/workspaces/qpcetu/deps/external/libmodbus/src
 

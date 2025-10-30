@@ -468,6 +468,8 @@ CMakeFiles/ModernSciFiHMI.dir/src/mainwindow.cpp.o: \
  /workspaces/qpcetu/src/pages/overviewpage.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /workspaces/qpcetu/src/pages/dragdroppage_simple.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QDragEnterEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QDropEvent \

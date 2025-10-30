@@ -533,6 +533,8 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/overviewpage.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_settingspage.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/settingspage.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_simpledragdroppage.cpp \

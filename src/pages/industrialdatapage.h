@@ -1,5 +1,4 @@
-#ifndef INDUSTRIALDATAPAGE_H
-#define INDUSTRIALDATAPAGE_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -63,5 +62,3 @@ private:
     
     bool m_isInitialized;
 };
-
-#endif // INDUSTRIALDATAPAGE_H

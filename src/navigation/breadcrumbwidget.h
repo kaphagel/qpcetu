@@ -1,5 +1,4 @@
-#ifndef BREADCRUMBWIDGET_H
-#define BREADCRUMBWIDGET_H
+#pragma once
 
 #include <QWidget>
 #include <QHBoxLayout>
@@ -144,5 +143,3 @@ private:
     bool m_isHovered;
     bool m_touchOptimized;
 };
-
-#endif // BREADCRUMBWIDGET_H

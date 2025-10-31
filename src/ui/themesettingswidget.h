@@ -1,5 +1,4 @@
-#ifndef THEMESETTINGSWIDGET_H
-#define THEMESETTINGSWIDGET_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -44,5 +43,3 @@ private:
     QFrame *m_previewFrame;
     QLabel *m_previewLabel;
 };
-
-#endif // THEMESETTINGSWIDGET_H

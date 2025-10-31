@@ -1,5 +1,4 @@
-#ifndef DATAREPOSITORY_H
-#define DATAREPOSITORY_H
+#pragma once
 
 #include <QObject>
 #include <QSqlDatabase>
@@ -108,5 +107,3 @@ private:
     int m_currentIndex;
     mutable QMutex m_bufferMutex;
 };
-
-#endif // DATAREPOSITORY_H

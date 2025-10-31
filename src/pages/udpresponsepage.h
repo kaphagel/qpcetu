@@ -1,5 +1,4 @@
-#ifndef UDPRESPONSEPAGE_H
-#define UDPRESPONSEPAGE_H
+#pragma once
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QTextEdit>
@@ -12,4 +11,3 @@ private:
     QVBoxLayout *m_layout;
     QTextEdit *m_textEdit;
 };
-#endif // UDPRESPONSEPAGE_H

@@ -28,8 +28,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/qpcetu/src/pages/simpledragdroppage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/simpledragdroppage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/simpledragdroppage.cpp.o.d"
   "/workspaces/qpcetu/src/pages/udpresponsepage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o.d"
   "/workspaces/qpcetu/src/pages/webbrowserpage.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.o.d"
+  "/workspaces/qpcetu/src/repositories/circularbufferrepository.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.o.d"
   "/workspaces/qpcetu/src/services/controllerxmlservice.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.o.d"
+  "/workspaces/qpcetu/src/services/modbusservice.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/services/modbusservice.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/services/modbusservice.cpp.o.d"
   "/workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o.d"
+  "/workspaces/qpcetu/src/statemachines/connectionstatemachine.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o.d"
   "/workspaces/qpcetu/src/strategies/controllerstrategy.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o.d"
   "/workspaces/qpcetu/src/udpservice.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/udpservice.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/udpservice.cpp.o.d"
   "/workspaces/qpcetu/src/ui/applestyle.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/applestyle.cpp.o.d"
@@ -39,6 +42,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/qpcetu/src/ui/thememanager.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/thememanager.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/thememanager.cpp.o.d"
   "/workspaces/qpcetu/src/ui/themesettingswidget.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/themesettingswidget.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/themesettingswidget.cpp.o.d"
   "/workspaces/qpcetu/src/ui/virtualkeyboard.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.o.d"
+  "/workspaces/qpcetu/src/viewmodels/dashboardviewmodel.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/dashboardviewmodel.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/dashboardviewmodel.cpp.o.d"
+  "/workspaces/qpcetu/src/viewmodels/graphviewmodel.cpp" "CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/graphviewmodel.cpp.o" "gcc" "CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/graphviewmodel.cpp.o.d"
   )
 
 # Targets to which this target links.

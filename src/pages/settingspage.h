@@ -1,9 +1,7 @@
-#ifndef SETTINGSPAGE_H
-#define SETTINGSPAGE_H
+#pragma once
 #include <QWidget>
 class SettingsPage : public QWidget {
     Q_OBJECT
 public:
     explicit SettingsPage(QWidget *parent = nullptr);
 };
-#endif // SETTINGSPAGE_H

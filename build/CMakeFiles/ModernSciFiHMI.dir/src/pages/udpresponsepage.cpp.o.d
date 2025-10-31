@@ -375,7 +375,6 @@ CMakeFiles/ModernSciFiHMI.dir/src/pages/udpresponsepage.cpp.o: \
  /workspaces/qpcetu/src/pages/../ui/../navigation/breadcrumbwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsOpacityEffect \
  /workspaces/qpcetu/src/pages/../ui/hamburgermenu.h \
- /workspaces/qpcetu/src/pages/../navigation/navigationmanager.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QTextCursor \

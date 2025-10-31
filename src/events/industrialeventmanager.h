@@ -1,5 +1,4 @@
-#ifndef INDUSTRIALEVENTMANAGER_H
-#define INDUSTRIALEVENTMANAGER_H
+#pragma once
 
 #include <QObject>
 #include <QDateTime>
@@ -124,5 +123,3 @@ private:
     QMap<QString, QVariant> m_lastValues;      // For change detection
     QMap<QString, QDateTime> m_lastAlarmTimes; // Alarm debouncing
 };
-
-#endif // INDUSTRIALEVENTMANAGER_H

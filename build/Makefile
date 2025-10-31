@@ -722,6 +722,30 @@ src/pages/webbrowserpage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/pages/webbrowserpage.cpp.s
 .PHONY : src/pages/webbrowserpage.cpp.s
 
+src/repositories/circularbufferrepository.o: src/repositories/circularbufferrepository.cpp.o
+.PHONY : src/repositories/circularbufferrepository.o
+
+# target to build an object file
+src/repositories/circularbufferrepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.o
+.PHONY : src/repositories/circularbufferrepository.cpp.o
+
+src/repositories/circularbufferrepository.i: src/repositories/circularbufferrepository.cpp.i
+.PHONY : src/repositories/circularbufferrepository.i
+
+# target to preprocess a source file
+src/repositories/circularbufferrepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.i
+.PHONY : src/repositories/circularbufferrepository.cpp.i
+
+src/repositories/circularbufferrepository.s: src/repositories/circularbufferrepository.cpp.s
+.PHONY : src/repositories/circularbufferrepository.s
+
+# target to generate assembly for a file
+src/repositories/circularbufferrepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.s
+.PHONY : src/repositories/circularbufferrepository.cpp.s
+
 src/services/controllerxmlservice.o: src/services/controllerxmlservice.cpp.o
 .PHONY : src/services/controllerxmlservice.o
 
@@ -746,6 +770,30 @@ src/services/controllerxmlservice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/services/controllerxmlservice.cpp.s
 .PHONY : src/services/controllerxmlservice.cpp.s
 
+src/services/modbusservice.o: src/services/modbusservice.cpp.o
+.PHONY : src/services/modbusservice.o
+
+# target to build an object file
+src/services/modbusservice.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/services/modbusservice.cpp.o
+.PHONY : src/services/modbusservice.cpp.o
+
+src/services/modbusservice.i: src/services/modbusservice.cpp.i
+.PHONY : src/services/modbusservice.i
+
+# target to preprocess a source file
+src/services/modbusservice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/services/modbusservice.cpp.i
+.PHONY : src/services/modbusservice.cpp.i
+
+src/services/modbusservice.s: src/services/modbusservice.cpp.s
+.PHONY : src/services/modbusservice.s
+
+# target to generate assembly for a file
+src/services/modbusservice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/services/modbusservice.cpp.s
+.PHONY : src/services/modbusservice.cpp.s
+
 src/statemachine/controllerstatemachine.o: src/statemachine/controllerstatemachine.cpp.o
 .PHONY : src/statemachine/controllerstatemachine.o
 
@@ -769,6 +817,30 @@ src/statemachine/controllerstatemachine.s: src/statemachine/controllerstatemachi
 src/statemachine/controllerstatemachine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.s
 .PHONY : src/statemachine/controllerstatemachine.cpp.s
+
+src/statemachines/connectionstatemachine.o: src/statemachines/connectionstatemachine.cpp.o
+.PHONY : src/statemachines/connectionstatemachine.o
+
+# target to build an object file
+src/statemachines/connectionstatemachine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o
+.PHONY : src/statemachines/connectionstatemachine.cpp.o
+
+src/statemachines/connectionstatemachine.i: src/statemachines/connectionstatemachine.cpp.i
+.PHONY : src/statemachines/connectionstatemachine.i
+
+# target to preprocess a source file
+src/statemachines/connectionstatemachine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.i
+.PHONY : src/statemachines/connectionstatemachine.cpp.i
+
+src/statemachines/connectionstatemachine.s: src/statemachines/connectionstatemachine.cpp.s
+.PHONY : src/statemachines/connectionstatemachine.s
+
+# target to generate assembly for a file
+src/statemachines/connectionstatemachine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.s
+.PHONY : src/statemachines/connectionstatemachine.cpp.s
 
 src/strategies/controllerstrategy.o: src/strategies/controllerstrategy.cpp.o
 .PHONY : src/strategies/controllerstrategy.o
@@ -986,6 +1058,54 @@ src/ui/virtualkeyboard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/ui/virtualkeyboard.cpp.s
 .PHONY : src/ui/virtualkeyboard.cpp.s
 
+src/viewmodels/dashboardviewmodel.o: src/viewmodels/dashboardviewmodel.cpp.o
+.PHONY : src/viewmodels/dashboardviewmodel.o
+
+# target to build an object file
+src/viewmodels/dashboardviewmodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/dashboardviewmodel.cpp.o
+.PHONY : src/viewmodels/dashboardviewmodel.cpp.o
+
+src/viewmodels/dashboardviewmodel.i: src/viewmodels/dashboardviewmodel.cpp.i
+.PHONY : src/viewmodels/dashboardviewmodel.i
+
+# target to preprocess a source file
+src/viewmodels/dashboardviewmodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/dashboardviewmodel.cpp.i
+.PHONY : src/viewmodels/dashboardviewmodel.cpp.i
+
+src/viewmodels/dashboardviewmodel.s: src/viewmodels/dashboardviewmodel.cpp.s
+.PHONY : src/viewmodels/dashboardviewmodel.s
+
+# target to generate assembly for a file
+src/viewmodels/dashboardviewmodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/dashboardviewmodel.cpp.s
+.PHONY : src/viewmodels/dashboardviewmodel.cpp.s
+
+src/viewmodels/graphviewmodel.o: src/viewmodels/graphviewmodel.cpp.o
+.PHONY : src/viewmodels/graphviewmodel.o
+
+# target to build an object file
+src/viewmodels/graphviewmodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/graphviewmodel.cpp.o
+.PHONY : src/viewmodels/graphviewmodel.cpp.o
+
+src/viewmodels/graphviewmodel.i: src/viewmodels/graphviewmodel.cpp.i
+.PHONY : src/viewmodels/graphviewmodel.i
+
+# target to preprocess a source file
+src/viewmodels/graphviewmodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/graphviewmodel.cpp.i
+.PHONY : src/viewmodels/graphviewmodel.cpp.i
+
+src/viewmodels/graphviewmodel.s: src/viewmodels/graphviewmodel.cpp.s
+.PHONY : src/viewmodels/graphviewmodel.s
+
+# target to generate assembly for a file
+src/viewmodels/graphviewmodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/graphviewmodel.cpp.s
+.PHONY : src/viewmodels/graphviewmodel.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1066,12 +1186,21 @@ help:
 	@echo "... src/pages/webbrowserpage.o"
 	@echo "... src/pages/webbrowserpage.i"
 	@echo "... src/pages/webbrowserpage.s"
+	@echo "... src/repositories/circularbufferrepository.o"
+	@echo "... src/repositories/circularbufferrepository.i"
+	@echo "... src/repositories/circularbufferrepository.s"
 	@echo "... src/services/controllerxmlservice.o"
 	@echo "... src/services/controllerxmlservice.i"
 	@echo "... src/services/controllerxmlservice.s"
+	@echo "... src/services/modbusservice.o"
+	@echo "... src/services/modbusservice.i"
+	@echo "... src/services/modbusservice.s"
 	@echo "... src/statemachine/controllerstatemachine.o"
 	@echo "... src/statemachine/controllerstatemachine.i"
 	@echo "... src/statemachine/controllerstatemachine.s"
+	@echo "... src/statemachines/connectionstatemachine.o"
+	@echo "... src/statemachines/connectionstatemachine.i"
+	@echo "... src/statemachines/connectionstatemachine.s"
 	@echo "... src/strategies/controllerstrategy.o"
 	@echo "... src/strategies/controllerstrategy.i"
 	@echo "... src/strategies/controllerstrategy.s"
@@ -1099,6 +1228,12 @@ help:
 	@echo "... src/ui/virtualkeyboard.o"
 	@echo "... src/ui/virtualkeyboard.i"
 	@echo "... src/ui/virtualkeyboard.s"
+	@echo "... src/viewmodels/dashboardviewmodel.o"
+	@echo "... src/viewmodels/dashboardviewmodel.i"
+	@echo "... src/viewmodels/dashboardviewmodel.s"
+	@echo "... src/viewmodels/graphviewmodel.o"
+	@echo "... src/viewmodels/graphviewmodel.i"
+	@echo "... src/viewmodels/graphviewmodel.s"
 .PHONY : help
 
 

@@ -1,5 +1,4 @@
-#ifndef ANIMATEDPROGRESSBAR_H
-#define ANIMATEDPROGRESSBAR_H
+#pragma once
 
 #include <QProgressBar>
 #include <QPropertyAnimation>
@@ -33,5 +32,3 @@ private:
     QPropertyAnimation *m_valueAnimation;
     QPropertyAnimation *m_flowAnimation;
 };
-
-#endif // ANIMATEDPROGRESSBAR_H

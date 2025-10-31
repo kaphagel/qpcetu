@@ -1,5 +1,4 @@
-#ifndef DATAWIDGET_H
-#define DATAWIDGET_H
+#pragma once
 
 #include <QWidget>
 #include <QLabel>
@@ -47,5 +46,3 @@ private:
     QPropertyAnimation *m_valueAnimation;
     QGraphicsDropShadowEffect *m_glowEffect;
 };
-
-#endif // DATAWIDGET_H

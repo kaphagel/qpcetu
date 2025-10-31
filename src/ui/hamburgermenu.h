@@ -1,5 +1,4 @@
-#ifndef HAMBURGERMENU_H
-#define HAMBURGERMENU_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -117,5 +116,3 @@ private:
     static const int DEFAULT_MENU_WIDTH = 280;
     static const int DEFAULT_ANIMATION_DURATION = 300;
 };
-
-#endif // HAMBURGERMENU_H

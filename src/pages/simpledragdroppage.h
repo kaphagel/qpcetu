@@ -1,5 +1,4 @@
-#ifndef SIMPLEDRAGDROPPAGE_H
-#define SIMPLEDRAGDROPPAGE_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -29,5 +28,3 @@ private:
     QLabel *m_titleLabel;
     QLabel *m_contentLabel;
 };
-
-#endif // SIMPLEDRAGDROPPAGE_H

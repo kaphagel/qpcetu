@@ -1,5 +1,4 @@
-#ifndef INDUSTRIALCONTROLLER_H
-#define INDUSTRIALCONTROLLER_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -115,5 +114,3 @@ private:
     ControllerType parseControllerType(const QString &typeStr);
     void setupTimeoutTimer();
 };
-
-#endif // INDUSTRIALCONTROLLER_H

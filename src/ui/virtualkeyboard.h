@@ -1,5 +1,4 @@
-#ifndef VIRTUALKEYBOARD_H
-#define VIRTUALKEYBOARD_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -158,5 +157,3 @@ protected:
 private:
     VirtualKeyboard* m_keyboard;
 };
-
-#endif // VIRTUALKEYBOARD_H

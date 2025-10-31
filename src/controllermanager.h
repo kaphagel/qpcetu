@@ -1,5 +1,4 @@
-#ifndef CONTROLLERMANAGER_H
-#define CONTROLLERMANAGER_H
+#pragma once
 
 #include <QObject>
 #include <QAbstractListModel>
@@ -72,5 +71,3 @@ private:
     void setupCleanupTimer();
     int findControllerIndex(IndustrialController *controller) const;
 };
-
-#endif // CONTROLLERMANAGER_H

@@ -387,7 +387,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
  /usr/include/c++/11/bits/random.tcc \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UVLADIE3JM/moc_industrialcontroller.cpp \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/industrialcontroller.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UVLADIE3JM/moc_mainwindow.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
@@ -416,7 +415,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qhostaddress.h \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkInterface \
  /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qnetworkinterface.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/controllermanager.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/DKENSKBYO5/moc_breadcrumbwidget.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/DKENSKBYO5/../../../src/navigation/breadcrumbwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList \
@@ -432,45 +430,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/dashboardpage.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_graphspage.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/graphspage.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus.h \
- /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
- /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
- /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
- /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
- /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
- /usr/include/x86_64-linux-gnu/bits/sigaction.h \
- /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
- /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
- /usr/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/sigstksz.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/sigthread.h \
- /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
- /usr/include/x86_64-linux-gnu/asm/param.h \
- /usr/include/asm-generic/param.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus-version.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus-rtu.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus-tcp.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../../deps/external/libmodbus/src/modbus-tcp.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../graphwidget.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_industrialdatapage.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/industrialdatapage.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollArea \
@@ -543,8 +502,30 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/udpresponsepage.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_webbrowserpage.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/webbrowserpage.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UEBDTUJI3I/moc_circularbufferrepository.cpp \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UEBDTUJI3I/../../../src/repositories/circularbufferrepository.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMutex \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMutexLocker \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UEBDTUJI3I/../../../src/repositories/../interfaces/irepository.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UEBDTUJI3I/../../../src/repositories/../interfaces/../utils/result.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UEBDTUJI3I/../../../src/repositories/../models/datapoint.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/GQ6NBGVJMG/moc_controllerxmlservice.cpp \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/GQ6NBGVJMG/../../../src/services/controllerxmlservice.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/GQ6NBGVJMG/moc_modbusservice.cpp \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/GQ6NBGVJMG/../../../src/services/modbusservice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdeadlinetimer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h \
+ /usr/include/c++/11/future /usr/include/c++/11/mutex \
+ /usr/include/c++/11/bits/std_mutex.h \
+ /usr/include/c++/11/bits/unique_lock.h \
+ /usr/include/c++/11/condition_variable \
+ /usr/include/c++/11/bits/atomic_futex.h \
+ /usr/include/c++/11/bits/std_thread.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/GQ6NBGVJMG/../../../src/services/../interfaces/idatasource.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QQMEBWJXMO/moc_controllerstatemachine.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QQMEBWJXMO/../../../src/statemachine/controllerstatemachine.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QStateMachine \
@@ -554,11 +535,11 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QState \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstate.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/LST6L3SH3N/moc_connectionstatemachine.cpp \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/LST6L3SH3N/../../../src/statemachines/connectionstatemachine.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/MKDT3456JX/moc_controllerstrategy.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/MKDT3456JX/../../../src/strategies/controllerstrategy.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/MKDT3456JX/../../../src/strategies/../industrialcontroller.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UVLADIE3JM/moc_udpservice.cpp \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/UVLADIE3JM/../../../src/udpservice.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_controllercardwidget.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/controllercardwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsDropShadowEffect \
@@ -567,10 +548,6 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/hamburgermenu.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_modernmainwindow.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/modernmainwindow.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../udpservice.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/navigationmanager.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/../navigation/breadcrumbwidget.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/hamburgermenu.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_thememanager.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QColor \
@@ -581,6 +558,8 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/themesettingswidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QButtonGroup \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/thememanager.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_virtualkeyboard.cpp \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/../../../src/ui/virtualkeyboard.h
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/moc_dashboardviewmodel.cpp \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/../../../src/viewmodels/dashboardviewmodel.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/moc_graphviewmodel.cpp \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/../../../src/viewmodels/graphviewmodel.h

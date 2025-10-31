@@ -1,5 +1,4 @@
-#ifndef CONTROLLEROVERVIEW_H
-#define CONTROLLEROVERVIEW_H
+#pragma once
 
 #include <QWidget>
 #include <QGridLayout>
@@ -85,5 +84,3 @@ private:
     void enterEvent(QEvent *event) override;
     void leaveEvent(QEvent *event) override;
 };
-
-#endif // CONTROLLEROVERVIEW_H

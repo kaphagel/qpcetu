@@ -1,5 +1,4 @@
-#ifndef DRAGDROPPAGE_SIMPLE_H
-#define DRAGDROPPAGE_SIMPLE_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -91,5 +90,3 @@ private:
 
     int m_rectangleCounter;
 };
-
-#endif // DRAGDROPPAGE_SIMPLE_H

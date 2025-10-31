@@ -1,5 +1,4 @@
-#ifndef COMMAND_H
-#define COMMAND_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -60,5 +59,3 @@ private:
     Operation m_operation;
     Operation m_previousState;
 };
-
-#endif // COMMAND_H

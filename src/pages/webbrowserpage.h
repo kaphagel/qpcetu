@@ -1,5 +1,4 @@
-#ifndef WEBBROWSERPAGE_H
-#define WEBBROWSERPAGE_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -105,5 +104,3 @@ private:
     QString m_homeUrl;
     bool m_webEngineAvailable;
 };
-
-#endif // WEBBROWSERPAGE_H

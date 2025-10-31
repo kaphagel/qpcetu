@@ -1,5 +1,4 @@
-#ifndef APPLESTYLE_H
-#define APPLESTYLE_H
+#pragma once
 
 #include <QString>
 #include <QColor>
@@ -87,5 +86,3 @@ public:
 private:
     AppleStyle() = default;
 };
-
-#endif // APPLESTYLE_H

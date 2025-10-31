@@ -1,5 +1,4 @@
-#ifndef UDPSERVICE_H
-#define UDPSERVICE_H
+#pragma once
 
 #include <QObject>
 #include <QUdpSocket>
@@ -43,5 +42,3 @@ private:
     QByteArray m_message = "Module Scan";
     void updateBroadcastAddresses();
 };
-
-#endif // UDPSERVICE_H

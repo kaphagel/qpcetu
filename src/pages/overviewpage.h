@@ -1,12 +1,19 @@
-#ifndef OVERVIEWPAGE_H
-#define OVERVIEWPAGE_H
+#pragma once
 
 #include <QWidget>
 #include <QPushButton>
+#include <QVBoxLayout>
 #include <QGridLayout>
 #include <QLabel>
 #include <QIcon>
+#include <QEvent>
 
+/**
+ * @brief iOS-style home page with large touch-optimized navigation cards
+ * 
+ * Clean, minimal design following Apple Human Interface Guidelines
+ * adapted for industrial tablet navigation.
+ */
 class OverviewPage : public QWidget {
     Q_OBJECT
 public:
@@ -16,8 +23,15 @@ public:
 signals:
     void iconClicked(int pageIndex);
 
-private:
-    QGridLayout *m_gridLayout;
-};
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
-#endif // OVERVIEWPAGE_H
+private:
+    void createNavigationCard(const QString &title, const QString &subtitle, 
+                             const QString &iconPath, int pageIndex);
+    
+    QVBoxLayout *m_mainLayout;
+    QGridLayout *m_cardsLayout;
+    QLabel *m_welcomeLabel;
+    QLabel *m_subtitleLabel;
+};

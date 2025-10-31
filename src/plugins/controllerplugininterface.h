@@ -1,5 +1,4 @@
-#ifndef CONTROLLERPLUGININTERFACE_H
-#define CONTROLLERPLUGININTERFACE_H
+#pragma once
 
 #include <QObject>
 #include <QVariantMap>
@@ -107,5 +106,3 @@ protected:
     bool isValidIpAddress(const QString &ip) const;
     bool isValidMacAddress(const QString &mac) const;
 };
-
-#endif // CONTROLLERPLUGININTERFACE_H

@@ -1,5 +1,4 @@
-#ifndef CONTROLLERXMLSERVICE_H
-#define CONTROLLERXMLSERVICE_H
+#pragma once
 
 #include <QObject>
 #include <QNetworkAccessManager>
@@ -93,5 +92,3 @@ private:
     XmlPage m_currentPage;
     int m_refreshInterval;
 };
-
-#endif // CONTROLLERXMLSERVICE_H

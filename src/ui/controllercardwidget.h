@@ -1,5 +1,4 @@
-#ifndef CONTROLLERCARDWIDGET_H
-#define CONTROLLERCARDWIDGET_H
+#pragma once
 
 #include <QWidget>
 #include <QVBoxLayout>
@@ -126,5 +125,3 @@ private:
     // Animation properties
     int m_pulseValue;
 };
-
-#endif // CONTROLLERCARDWIDGET_H

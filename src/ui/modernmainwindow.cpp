@@ -2,6 +2,7 @@
 #include "controllercardwidget.h"
 #include "thememanager.h"
 #include "applestyle.h"
+#include "../pages/overviewpage.h"
 #include "../pages/dashboardpage.h"
 #include "../pages/graphspage.h"
 #include "../pages/settingspage.h"
@@ -24,6 +25,7 @@ ModernMainWindow::ModernMainWindow(QWidget *parent)
     , m_udpService(nullptr)
     , m_navigationManager(nullptr)
     , m_breadcrumbWidget(nullptr)
+    , m_overviewPage(nullptr)
     , m_dashboardPage(nullptr)
     , m_graphsPage(nullptr)
     , m_settingsPage(nullptr)
@@ -108,13 +110,13 @@ void ModernMainWindow::setupUI()
 
     // Create main UI components
     createHeaderBar();
-    createSystemStatusStrip();
+    createSystemStatusStrip();  // Still create it so pointers aren't null
     createMainContentArea();
     createStatusBar();
 
     // Add to main layout
     mainLayout->addWidget(m_headerBar);
-    mainLayout->addWidget(m_statusStrip);
+    // mainLayout->addWidget(m_statusStrip);  // Don't add to layout - cleaner interface
     
     // Create stacked widget here instead of in setupNavigation
     m_stackedWidget = new QStackedWidget(this);
@@ -894,6 +896,16 @@ void ModernMainWindow::setupNavigation()
     // Initialize navigation manager
     m_navigationManager = new NavigationManager(m_stackedWidget, this);
     
+    // Create overview page (iOS-style navigation home)
+    if (!m_overviewPage) {
+        m_overviewPage = new OverviewPage(this);
+        // Connect navigation cards to page navigation
+        connect(m_overviewPage, &OverviewPage::iconClicked, this, [this](int pageIndex) {
+            NavigationManager::PageId pageId = static_cast<NavigationManager::PageId>(pageIndex);
+            navigateToPage(pageId);
+        });
+    }
+    
     // Create pages if they don't exist
     if (!m_dashboardPage) {
         m_dashboardPage = new DashboardPage(this);
@@ -917,9 +929,9 @@ void ModernMainWindow::setupNavigation()
         m_webBrowserPage = new WebBrowserPage(this);
     }
     
-    // Register pages with navigation manager
+    // Register pages with navigation manager - Use OverviewPage as home
     m_navigationManager->registerPage(NavigationManager::PageId::Overview, 
-                                      m_mainContent, "Overview", "🏠");
+                                      m_overviewPage, "Home", "🏠");
     m_navigationManager->registerPage(NavigationManager::PageId::Dashboard, 
                                       m_dashboardPage, "Dashboard", "📊");
     m_navigationManager->registerPage(NavigationManager::PageId::Graphs, 

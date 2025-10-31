@@ -1,5 +1,4 @@
-#ifndef GRAPHWIDGET_H
-#define GRAPHWIDGET_H
+#pragma once
 
 #include <QWidget>
 #include <QTimer>
@@ -52,5 +51,3 @@ public:
     // ...existing code...
     
 };
-
-#endif // GRAPHWIDGET_H

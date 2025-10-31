@@ -1,5 +1,4 @@
-#ifndef CONTROLLERSTRATEGY_H
-#define CONTROLLERSTRATEGY_H
+#pragma once
 
 #include <QObject>
 #include <QVariantMap>
@@ -104,5 +103,3 @@ public:
     static ControllerStrategy *createStrategy(IndustrialController::ControllerType type, QObject *parent = nullptr);
     static QStringList supportedTypes();
 };
-
-#endif // CONTROLLERSTRATEGY_H

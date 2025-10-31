@@ -1,5 +1,4 @@
-#ifndef CONTROLLERSTATEMACHINE_H
-#define CONTROLLERSTATEMACHINE_H
+#pragma once
 
 #include <QObject>
 #include <QStateMachine>
@@ -72,5 +71,3 @@ private:
     QString m_controllerIp;
     ControllerState m_currentState;
 };
-
-#endif // CONTROLLERSTATEMACHINE_H

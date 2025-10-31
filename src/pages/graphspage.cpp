@@ -1,112 +1,122 @@
-// GraphsPage implementation
 #include "graphspage.h"
 #include "../graphwidget.h"
-#include "../mainwindow.h"
+#include "../viewmodels/graphviewmodel.h"
+#include "../services/modbusservice.h"
+#include "../ui/thememanager.h"
 #include <QVBoxLayout>
+#include <QGridLayout>
 #include <QLabel>
 #include <QPushButton>
-#include <QIcon>
-#include <QThread>
+#include <QMessageBox>
+#include <QDebug>
 
-GraphsPage::GraphsPage(QWidget *parent) : QWidget(parent) {
-    QGridLayout *mainLayout = new QGridLayout;
-    mainLayout->setSpacing(4);
-    mainLayout->setContentsMargins(8, 8, 8, 8);
+GraphsPage::GraphsPage(QWidget* parent) 
+    : QWidget(parent)
+    , m_viewModel(nullptr)
+    , m_modbusService(new ModbusService(this))
+    , m_eegGraph(nullptr)
+    , m_graph2(nullptr)
+    , m_graph3(nullptr)
+    , m_graph4(nullptr)
+    , m_mainLayout(nullptr)
+    , m_themeManager(ThemeManager::instance())
+{
+    setupUI();
+    
+    // Create ViewModel with ModbusService
+    m_viewModel = new GraphViewModel(m_modbusService, this);
+    
+    connectSignals();
+    
+    // Connect to Modbus controller
+    auto connectResult = m_modbusService->connect("192.168.10.243", 502);
+    if (connectResult.isSuccess()) {
+        qDebug() << "GraphsPage: Successfully connected to Modbus controller";
+        
+        // Start polling EEG data (1 second interval)
+        m_viewModel->startPolling(1000);
+    } else {
+        qWarning() << "GraphsPage: Failed to connect to Modbus:" << connectResult.error();
+    }
+    
+    applyTheme();
+}
+
+GraphsPage::~GraphsPage() {
+    // Qt parent-child relationship handles cleanup
+    if (m_viewModel) {
+        m_viewModel->stopPolling();
+    }
+}
+
+void GraphsPage::setupUI() {
+    // Create main layout
+    QGridLayout* gridLayout = new QGridLayout;
+    gridLayout->setSpacing(4);
+    gridLayout->setContentsMargins(8, 8, 8, 8);
 
     // Create 4 graphs for 2x2 grid
     m_eegGraph = new GraphWidget("EEG Waveform", GraphWidget::SineWave, this);
     m_eegGraph->setRange(0, 120);
     m_eegGraph->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    mainLayout->addWidget(m_eegGraph, 0, 0);
+    gridLayout->addWidget(m_eegGraph, 0, 0);
 
     m_graph2 = new GraphWidget("Shield Harmonics", GraphWidget::RandomData, this);
     m_graph2->setRange(20, 100);
     m_graph2->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    mainLayout->addWidget(m_graph2, 0, 1);
+    gridLayout->addWidget(m_graph2, 0, 1);
 
     m_graph3 = new GraphWidget("System Status", GraphWidget::StepFunction, this);
     m_graph3->setRange(0, 100);
     m_graph3->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    mainLayout->addWidget(m_graph3, 1, 0);
+    gridLayout->addWidget(m_graph3, 1, 0);
 
     m_graph4 = new GraphWidget("Network Traffic", GraphWidget::PulseWave, this);
     m_graph4->setRange(0, 100);
     m_graph4->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    mainLayout->addWidget(m_graph4, 1, 1);
+    gridLayout->addWidget(m_graph4, 1, 1);
 
-    this->setLayout(mainLayout);
-
-    // Modbus TCP setup
-    int maxAttempts = 5;
-    int attempt = 0;
-    while (attempt < maxAttempts) {
-        m_modbusCtx = modbus_new_tcp("192.168.10.243", 502);
-        if (m_modbusCtx) {
-            modbus_set_debug(m_modbusCtx, TRUE);
-            modbus_enable_quirks(m_modbusCtx, TRUE);
-            if (modbus_connect(m_modbusCtx) == -1) {
-                qWarning("Modbus connection failed (attempt %d): %s", attempt+1, modbus_strerror(errno));
-                modbus_free(m_modbusCtx);
-                m_modbusCtx = nullptr;
-                QThread::msleep(1000); // Wait 1s before retry
-            } else {
-                qWarning("Modbus connection succeeded (attempt %d)", attempt+1);
-                break;
-            }
-        } else {
-            qWarning("Modbus context creation failed (attempt %d)", attempt+1);
-            QThread::msleep(1000);
-        }
-        ++attempt;
-    }
-
-    // Timer for polling EEG value
-    m_pollTimer = new QTimer(this);
-    connect(m_pollTimer, &QTimer::timeout, this, &GraphsPage::pollEEG);
-    m_pollTimer->start(1000); // 1 second interval
-
-    this->setLayout(mainLayout);
+    setLayout(gridLayout);
 }
 
-void GraphsPage::pollEEG() {
-    if (!m_modbusCtx) return;
-    uint16_t reg[1] = {0};
-    int rc = modbus_read_input_registers(m_modbusCtx, 25, 1, reg); // Input register 25 (decimal)
-    if (rc == 1) {
-        qreal scaledValue = reg[0] / 10.0;
-        m_eegGraph->addDataPoint(scaledValue);
-    } else {
-        int err = errno;
-        // Attempt to fully reset and robustly reconnect Modbus context if connection error
-        if (err == ECONNRESET || err == ETIMEDOUT || err == ENOTCONN || err == EBADF) {
-            qWarning("Attempting full Modbus context reset and robust reconnect...");
-            if (m_modbusCtx) {
-                modbus_close(m_modbusCtx);
-                modbus_free(m_modbusCtx);
-                m_modbusCtx = nullptr;
-            }
-            int maxAttempts = 5;
-            int attempt = 0;
-            while (attempt < maxAttempts) {
-                m_modbusCtx = modbus_new_tcp("192.168.10.243", 502);
-                if (m_modbusCtx) {
-                    modbus_set_debug(m_modbusCtx, TRUE);
-                    modbus_enable_quirks(m_modbusCtx, TRUE);
-                    if (modbus_connect(m_modbusCtx) == -1) {
-                        qWarning("Modbus reconnect failed (attempt %d): %s", attempt+1, modbus_strerror(errno));
-                        modbus_free(m_modbusCtx);
-                        m_modbusCtx = nullptr;
-                        QThread::msleep(1000); // Wait 1s before retry
-                    } else {
-                        qWarning("Modbus reconnect succeeded (attempt %d)", attempt+1);
-                        break;
-                    }
-                } else {
-                    qWarning("Modbus context creation failed (attempt %d)", attempt+1);
-                    QThread::msleep(1000);
-                }
-                ++attempt;
-            }
-        }
+void GraphsPage::connectSignals() {
+    // ViewModel → View connections
+    connect(m_viewModel, &GraphViewModel::eegDataUpdated,
+            this, &GraphsPage::onEegDataUpdated);
+    connect(m_viewModel, &GraphViewModel::errorOccurred,
+            this, &GraphsPage::onErrorOccurred);
+    connect(m_viewModel, &GraphViewModel::connectionStateChanged,
+            this, &GraphsPage::onConnectionStateChanged);
+    
+    // Theme changes
+    connect(m_themeManager, &ThemeManager::themeChanged,
+            this, &GraphsPage::applyTheme);
+}
+
+void GraphsPage::applyTheme() {
+    // Use ThemeManager for colors (RULE-070)
+    QString bgColor = m_themeManager->color(ThemeManager::MainBackground).name();
+    QString textColor = m_themeManager->color(ThemeManager::PrimaryText).name();
+    
+    setStyleSheet(QString(
+        "QWidget { background-color: %1; color: %2; }"
+    ).arg(bgColor, textColor));
+}
+
+void GraphsPage::onEegDataUpdated(double value) {
+    // Update EEG graph with new data
+    if (m_eegGraph) {
+        m_eegGraph->addDataPoint(value);
     }
+}
+
+void GraphsPage::onErrorOccurred(const QString& error) {
+    qWarning() << "GraphsPage: Error occurred:" << error;
+    // Could show error in UI status bar or message box
+    // For now, just log it
+}
+
+void GraphsPage::onConnectionStateChanged(bool connected) {
+    qDebug() << "GraphsPage: Connection state changed:" << connected;
+    // Could update UI to show connection status
 }

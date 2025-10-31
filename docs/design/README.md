@@ -6,13 +6,6 @@ This section contains UI/UX design specifications and visual design system docum
 
 ## 📋 Documentation Index
 
-### **[Project Specifications](./project-specifications.md)**
-Complete project requirements and system architecture including:
-- **Industrial HMI Architecture**: Touch screen optimization and enterprise patterns
-- **Technology Stack**: Qt5 Widgets, C++17, cross-platform support
-- **Protocol Integration**: UDP discovery, Modbus TCP, real-time data acquisition
-- **Build System**: Professional Linux/Windows build automation
-
 ### **[UI Specification](./ui-specification.md)**
 Detailed user interface design specifications including:
 - **Interface Layout**: Multi-page navigation and component organization
@@ -26,6 +19,8 @@ iOS/iPadOS inspired design guidelines adapted for industrial use including:
 - **Color System**: Dynamic theming with Dark, Light, High Contrast, Apple themes
 - **Layout Principles**: Clean, borderless design with background differentiation
 - **Touch Standards**: 60x60px minimum targets with generous spacing
+
+> **Note**: For comprehensive project architecture and specifications, see [../ARCHITECTURE.md](../ARCHITECTURE.md) - the authoritative architectural reference.
 
 ## 🎨 Design System Overview
 
@@ -162,5 +157,5 @@ For design questions and UI/UX guidance:
 3. Examine the [UI Specification](./ui-specification.md) for component details
 4. Follow established design patterns in the existing interface
 
-**Last Updated**: October 4, 2025
+**Last Updated**: October 30, 2025
 **Focus**: Touch-optimized industrial HMI with multi-theme support

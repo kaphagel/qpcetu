@@ -187,10 +187,17 @@ set(MODERN_SOURCES
     src/navigation/breadcrumbwidget.cpp
     # Services
     src/services/controllerxmlservice.cpp
+    src/services/modbusservice.cpp
+    # ViewModels (MVVM Pattern)
+    src/viewmodels/graphviewmodel.cpp
+    src/viewmodels/dashboardviewmodel.cpp
+    # Repositories (Data Access Layer)
+    src/repositories/circularbufferrepository.cpp
     # Architecture Pattern Implementations
     src/strategies/controllerstrategy.cpp
     src/commands/command.cpp
     src/statemachine/controllerstatemachine.cpp
+    src/statemachines/connectionstatemachine.cpp
 )
 
 if(WIN32)

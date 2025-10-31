@@ -5,6 +5,18 @@ This directory contains comprehensive documentation for the Qt5-based industrial
 
 ## 📚 Documentation Structure
 
+### 🏛️ Architecture & Design Principles
+**CRITICAL**: Read these foundational documents before making any architectural changes.
+
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - 📖 **PRIMARY REFERENCE** for all architectural decisions
+  - SOLID Principles with code examples
+  - Clean Architecture layered design
+  - 8 Primary Design Patterns (MVVM, Strategy, Repository, Observer, Command, State Machine, Factory, Singleton)
+  - Technology Stack decisions with rationale
+  - Directory structure and organization
+  - Coding standards and testing strategy
+  - System architecture diagrams
+
 ### 🔧 [Development](./development/)
 Technical documentation for developers working on the HMI system.
 - **[Guidelines](./development/guidelines.md)** - Coding standards, architecture patterns, and best practices
@@ -12,7 +24,6 @@ Technical documentation for developers working on the HMI system.
 
 ### 🎨 [Design](./design/)
 UI/UX design specifications and visual design system documentation.
-- **[Project Specifications](./design/project-specifications.md)** - Complete project requirements and architecture
 - **[UI Specification](./design/ui-specification.md)** - User interface design specifications
 - **[Apple Design System](./design/apple-design-system.md)** - iOS/iPadOS inspired design guidelines
 
@@ -33,12 +44,18 @@ API documentation and developer references.
 - **Design**: Apple Human Interface Guidelines adapted for industrial use
 
 ### **Architecture Patterns**
-- **Strategy Pattern**: Protocol-specific controller communication
-- **Command Pattern**: Industrial operations with undo/redo support
-- **State Machine**: Connection lifecycle management
-- **Observer Pattern**: Real-time event propagation
-- **Repository Pattern**: Data persistence and historical storage
-- **Plugin Architecture**: Extensible controller type support
+All architectural patterns are comprehensively documented in **[ARCHITECTURE.md](./ARCHITECTURE.md)** with code examples:
+
+- **MVVM Pattern**: View-ViewModel-Model separation with Qt signals/slots
+- **Strategy Pattern**: Protocol-specific controller communication (EPIC4, SNAP_PAC)
+- **Command Pattern**: Industrial operations with undo/redo support and audit trails
+- **State Machine**: Connection lifecycle management (Disconnected → Connected → Running → Fault)
+- **Observer Pattern**: Real-time event propagation using Qt signals/slots
+- **Repository Pattern**: Data persistence and historical storage abstraction
+- **Factory Pattern**: Object creation for controllers, strategies, commands
+- **Singleton Pattern**: Global services (ThemeManager, NavigationManager, EventManager)
+
+**See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed implementation examples and SOLID principles.**
 
 ### **Key Features**
 - ✅ **Touch-Optimized Interface**: 60x60px minimum buttons, generous spacing
@@ -91,21 +108,40 @@ project-root/
 
 ## 🎯 Industrial Applications
 
-This HMI system is designed for:
+This HMI system follows **SOLID principles** and **Clean Architecture** for industrial-grade reliability:
+
+### **Application Domains**
 - **Manufacturing Control**: Real-time monitoring and control of industrial processes
 - **SCADA Systems**: Supervisory control and data acquisition
 - **Process Automation**: Touch-friendly interfaces for industrial environments
 - **Remote Monitoring**: Cross-platform deployment for various industrial computers
 - **Data Visualization**: Real-time graphs and industrial dashboard displays
 
+### **Design Goals** (from [ARCHITECTURE.md](./ARCHITECTURE.md))
+1. **Maintainability**: Easy to understand, modify, and extend over time
+2. **Testability**: Components can be tested in isolation
+3. **Flexibility**: Support multiple controller types and protocols
+4. **Scalability**: Handle multiple controllers and large datasets
+5. **Reliability**: Industrial-grade robustness for 24/7 operation
+6. **User Experience**: Professional, clean, Apple-inspired touch interfaces
+
 ## 📞 Support
 
 For technical support, development questions, or feature requests:
-1. Check the relevant documentation section above
-2. Review the [Development Guidelines](./development/guidelines.md)
-3. Consult the [Build System Documentation](./development/build-system.md)
+1. **Start with [ARCHITECTURE.md](./ARCHITECTURE.md)** - Comprehensive architectural guide
+2. Check the relevant documentation section above
+3. Review the [Development Guidelines](./development/guidelines.md)
+4. Consult the [Build System Documentation](./development/build-system.md)
+
+### **Documentation Philosophy**
+This project maintains **living documentation** that evolves with the codebase:
+- **ARCHITECTURE.md**: Authoritative source for all architectural decisions
+- **Development docs**: Practical guides for daily development work
+- **Design docs**: UI/UX specifications and design system guidelines
+- **API docs**: Generated from code comments (Doxygen-style)
 
 ---
 
-**Last Updated**: October 4, 2025
-**Version**: Professional Structure Implementation (Steps 1-3 Complete)
+**Last Updated**: October 30, 2025  
+**Version**: SOLID Principles & Clean Architecture Implementation  
+**Primary Reference**: [ARCHITECTURE.md](./ARCHITECTURE.md)

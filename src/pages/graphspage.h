@@ -1,28 +1,55 @@
-#ifndef GRAPHSPAGE_H
-#define GRAPHSPAGE_H
+#pragma once
 #include <QWidget>
-#include "../../deps/external/libmodbus/src/modbus.h"
-#include "../../deps/external/libmodbus/src/modbus-tcp.h"
+#include <QVBoxLayout>
 
-extern "C" {
-#include "../../deps/external/libmodbus/src/modbus.h"
-#include "../../deps/external/libmodbus/src/modbus-tcp.h"
-}
+class GraphWidget;
+class GraphViewModel;
+class ModbusService;
+class ThemeManager;
 
-#include "../graphwidget.h"
-
+/**
+ * @brief Graphs page - Pure UI for data visualization
+ * 
+ * This page displays real-time graphs of industrial data (EEG, shield harmonics, etc.).
+ * All business logic has been moved to GraphViewModel following MVVM pattern.
+ * 
+ * Pattern: MVVM - View layer (RULE-200)
+ * Location: src/pages/ (will be moved to src/views/pages/ in Phase 5)
+ * 
+ * Responsibilities:
+ * - UI layout and styling ONLY
+ * - Connect to ViewModel signals
+ * - Update UI based on ViewModel data
+ * - NO business logic (RULE-100)
+ */
 class GraphsPage : public QWidget {
     Q_OBJECT
+    
 public:
-    explicit GraphsPage(QWidget *parent = nullptr);
+    explicit GraphsPage(QWidget* parent = nullptr);
+    ~GraphsPage() override;
+
+private slots:
+    void onEegDataUpdated(double value);
+    void onErrorOccurred(const QString& error);
+    void onConnectionStateChanged(bool connected);
 
 private:
-    GraphWidget *m_eegGraph;
-    GraphWidget *m_graph2;
-    GraphWidget *m_graph3;
-    GraphWidget *m_graph4;
-    QTimer *m_pollTimer;
-    modbus_t *m_modbusCtx;
-    void pollEEG();
+    void setupUI();
+    void connectSignals();
+    void applyTheme();
+    
+    // ViewModel (business logic)
+    GraphViewModel* m_viewModel;
+    ModbusService* m_modbusService;
+    
+    // UI Components
+    GraphWidget* m_eegGraph;
+    GraphWidget* m_graph2;
+    GraphWidget* m_graph3;
+    GraphWidget* m_graph4;
+    QVBoxLayout* m_mainLayout;
+    
+    // Services
+    ThemeManager* m_themeManager;
 };
-#endif // GRAPHSPAGE_H

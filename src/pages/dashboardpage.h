@@ -1,5 +1,4 @@
-#ifndef DASHBOARDPAGE_H
-#define DASHBOARDPAGE_H
+#pragma once
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
@@ -74,4 +73,3 @@ private:
     void createControlPanel(QGridLayout *mainLayout);
     void createGraphPanels(QGridLayout *mainLayout);
 };
-#endif // DASHBOARDPAGE_H

@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include <QGridLayout>
@@ -81,4 +80,3 @@ private:
     QLabel *m_timeLabel;
     QLabel *m_connectionStatus;
 };
-#endif // MAINWINDOW_H

@@ -1,5 +1,4 @@
-#ifndef NAVIGATIONMANAGER_H
-#define NAVIGATIONMANAGER_H
+#pragma once
 
 #include <QObject>
 #include <QStack>
@@ -204,5 +203,3 @@ inline uint qHash(NavigationManager::PageId key, uint seed = 0) Q_DECL_NOTHROW
 {
     return qHash(static_cast<uint>(key), seed);
 }
-
-#endif // NAVIGATIONMANAGER_H

@@ -1,5 +1,4 @@
-#ifndef MODERNMAINWINDOW_H
-#define MODERNMAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include <QGridLayout>
@@ -30,6 +29,7 @@ class UdpResponsePage;
 class IndustrialDataPage;
 class ControllerCardWidget;
 class WebBrowserPage;
+class OverviewPage;
 
 /**
  * @brief Modern Industrial HMI MainWindow with card-based controller interface
@@ -91,6 +91,7 @@ private:
     BreadcrumbWidget *m_breadcrumbWidget;
 
     // Pages
+    OverviewPage *m_overviewPage;
     DashboardPage *m_dashboardPage;
     GraphsPage *m_graphsPage;
     SettingsPage *m_settingsPage;
@@ -145,5 +146,3 @@ private:
     // Animation
     QPropertyAnimation *m_cardAnimation;
 };
-
-#endif // MODERNMAINWINDOW_H

@@ -1,5 +1,4 @@
-#ifndef THEMEMANAGER_H
-#define THEMEMANAGER_H
+#pragma once
 
 #include <QObject>
 #include <QColor>
@@ -103,5 +102,3 @@ private:
 // Convenience macros for theme colors
 #define THEME_COLOR(role) ThemeManager::instance()->color(ThemeManager::role)
 #define THEME_COLOR_STR(role) ThemeManager::instance()->colorString(ThemeManager::role)
-
-#endif // THEMEMANAGER_H

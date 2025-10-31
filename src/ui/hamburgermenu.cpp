@@ -354,26 +354,27 @@ void HamburgerMenu::applyIndustrialStyling()
     ).arg(themeManager->colorString(ThemeManager::CardBackground), 
           themeManager->colorString(ThemeManager::BorderColor)));
     
-    // Apply industrial button styling to all navigation buttons
+    // Apply clean, minimal button styling to all navigation buttons
+    // White background with subtle hover effects for content-focused design
     QString buttonStyle = QString(
         "QPushButton {"
-        "    background-color: %1;"
-        "    color: %2;"
+        "    background-color: transparent;"
+        "    color: %1;"
         "    border: none;"
         "    padding: 12px 20px;"
         "    text-align: left;"
         "    font-size: 16px;"
         "    font-weight: 500;"
         "    min-height: 44px;"
+        "    border-radius: 8px;"
         "}"
         "QPushButton:hover {"
-        "    background-color: %3;"
+        "    background-color: %2;"
         "}"
         "QPushButton:pressed {"
-        "    background-color: %4;"
+        "    background-color: %3;"
         "}"
-    ).arg(themeManager->colorString(ThemeManager::ButtonBackground),
-          themeManager->colorString(ThemeManager::PrimaryText),
+    ).arg(themeManager->colorString(ThemeManager::PrimaryText),
           themeManager->colorString(ThemeManager::ButtonHover),
           themeManager->colorString(ThemeManager::ButtonPressed));
     

@@ -23,15 +23,20 @@ public:
 signals:
     void iconClicked(int pageIndex);
 
+private slots:
+    void onThemeChanged();
+
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
     void createNavigationCard(const QString &title, const QString &subtitle, 
                              const QString &iconPath, int pageIndex);
+    void updateCardStyles();
     
     QVBoxLayout *m_mainLayout;
     QGridLayout *m_cardsLayout;
     QLabel *m_welcomeLabel;
     QLabel *m_subtitleLabel;
+    QVector<QWidget*> m_cardWidgets;  // Store card references for theme updates
 };

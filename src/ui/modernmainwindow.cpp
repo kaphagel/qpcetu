@@ -241,16 +241,17 @@ void ModernMainWindow::createHeaderBar()
     themeToggleBtn->setToolTip("Tap to switch theme (Dark/Light/High Contrast/Apple Light/Apple Dark)");
     connect(themeToggleBtn, &QPushButton::clicked, this, &ModernMainWindow::toggleTheme);
 
-    // Layout: Hamburger + Back + Home + Title on left, then status info on right
+    // Layout: Hamburger + Back + Home on left, theme toggle on right (clean & minimal)
     headerLayout->addWidget(m_hamburgerButton);
     headerLayout->addWidget(m_backButton);
     headerLayout->addWidget(m_homeButton);
-    headerLayout->addWidget(m_titleLabel);
+    // headerLayout->addWidget(m_titleLabel);  // Removed for ultra-clean header
     headerLayout->addStretch();
     headerLayout->addWidget(themeToggleBtn);
-    headerLayout->addWidget(m_connectionStatusLabel);
-    headerLayout->addWidget(m_userLabel);
-    headerLayout->addWidget(m_dateTimeLabel);
+    // Clean header - removed connection status, operator, and clock for minimal design
+    // headerLayout->addWidget(m_connectionStatusLabel);
+    // headerLayout->addWidget(m_userLabel);
+    // headerLayout->addWidget(m_dateTimeLabel);
     
     // Create hamburger menu
     m_hamburgerMenu = new HamburgerMenu(this);

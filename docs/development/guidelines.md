@@ -38,17 +38,23 @@ It uses Qt Widgets for the user interface, C++ backend for data processing, and 
 - **Theme toggle**: Industrial-friendly button in header bar for quick theme switching
 - **Clean styling**: All themes maintain borderless design while adapting colors appropriately
 - **Accessibility**: High contrast mode for harsh industrial lighting conditions
+- **Dark mode**: Industry-standard dark gray `#1C1C1E` (NOT pure black - reduces eye strain)
 
 ### **Color Palette**
 - **Dynamic theming**: Colors adapt based on selected theme
 - **Never hardcode colors**: Use `ThemeManager` for all color decisions
 - **Industrial status colors**: Color-coded controller states (Active/Inactive/Fault) across all themes
+- **iOS colors**: Light mode `#007AFF` blue, Dark mode `#0A84FF` blue, subtle grays for hover
 
 ### **Border Policy**
 - **NO DECORATIVE BORDERS**: Remove all decorative borders from frames, panels, and containers
 - **Clean separation**: Use theme-appropriate background color differences and spacing for visual hierarchy
 - **Focus only**: Borders only for accessibility focus states when absolutely required
-- **Touch feedback**: Theme-appropriate background color changes on hover/press instead of border changes
+- **Touch feedback**: iOS-style subtle gray overlays on hover/press (NOT blue colors)
+  - Light mode hover: `#E5E5EA` (systemGray5 - visible on white)
+  - Light mode pressed: `#D1D1D6` (systemGray4 - darker)
+  - Dark mode hover: `#2C2C2E` (subtle dark gray)
+  - Dark mode pressed: `#3A3A3C` (slightly lighter gray)
 
 ### **Typography Scale**
 - **Large Title**: 28px, font-weight: 700 - Main section headers
@@ -61,6 +67,8 @@ It uses Qt Widgets for the user interface, C++ backend for data processing, and 
 - **Generous spacing**: 16px, 24px, 32px margins for clean separation
 - **Card-based design**: Theme-appropriate background colors with border-radius (8px, 12px) but no borders
 - **Typography hierarchy**: Font weights and sizes for organization, not visual frames
+- **Clean header**: Minimal navigation-only header (hamburger, back, home, theme toggle)
+- **Content focus**: Remove non-essential status indicators for cleaner interface
 
 ---
 

@@ -24,11 +24,11 @@ void ThemeManager::initializeThemes()
 {
     // Light Theme - Clean iPhone-like design for industrial HMI
     QMap<ColorRole, QColor> lightTheme;
-    lightTheme[MainBackground] = QColor("#F2F2F7");      // systemGroupedBackground
-    lightTheme[SecondaryBackground] = QColor("#FFFFFF"); // systemBackground
-    lightTheme[HeaderBackground] = QColor("#F2F2F7");    // same as main for seamless look
-    lightTheme[CardBackground] = QColor("#FFFFFF");      // systemBackground
-    lightTheme[StatusStripBackground] = QColor("#F2F2F7");
+    lightTheme[MainBackground] = QColor("#FFFFFF");      // systemBackground (pure white - iOS standard)
+    lightTheme[SecondaryBackground] = QColor("#F2F2F7"); // systemGroupedBackground
+    lightTheme[HeaderBackground] = QColor("#FFFFFF");    // same as main for seamless look
+    lightTheme[CardBackground] = QColor("#F2F2F7");      // systemGroupedBackground (subtle contrast)
+    lightTheme[StatusStripBackground] = QColor("#FFFFFF");
 
     lightTheme[PrimaryText] = QColor("#000000");   // label
     lightTheme[SecondaryText] = QColor("#3C3C43"); // secondaryLabel
@@ -41,8 +41,8 @@ void ThemeManager::initializeThemes()
     lightTheme[Error] = QColor("#FF3B30");   // systemRed
 
     lightTheme[ButtonBackground] = QColor("#007AFF"); // systemBlue
-    lightTheme[ButtonHover] = QColor("#0056CC");      // darker systemBlue
-    lightTheme[ButtonPressed] = QColor("#003D99");    // pressed systemBlue
+    lightTheme[ButtonHover] = QColor("#E5E5EA");      // systemGray5 (more visible on white)
+    lightTheme[ButtonPressed] = QColor("#D1D1D6");    // systemGray4 (darker for pressed)
     lightTheme[BorderColor] = QColor("#C6C6C8");      // separator (not used in borderless design)
     lightTheme[FocusColor] = QColor("#007AFF");       // systemBlue
 
@@ -57,11 +57,12 @@ void ThemeManager::initializeThemes()
 
     // Dark Theme - Clean iPhone-like dark design for industrial HMI
     QMap<ColorRole, QColor> darkTheme;
-    darkTheme[MainBackground] = QColor("#000000");      // systemBackground
-    darkTheme[SecondaryBackground] = QColor("#1C1C1E"); // systemGroupedBackground
-    darkTheme[HeaderBackground] = QColor("#000000");    // same as main for seamless look
-    darkTheme[CardBackground] = QColor("#2C2C2E");      // secondarySystemGroupedBackground
-    darkTheme[StatusStripBackground] = QColor("#000000");
+    // Industry-standard dark mode (not pure black - reduces eye strain)
+    darkTheme[MainBackground] = QColor("#1C1C1E");      // Apple systemBackground (dark gray)
+    darkTheme[SecondaryBackground] = QColor("#2C2C2E"); // systemGroupedBackground
+    darkTheme[HeaderBackground] = QColor("#1C1C1E");    // same as main for seamless look
+    darkTheme[CardBackground] = QColor("#3A3A3C");      // secondarySystemGroupedBackground (lighter)
+    darkTheme[StatusStripBackground] = QColor("#1C1C1E");
 
     darkTheme[PrimaryText] = QColor("#FFFFFF");   // label
     darkTheme[SecondaryText] = QColor("#EBEBF5"); // secondaryLabel
@@ -74,8 +75,8 @@ void ThemeManager::initializeThemes()
     darkTheme[Error] = QColor("#FF453A");   // systemRed (dark)
 
     darkTheme[ButtonBackground] = QColor("#0A84FF"); // systemBlue (dark)
-    darkTheme[ButtonHover] = QColor("#409CFF");      // lighter systemBlue
-    darkTheme[ButtonPressed] = QColor("#64B5F6");    // pressed systemBlue
+    darkTheme[ButtonHover] = QColor("#2C2C2E");      // subtle dark gray (not blue!)
+    darkTheme[ButtonPressed] = QColor("#3A3A3C");    // slightly lighter gray
     darkTheme[BorderColor] = QColor("#38383A");      // separator (not used in borderless design)
     darkTheme[FocusColor] = QColor("#0A84FF");       // systemBlue (dark)
 
@@ -258,6 +259,6 @@ void ThemeManager::saveTheme()
 
 void ThemeManager::loadTheme()
 {
-    int themeValue = m_settings->value("theme", static_cast<int>(Dark)).toInt();
+    int themeValue = m_settings->value("theme", static_cast<int>(Light)).toInt();
     setTheme(static_cast<Theme>(themeValue));
 }

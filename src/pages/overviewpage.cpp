@@ -34,10 +34,12 @@ OverviewPage::OverviewPage(QWidget *parent)
     m_mainLayout->addWidget(m_subtitleLabel);
     m_mainLayout->addSpacing(8);
 
-    // Navigation cards grid - 2 columns for tablet
+    // Navigation cards grid - uniform 2 column layout
     m_cardsLayout = new QGridLayout();
     m_cardsLayout->setSpacing(20);
     m_cardsLayout->setContentsMargins(0, 0, 0, 0);
+    m_cardsLayout->setColumnStretch(0, 1);  // Equal column widths
+    m_cardsLayout->setColumnStretch(1, 1);
 
     // Create navigation cards with iOS-style design
     struct CardInfo {
@@ -56,18 +58,9 @@ OverviewPage::OverviewPage(QWidget *parent)
         {"Web Browser", "Chromium-based web view", ":/icons/udp.svg", 9}
     };
 
-    int row = 0, col = 0;
+    // Create cards in a clean grid (cards are added by createNavigationCard)
     for (const auto &card : cards) {
         createNavigationCard(card.title, card.subtitle, card.iconPath, card.pageIndex);
-        m_cardsLayout->addWidget(m_cardsLayout->itemAtPosition(row, col) 
-            ? m_cardsLayout->itemAtPosition(row, col)->widget() 
-            : nullptr, row, col);
-        
-        col++;
-        if (col >= 2) { // 2 columns
-            col = 0;
-            row++;
-        }
     }
 
     m_mainLayout->addLayout(m_cardsLayout);
@@ -76,6 +69,81 @@ OverviewPage::OverviewPage(QWidget *parent)
     // Set overall background
     setStyleSheet(QString("OverviewPage { background: %1; }")
         .arg(theme->colorString(ThemeManager::MainBackground)));
+    
+    // Connect to theme changes
+    connect(theme, &ThemeManager::themeChanged, this, &OverviewPage::onThemeChanged);
+}
+
+void OverviewPage::onThemeChanged()
+{
+    ThemeManager *theme = ThemeManager::instance();
+    
+    // Update page background
+    setStyleSheet(QString("OverviewPage { background: %1; }")
+        .arg(theme->colorString(ThemeManager::MainBackground)));
+    
+    // Update welcome labels
+    m_welcomeLabel->setStyleSheet(QString("color: %1; background: transparent; padding: 0px;")
+        .arg(theme->colorString(ThemeManager::PrimaryText)));
+    m_subtitleLabel->setStyleSheet(QString("color: %1; background: transparent; padding: 0px; margin-bottom: 16px;")
+        .arg(theme->colorString(ThemeManager::SecondaryText)));
+    
+    // Update all card styles
+    updateCardStyles();
+}
+
+void OverviewPage::updateCardStyles()
+{
+    ThemeManager *theme = ThemeManager::instance();
+    
+    // Update each card widget's styling
+    for (QWidget *card : m_cardWidgets) {
+        if (!card) continue;
+        
+        // Update card background and hover
+        QString cardStyle = QString(
+            "QWidget {"
+            "   background: %1;"
+            "   border-radius: 16px;"
+            "   border: none;"
+            "}"
+            "QWidget:hover {"
+            "   background: %2;"
+            "}"
+        ).arg(theme->colorString(ThemeManager::CardBackground))
+         .arg(theme->colorString(ThemeManager::ButtonHover));
+        
+        card->setStyleSheet(cardStyle);
+        
+        // Find and update child widgets (icon container and labels)
+        QList<QWidget*> children = card->findChildren<QWidget*>(QString(), Qt::FindDirectChildrenOnly);
+        for (QWidget *child : children) {
+            if (child->objectName() == "iconContainer") {
+                child->setStyleSheet(QString(
+                    "QWidget {"
+                    "   background: %1;"
+                    "   border-radius: 16px;"
+                    "   border: none;"
+                    "}"
+                ).arg(theme->colorString(ThemeManager::Primary)));
+            }
+        }
+        
+        // Update text labels
+        QList<QLabel*> labels = card->findChildren<QLabel*>();
+        for (QLabel *label : labels) {
+            if (label->objectName() == "cardTitle") {
+                label->setStyleSheet(QString("color: %1; background: transparent;")
+                    .arg(theme->colorString(ThemeManager::PrimaryText)));
+            } else if (label->objectName() == "cardSubtitle") {
+                label->setStyleSheet(QString("color: %1; background: transparent;")
+                    .arg(theme->colorString(ThemeManager::SecondaryText)));
+            } else if (label->objectName() == "cardArrow") {
+                label->setStyleSheet(QString("color: %1; background: transparent;")
+                    .arg(theme->colorString(ThemeManager::SecondaryText)));
+            }
+        }
+    }
 }
 
 void OverviewPage::createNavigationCard(const QString &title, const QString &subtitle, 
@@ -110,6 +178,7 @@ void OverviewPage::createNavigationCard(const QString &title, const QString &sub
     
     // Icon container with iOS-style colored background
     QWidget *iconContainer = new QWidget();
+    iconContainer->setObjectName("iconContainer");
     iconContainer->setFixedSize(72, 72);
     iconContainer->setStyleSheet(QString(
         "QWidget {"
@@ -133,12 +202,14 @@ void OverviewPage::createNavigationCard(const QString &title, const QString &sub
     textLayout->setSpacing(6);
     
     QLabel *titleLabel = new QLabel(title);
+    titleLabel->setObjectName("cardTitle");
     QFont titleFont("SF Pro Display", 19, QFont::DemiBold);
     titleLabel->setFont(titleFont);
     titleLabel->setStyleSheet(QString("color: %1; background: transparent;")
         .arg(theme->colorString(ThemeManager::PrimaryText)));
     
     QLabel *subtitleLabel = new QLabel(subtitle);
+    subtitleLabel->setObjectName("cardSubtitle");
     QFont subtitleFont("SF Pro Text", 14, QFont::Normal);
     subtitleLabel->setFont(subtitleFont);
     subtitleLabel->setStyleSheet(QString("color: %1; background: transparent;")
@@ -151,6 +222,7 @@ void OverviewPage::createNavigationCard(const QString &title, const QString &sub
     
     // Arrow indicator (iOS style)
     QLabel *arrowLabel = new QLabel("›");
+    arrowLabel->setObjectName("cardArrow");
     QFont arrowFont("SF Pro Display", 32, QFont::Light);
     arrowLabel->setFont(arrowFont);
     arrowLabel->setStyleSheet(QString("color: %1; background: transparent;")
@@ -165,6 +237,9 @@ void OverviewPage::createNavigationCard(const QString &title, const QString &sub
     // Make entire card clickable
     cardWidget->installEventFilter(this);
     cardWidget->setProperty("pageIndex", pageIndex);
+    
+    // Store card reference for theme updates
+    m_cardWidgets.append(cardWidget);
     
     // Add to cards layout
     int row = m_cardsLayout->count() / 2;

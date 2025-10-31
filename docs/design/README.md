@@ -29,12 +29,14 @@ The HMI supports 5 professional themes optimized for different industrial enviro
 
 #### **Dark Theme** 🌙
 - **Use Case**: Low-light industrial environments, night shifts
-- **Colors**: Deep blues (#0F1419), cyan accents (#00E5FF)
-- **Readability**: High contrast white text on dark backgrounds
+- **Colors**: Apple dark gray `#1C1C1E` (main), `#2C2C2E` (secondary), `#3A3A3C` (cards)
+- **Accents**: iOS system blue `#0A84FF`, green `#30D158`, orange `#FF9F0A`
+- **Readability**: High contrast white text on comfortable dark gray (not pure black for reduced eye strain)
 
 #### **Light Theme** ☀️
 - **Use Case**: Bright industrial environments, daylight operation
-- **Colors**: Clean whites (#FAFAFA), blue accents (#1976D2)
+- **Colors**: Clean white `#FFFFFF` (main), `#F2F2F7` (secondary), subtle grays
+- **Accents**: iOS system blue `#007AFF`, green `#34C759`, orange `#FF9500`
 - **Readability**: Dark text on light backgrounds for bright conditions
 
 #### **High Contrast Theme** ⚡
@@ -77,13 +79,15 @@ The HMI supports 5 professional themes optimized for different industrial enviro
 #### **No Decorative Borders Policy**
 - **Visual Separation**: Use background color differences instead of borders
 - **Focus States**: Borders only for accessibility focus when absolutely required
-- **Touch Feedback**: Background color changes on hover/press, not border changes
+- **Touch Feedback**: iOS-style subtle gray background changes on hover/press (not blue!)
+- **Hover Effects**: Light mode uses `#E5E5EA` (systemGray5), dark mode uses `#2C2C2E`
+- **Pressed Effects**: Light mode uses `#D1D1D6` (systemGray4), dark mode uses `#3A3A3C`
 - **Clean Aesthetics**: Minimal design reducing visual clutter
 
 #### **Background Differentiation**
 - **Primary Content**: Main theme background color
 - **Secondary Panels**: Subtle background color variation for grouping
-- **Interactive Elements**: Clear background changes for button states
+- **Interactive Elements**: Subtle gray overlays for hover/press states (iOS-style)
 - **Status Indicators**: Theme-appropriate color coding for system states
 
 ### **Typography Hierarchy**
@@ -102,6 +106,19 @@ The HMI supports 5 professional themes optimized for different industrial enviro
 - **Distance Viewing**: Optimized for arm's length reading distance
 
 ## 🏗️ Component Design Standards
+
+### **Header Bar** (Updated Oct 2025)
+- **Height**: 80px for touch optimization
+- **Layout**: Minimal, content-focused design
+- **Elements**: Hamburger menu (☰) + Back (←) + Home (🏠) + Theme toggle (🎨)
+- **Removed Elements**: Status indicators, clock, operator name (for clean aesthetic)
+- **Philosophy**: Ultra-minimal header focusing on navigation only
+
+### **Hamburger Menu** (Updated Oct 2025)
+- **Width**: 320px flyout panel
+- **Button Style**: Clean, transparent background with subtle gray hover
+- **Hover Effect**: `#F2F2F7` (light) or `#2C2C2E` (dark) - NOT blue
+- **Design**: iOS-style content-focused navigation with rounded corners
 
 ### **Controller Cards**
 - **Size**: 300x200px minimum for touch interaction

@@ -514,10 +514,24 @@ CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/repositories/circularbufferrepository.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.s
 
+CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
+CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o: ../src/repositories/sqliterepository.cpp
+CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o -c /workspaces/qpcetu/src/repositories/sqliterepository.cpp
+
+CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/repositories/sqliterepository.cpp > CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.i
+
+CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/repositories/sqliterepository.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.s
+
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o: ../src/strategies/controllerstrategy.cpp
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o -c /workspaces/qpcetu/src/strategies/controllerstrategy.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.i: cmake_force
@@ -531,7 +545,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.s: cmake_for
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o: ../src/commands/command.cpp
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o -c /workspaces/qpcetu/src/commands/command.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.i: cmake_force
@@ -542,10 +556,38 @@ CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/commands/command.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.s
 
+CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
+CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o: ../src/commands/writevaluecommand.cpp
+CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o -c /workspaces/qpcetu/src/commands/writevaluecommand.cpp
+
+CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/commands/writevaluecommand.cpp > CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.i
+
+CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/commands/writevaluecommand.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.s
+
+CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
+CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o: ../src/commands/configurationcommand.cpp
+CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o -c /workspaces/qpcetu/src/commands/configurationcommand.cpp
+
+CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/commands/configurationcommand.cpp > CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.i
+
+CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/commands/configurationcommand.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.s
+
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o: ../src/statemachine/controllerstatemachine.cpp
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o -c /workspaces/qpcetu/src/statemachine/controllerstatemachine.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.i: cmake_force
@@ -559,7 +601,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.s: cma
 CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
 CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o: ../src/statemachines/connectionstatemachine.cpp
 CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o -c /workspaces/qpcetu/src/statemachines/connectionstatemachine.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.i: cmake_force
@@ -570,10 +612,24 @@ CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/statemachines/connectionstatemachine.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.s
 
+CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
+CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o: ../src/factories/controllerfactory.cpp
+CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o -c /workspaces/qpcetu/src/factories/controllerfactory.cpp
+
+CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/qpcetu/src/factories/controllerfactory.cpp > CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.i
+
+CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/qpcetu/src/factories/controllerfactory.cpp -o CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.s
+
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o: CMakeFiles/ModernSciFiHMI.dir/flags.make
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o: qrc_overview.cpp
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o: CMakeFiles/ModernSciFiHMI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o -MF CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o.d -o CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o -c /workspaces/qpcetu/build/qrc_overview.cpp
 
 CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.i: cmake_force
@@ -617,10 +673,14 @@ ModernSciFiHMI_OBJECTS = \
 "CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/graphviewmodel.cpp.o" \
 "CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/dashboardviewmodel.cpp.o" \
 "CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.o" \
+"CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o" \
 "CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o" \
 "CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o" \
+"CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o" \
+"CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o" \
 "CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o" \
 "CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o" \
+"CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o" \
 "CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o"
 
 # External object files for target ModernSciFiHMI
@@ -657,13 +717,18 @@ bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/services/modbusservice.cpp
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/graphviewmodel.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/viewmodels/dashboardviewmodel.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.o
+bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/strategies/controllerstrategy.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.o
+bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o
+bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/statemachine/controllerstatemachine.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/statemachines/connectionstatemachine.cpp.o
+bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/qrc_overview.cpp.o
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/build.make
 bin/ModernSciFiHMI: /usr/lib/x86_64-linux-gnu/libQt5Svg.so.5.15.3
+bin/ModernSciFiHMI: /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.3
 bin/ModernSciFiHMI: deps/external/libmodbus/src/liblibmodbus.a
 bin/ModernSciFiHMI: /usr/lib/x86_64-linux-gnu/libQt5WebEngineWidgets.so.5.15.9
 bin/ModernSciFiHMI: /usr/lib/x86_64-linux-gnu/libQt5WebEngineCore.so.5.15.9
@@ -678,7 +743,7 @@ bin/ModernSciFiHMI: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 bin/ModernSciFiHMI: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 bin/ModernSciFiHMI: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 bin/ModernSciFiHMI: CMakeFiles/ModernSciFiHMI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking CXX executable bin/ModernSciFiHMI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/qpcetu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable bin/ModernSciFiHMI"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ModernSciFiHMI.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

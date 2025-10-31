@@ -53,7 +53,7 @@ endif()
 # add_subdirectory(tests)
 
 # Find Qt5 components
-find_package(Qt5 REQUIRED COMPONENTS Core Widgets Network Svg)
+find_package(Qt5 REQUIRED COMPONENTS Core Widgets Network Svg Sql)
 
 # Try to find Qt5WebEngineWidgets (optional for web browser page)
 find_package(Qt5 COMPONENTS WebEngineWidgets QUIET)
@@ -193,11 +193,16 @@ set(MODERN_SOURCES
     src/viewmodels/dashboardviewmodel.cpp
     # Repositories (Data Access Layer)
     src/repositories/circularbufferrepository.cpp
+    src/repositories/sqliterepository.cpp
     # Architecture Pattern Implementations
     src/strategies/controllerstrategy.cpp
     src/commands/command.cpp
+    src/commands/writevaluecommand.cpp
+    src/commands/configurationcommand.cpp
     src/statemachine/controllerstatemachine.cpp
     src/statemachines/connectionstatemachine.cpp
+    # Factories
+    src/factories/controllerfactory.cpp
 )
 
 if(WIN32)
@@ -214,7 +219,7 @@ endif()
 # Link Qt and libmodbus libraries - Only for touch-optimized ModernSciFiHMI
 if(WIN32)
     # target_link_libraries(SciFiDataScreen Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg ${LIBMODBUS_LIBRARY})
-    target_link_libraries(ModernSciFiHMI Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg ${LIBMODBUS_LIBRARY})
+    target_link_libraries(ModernSciFiHMI Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg Qt5::Sql ${LIBMODBUS_LIBRARY})
     
     # Add WebEngineWidgets if available
     if(Qt5WebEngineWidgets_FOUND)
@@ -222,7 +227,7 @@ if(WIN32)
     endif()
 else()
     # target_link_libraries(SciFiDataScreen Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg libmodbus bsd)
-    target_link_libraries(ModernSciFiHMI Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg libmodbus bsd)
+    target_link_libraries(ModernSciFiHMI Qt5::Core Qt5::Widgets Qt5::Network Qt5::Svg Qt5::Sql libmodbus bsd)
     
     # Add WebEngineWidgets if available
     if(Qt5WebEngineWidgets_FOUND)

@@ -428,6 +428,7 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_dashboardpage.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/dashboardpage.h \
+ /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/../viewmodels/dashboardviewmodel.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_graphspage.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/../../../src/pages/graphspage.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/V5LNE4NMWJ/moc_industrialdatapage.cpp \
@@ -560,6 +561,5 @@ CMakeFiles/ModernSciFiHMI.dir/ModernSciFiHMI_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/YPKJ5OE7LN/moc_virtualkeyboard.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/moc_dashboardviewmodel.cpp \
- /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/../../../src/viewmodels/dashboardviewmodel.h \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/moc_graphviewmodel.cpp \
  /workspaces/qpcetu/build/ModernSciFiHMI_autogen/QGUZWGM6RH/../../../src/viewmodels/graphviewmodel.h

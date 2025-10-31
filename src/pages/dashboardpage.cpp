@@ -3,6 +3,7 @@
 #include "../datawidget.h"
 #include "../animatedprogressbar.h"
 #include "../graphwidget.h"
+#include "../viewmodels/dashboardviewmodel.h"
 #include <QLabel>
 #include <QPushButton>
 #include <QTextEdit>
@@ -13,6 +14,7 @@
 #include <QSizePolicy>
 #include <QGroupBox>
 #include <QDateTime>
+#include <QScrollBar>
 // --- DashboardPage widget creation methods ---
 void DashboardPage::createStatusPanel(QVBoxLayout *mainVLayout) {
     QFrame *statusFrame = new QFrame;
@@ -139,7 +141,9 @@ void DashboardPage::createControlPanel(QGridLayout *mainLayout) {
     });
 
     connect(m_alertBtn, &QPushButton::clicked, [this]() {
-        simulateAlert();
+        if (m_viewModel) {
+            m_viewModel->generateAlert();
+        }
     });
 
     connect(m_scanBtn, &QPushButton::clicked, [this]() {
@@ -175,85 +179,49 @@ void DashboardPage::createGraphPanels(QGridLayout *mainLayout) {
     m_sensorGraph->setRange(10, 90);
     mainLayout->addWidget(m_sensorGraph, 3, 3);
 }
-// ...existing code...
-#include <QDateTime>
-#include <QScrollBar>
-#include <QRandomGenerator>
 
-void DashboardPage::updateData() {
-    QRandomGenerator *rng = QRandomGenerator::global();
-    if (m_energyWidget) m_energyWidget->setValue(85 + rng->bounded(15));
-    if (m_shieldWidget) m_shieldWidget->setValue(70 + rng->bounded(30));
-    if (m_engineWidget) m_engineWidget->setValue(90 + rng->bounded(10));
-    if (m_weaponWidget) m_weaponWidget->setValue(rng->bounded(2) ? 100 : 95 + rng->bounded(5));
-    if (m_powerBar) m_powerBar->setValue(75 + rng->bounded(20));
-    if (m_coolantBar) m_coolantBar->setValue(60 + rng->bounded(25));
-    if (m_fuelBar) m_fuelBar->setValue(80 + rng->bounded(15));
-    if (m_coordinates) {
-        int x = 10000 + rng->bounded(90000);
-        int y = 5000 + rng->bounded(45000);
-        int z = 1000 + rng->bounded(9000);
-        m_coordinates->setText(QString("COORDINATES: X:%1 Y:%2 Z:%3").arg(x).arg(y).arg(z));
-    }
-    if (m_velocity) {
-        double velocity = 0.15 + (rng->bounded(100) / 1000.0);
-        m_velocity->setText(QString("VELOCITY: %1 C").arg(velocity, 0, 'f', 3));
-    }
-    if (m_altitude) {
-        int altitude = 15000 + rng->bounded(5000);
-        m_altitude->setText(QString("ALTITUDE: %1 KM").arg(altitude));
-    }
-}
-
-void DashboardPage::updateSystemStatus() {
-    if (m_timeLabel) {
-        m_timeLabel->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
-    }
-    QRandomGenerator *rng = QRandomGenerator::global();
-    if (rng->bounded(100) < 2) {
-        m_systemOnline = !m_systemOnline;
-        if (m_statusLabel) {
-            if (m_systemOnline) {
-                m_statusLabel->setText("SYSTEM ONLINE");
-                // Removed per-label stylesheet for global style
-            } else {
-                m_statusLabel->setText("SYSTEM WARNING");
-                // Removed per-label stylesheet for global style
-            }
-        }
-    }
-}
-
-void DashboardPage::simulateAlert() {
-    QRandomGenerator *rng = QRandomGenerator::global();
-    QStringList alerts = {
-        "Quantum fluctuation detected in sector 7",
-        "Energy spike in main reactor core",
-        "Incoming transmission from deep space",
-        "Shield harmonics approaching critical threshold",
-        "Navigation array recalibration complete",
-        "Weapon systems cycling - all parameters nominal",
-        "Long-range sensors detecting anomalous readings",
-        "Coolant flow rate optimization in progress"
-    };
-    QString alert = alerts[rng->bounded(alerts.size())];
-    if (m_logDisplay) {
-        m_logDisplay->append(QString("[%1] %2")
-                            .arg(QDateTime::currentDateTime().toString("hh:mm:ss"))
-                            .arg(alert));
-        QScrollBar *scrollBar = m_logDisplay->verticalScrollBar();
-        scrollBar->setValue(scrollBar->maximum());
-    }
-}
-// DashboardPage implementation
-#include "dashboardpage.h"
-#include "../datawidget.h"
-#include "../animatedprogressbar.h"
-#include "../graphwidget.h"
-#include <QVBoxLayout>
+// === End of DashboardPage implementation ===
 #include <QLabel>
 
-DashboardPage::DashboardPage(QWidget *parent) : QWidget(parent) {
+DashboardPage::DashboardPage(QWidget *parent) 
+    : QWidget(parent)
+    , m_viewModel(new DashboardViewModel(this))
+    , m_statusLabel(nullptr)
+    , m_timeLabel(nullptr)
+    , m_connectionStatus(nullptr)
+    , m_energyWidget(nullptr)
+    , m_shieldWidget(nullptr)
+    , m_engineWidget(nullptr)
+    , m_weaponWidget(nullptr)
+    , m_powerBar(nullptr)
+    , m_coolantBar(nullptr)
+    , m_fuelBar(nullptr)
+    , m_logDisplay(nullptr)
+    , m_coordinates(nullptr)
+    , m_velocity(nullptr)
+    , m_altitude(nullptr)
+    , m_engageBtn(nullptr)
+    , m_alertBtn(nullptr)
+    , m_scanBtn(nullptr)
+    , m_energyGraph(nullptr)
+    , m_shieldGraph(nullptr)
+    , m_systemGraph(nullptr)
+    , m_networkGraph(nullptr)
+    , m_thrusterGraph(nullptr)
+    , m_sensorGraph(nullptr)
+{
+    setupUI();
+    connectSignals();
+    
+    // Start ViewModel updates (1 second interval)
+    m_viewModel->startUpdates(1000);
+}
+
+DashboardPage::~DashboardPage() {
+    // Qt parent-child relationship handles cleanup
+}
+
+void DashboardPage::setupUI() {
     setupEEGLayout();
     // Apply EEG-inspired dark style
     QString styleSheet = R"(
@@ -280,6 +248,106 @@ DashboardPage::DashboardPage(QWidget *parent) : QWidget(parent) {
         }
     )";
     // Removed per-page stylesheet to allow global button style
+}
+
+void DashboardPage::connectSignals() {
+    // Connect ViewModel signals to UI update slots
+    connect(m_viewModel, &DashboardViewModel::energyCoreUpdated,
+            this, &DashboardPage::onEnergyCoreUpdated);
+    connect(m_viewModel, &DashboardViewModel::shieldMatrixUpdated,
+            this, &DashboardPage::onShieldMatrixUpdated);
+    connect(m_viewModel, &DashboardViewModel::engineThrustUpdated,
+            this, &DashboardPage::onEngineThrustUpdated);
+    connect(m_viewModel, &DashboardViewModel::weaponArrayUpdated,
+            this, &DashboardPage::onWeaponArrayUpdated);
+    connect(m_viewModel, &DashboardViewModel::systemParametersUpdated,
+            this, &DashboardPage::onSystemParametersUpdated);
+    connect(m_viewModel, &DashboardViewModel::navigationDataUpdated,
+            this, &DashboardPage::onNavigationDataUpdated);
+    connect(m_viewModel, &DashboardViewModel::systemStatusChanged,
+            this, &DashboardPage::onSystemStatusChanged);
+    connect(m_viewModel, &DashboardViewModel::timeUpdated,
+            this, &DashboardPage::onTimeUpdated);
+    connect(m_viewModel, &DashboardViewModel::alertGenerated,
+            this, &DashboardPage::onAlertGenerated);
+    connect(m_viewModel, &DashboardViewModel::connectionStatusChanged,
+            this, &DashboardPage::onConnectionStatusChanged);
+}
+
+// ViewModel signal handlers (pure UI updates)
+void DashboardPage::onEnergyCoreUpdated(int value) {
+    if (m_energyWidget) {
+        m_energyWidget->setValue(value);
+    }
+}
+
+void DashboardPage::onShieldMatrixUpdated(int value) {
+    if (m_shieldWidget) {
+        m_shieldWidget->setValue(value);
+    }
+}
+
+void DashboardPage::onEngineThrustUpdated(int value) {
+    if (m_engineWidget) {
+        m_engineWidget->setValue(value);
+    }
+}
+
+void DashboardPage::onWeaponArrayUpdated(int value) {
+    if (m_weaponWidget) {
+        m_weaponWidget->setValue(value);
+    }
+}
+
+void DashboardPage::onSystemParametersUpdated(const DashboardViewModel::SystemParameters& params) {
+    if (m_powerBar) {
+        m_powerBar->setValue(params.powerDistribution);
+    }
+    if (m_coolantBar) {
+        m_coolantBar->setValue(params.coolantLevel);
+    }
+    if (m_fuelBar) {
+        m_fuelBar->setValue(params.fuelReserves);
+    }
+}
+
+void DashboardPage::onNavigationDataUpdated(const DashboardViewModel::NavigationData& data) {
+    if (m_coordinates) {
+        m_coordinates->setText(QString("COORDINATES: X:%1 Y:%2 Z:%3")
+            .arg(data.x).arg(data.y).arg(data.z));
+    }
+    if (m_velocity) {
+        m_velocity->setText(QString("VELOCITY: %1 C").arg(data.velocity, 0, 'f', 3));
+    }
+    if (m_altitude) {
+        m_altitude->setText(QString("ALTITUDE: %1 KM").arg(data.altitude));
+    }
+}
+
+void DashboardPage::onSystemStatusChanged(DashboardViewModel::SystemStatus status, const QString& message) {
+    if (m_statusLabel) {
+        m_statusLabel->setText(message);
+    }
+}
+
+void DashboardPage::onTimeUpdated(const QString& timestamp) {
+    if (m_timeLabel) {
+        m_timeLabel->setText(timestamp);
+    }
+}
+
+void DashboardPage::onAlertGenerated(const QString& message) {
+    if (m_logDisplay) {
+        m_logDisplay->append(message);
+        QScrollBar* scrollBar = m_logDisplay->verticalScrollBar();
+        scrollBar->setValue(scrollBar->maximum());
+    }
+}
+
+void DashboardPage::onConnectionStatusChanged(bool connected, const QString& message) {
+    if (m_connectionStatus) {
+        m_connectionStatus->setText(message);
+    }
 }
 
 void DashboardPage::setupEEGLayout() {

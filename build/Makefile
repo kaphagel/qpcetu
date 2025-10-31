@@ -314,6 +314,54 @@ src/commands/command.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/commands/command.cpp.s
 .PHONY : src/commands/command.cpp.s
 
+src/commands/configurationcommand.o: src/commands/configurationcommand.cpp.o
+.PHONY : src/commands/configurationcommand.o
+
+# target to build an object file
+src/commands/configurationcommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.o
+.PHONY : src/commands/configurationcommand.cpp.o
+
+src/commands/configurationcommand.i: src/commands/configurationcommand.cpp.i
+.PHONY : src/commands/configurationcommand.i
+
+# target to preprocess a source file
+src/commands/configurationcommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.i
+.PHONY : src/commands/configurationcommand.cpp.i
+
+src/commands/configurationcommand.s: src/commands/configurationcommand.cpp.s
+.PHONY : src/commands/configurationcommand.s
+
+# target to generate assembly for a file
+src/commands/configurationcommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/commands/configurationcommand.cpp.s
+.PHONY : src/commands/configurationcommand.cpp.s
+
+src/commands/writevaluecommand.o: src/commands/writevaluecommand.cpp.o
+.PHONY : src/commands/writevaluecommand.o
+
+# target to build an object file
+src/commands/writevaluecommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.o
+.PHONY : src/commands/writevaluecommand.cpp.o
+
+src/commands/writevaluecommand.i: src/commands/writevaluecommand.cpp.i
+.PHONY : src/commands/writevaluecommand.i
+
+# target to preprocess a source file
+src/commands/writevaluecommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.i
+.PHONY : src/commands/writevaluecommand.cpp.i
+
+src/commands/writevaluecommand.s: src/commands/writevaluecommand.cpp.s
+.PHONY : src/commands/writevaluecommand.s
+
+# target to generate assembly for a file
+src/commands/writevaluecommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/commands/writevaluecommand.cpp.s
+.PHONY : src/commands/writevaluecommand.cpp.s
+
 src/controllermanager.o: src/controllermanager.cpp.o
 .PHONY : src/controllermanager.o
 
@@ -361,6 +409,30 @@ src/datawidget.s: src/datawidget.cpp.s
 src/datawidget.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/datawidget.cpp.s
 .PHONY : src/datawidget.cpp.s
+
+src/factories/controllerfactory.o: src/factories/controllerfactory.cpp.o
+.PHONY : src/factories/controllerfactory.o
+
+# target to build an object file
+src/factories/controllerfactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.o
+.PHONY : src/factories/controllerfactory.cpp.o
+
+src/factories/controllerfactory.i: src/factories/controllerfactory.cpp.i
+.PHONY : src/factories/controllerfactory.i
+
+# target to preprocess a source file
+src/factories/controllerfactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.i
+.PHONY : src/factories/controllerfactory.cpp.i
+
+src/factories/controllerfactory.s: src/factories/controllerfactory.cpp.s
+.PHONY : src/factories/controllerfactory.s
+
+# target to generate assembly for a file
+src/factories/controllerfactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/factories/controllerfactory.cpp.s
+.PHONY : src/factories/controllerfactory.cpp.s
 
 src/graphwidget.o: src/graphwidget.cpp.o
 .PHONY : src/graphwidget.o
@@ -745,6 +817,30 @@ src/repositories/circularbufferrepository.s: src/repositories/circularbufferrepo
 src/repositories/circularbufferrepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/repositories/circularbufferrepository.cpp.s
 .PHONY : src/repositories/circularbufferrepository.cpp.s
+
+src/repositories/sqliterepository.o: src/repositories/sqliterepository.cpp.o
+.PHONY : src/repositories/sqliterepository.o
+
+# target to build an object file
+src/repositories/sqliterepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.o
+.PHONY : src/repositories/sqliterepository.cpp.o
+
+src/repositories/sqliterepository.i: src/repositories/sqliterepository.cpp.i
+.PHONY : src/repositories/sqliterepository.i
+
+# target to preprocess a source file
+src/repositories/sqliterepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.i
+.PHONY : src/repositories/sqliterepository.cpp.i
+
+src/repositories/sqliterepository.s: src/repositories/sqliterepository.cpp.s
+.PHONY : src/repositories/sqliterepository.s
+
+# target to generate assembly for a file
+src/repositories/sqliterepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ModernSciFiHMI.dir/build.make CMakeFiles/ModernSciFiHMI.dir/src/repositories/sqliterepository.cpp.s
+.PHONY : src/repositories/sqliterepository.cpp.s
 
 src/services/controllerxmlservice.o: src/services/controllerxmlservice.cpp.o
 .PHONY : src/services/controllerxmlservice.o
@@ -1135,12 +1231,21 @@ help:
 	@echo "... src/commands/command.o"
 	@echo "... src/commands/command.i"
 	@echo "... src/commands/command.s"
+	@echo "... src/commands/configurationcommand.o"
+	@echo "... src/commands/configurationcommand.i"
+	@echo "... src/commands/configurationcommand.s"
+	@echo "... src/commands/writevaluecommand.o"
+	@echo "... src/commands/writevaluecommand.i"
+	@echo "... src/commands/writevaluecommand.s"
 	@echo "... src/controllermanager.o"
 	@echo "... src/controllermanager.i"
 	@echo "... src/controllermanager.s"
 	@echo "... src/datawidget.o"
 	@echo "... src/datawidget.i"
 	@echo "... src/datawidget.s"
+	@echo "... src/factories/controllerfactory.o"
+	@echo "... src/factories/controllerfactory.i"
+	@echo "... src/factories/controllerfactory.s"
 	@echo "... src/graphwidget.o"
 	@echo "... src/graphwidget.i"
 	@echo "... src/graphwidget.s"
@@ -1189,6 +1294,9 @@ help:
 	@echo "... src/repositories/circularbufferrepository.o"
 	@echo "... src/repositories/circularbufferrepository.i"
 	@echo "... src/repositories/circularbufferrepository.s"
+	@echo "... src/repositories/sqliterepository.o"
+	@echo "... src/repositories/sqliterepository.i"
+	@echo "... src/repositories/sqliterepository.s"
 	@echo "... src/services/controllerxmlservice.o"
 	@echo "... src/services/controllerxmlservice.i"
 	@echo "... src/services/controllerxmlservice.s"

@@ -160,18 +160,15 @@ void MainWindow::navigateToPage(int index)
 
 void MainWindow::updateData()
 {
-    if (dashboardPage)
-        dashboardPage->updateData();
+    // No longer needed - DashboardPage ViewModel handles updates automatically
 }
 
 void MainWindow::updateSystemStatus()
 {
-    if (dashboardPage)
-        dashboardPage->updateSystemStatus();
+    // No longer needed - DashboardPage ViewModel handles updates automatically
 }
 
 void MainWindow::simulateAlert()
 {
-    if (dashboardPage)
-        dashboardPage->simulateAlert();
+    // No longer needed - DashboardPage ViewModel handles alerts automatically
 }

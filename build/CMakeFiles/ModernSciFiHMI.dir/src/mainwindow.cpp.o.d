@@ -423,6 +423,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
  /workspaces/qpcetu/src/pages/dashboardpage.h \
+ /workspaces/qpcetu/src/pages/../viewmodels/dashboardviewmodel.h \
  /workspaces/qpcetu/src/pages/graphspage.h \
  /workspaces/qpcetu/src/pages/settingspage.h \
  /workspaces/qpcetu/src/pages/udpresponsepage.h \

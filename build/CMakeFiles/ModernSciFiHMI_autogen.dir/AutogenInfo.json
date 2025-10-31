@@ -73,6 +73,8 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Svg/Qt5SvgConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Svg/Qt5SvgConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Sql/Qt5SqlConfig.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
@@ -128,6 +130,18 @@
 			null
 		],
 		[
+			"/workspaces/qpcetu/src/commands/configurationcommand.h",
+			"Mu",
+			"6JCNSNR7WH/moc_configurationcommand.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/src/commands/writevaluecommand.h",
+			"Mu",
+			"6JCNSNR7WH/moc_writevaluecommand.cpp",
+			null
+		],
+		[
 			"/workspaces/qpcetu/src/controllermanager.h",
 			"Mu",
 			"UVLADIE3JM/moc_controllermanager.cpp",
@@ -137,6 +151,12 @@
 			"/workspaces/qpcetu/src/datawidget.h",
 			"Mu",
 			"UVLADIE3JM/moc_datawidget.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/src/factories/controllerfactory.h",
+			"Mu",
+			"C2ZGISSCJH/moc_controllerfactory.cpp",
 			null
 		],
 		[
@@ -221,6 +241,12 @@
 			"/workspaces/qpcetu/src/repositories/circularbufferrepository.h",
 			"Mu",
 			"UEBDTUJI3I/moc_circularbufferrepository.cpp",
+			null
+		],
+		[
+			"/workspaces/qpcetu/src/repositories/sqliterepository.h",
+			"Mu",
+			"UEBDTUJI3I/moc_sqliterepository.cpp",
 			null
 		],
 		[
@@ -328,6 +354,7 @@
 		"QT_QMLMODELS_LIB",
 		"QT_QML_LIB",
 		"QT_QUICK_LIB",
+		"QT_SQL_LIB",
 		"QT_SVG_LIB",
 		"QT_WEBCHANNEL_LIB",
 		"QT_WEBENGINECORE_LIB",
@@ -351,6 +378,7 @@
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
 		"/usr/include/x86_64-linux-gnu/qt5/QtSvg",
+		"/usr/include/x86_64-linux-gnu/qt5/QtSql",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWebEngineCore",
 		"/usr/include/x86_64-linux-gnu/qt5/QtQuick",
@@ -393,8 +421,15 @@
 	[
 		[ "/workspaces/qpcetu/src/animatedprogressbar.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/commands/command.cpp", "Mu", null ],
+		[
+			"/workspaces/qpcetu/src/commands/configurationcommand.cpp",
+			"Mu",
+			null
+		],
+		[ "/workspaces/qpcetu/src/commands/writevaluecommand.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/controllermanager.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/datawidget.cpp", "Mu", null ],
+		[ "/workspaces/qpcetu/src/factories/controllerfactory.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/graphwidget.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/industrialcontroller.cpp", "Mu", null ],
 		[ "/workspaces/qpcetu/src/main_modern.cpp", "Mu", null ],
@@ -411,6 +446,11 @@
 		[ "/workspaces/qpcetu/src/pages/webbrowserpage.cpp", "Mu", null ],
 		[
 			"/workspaces/qpcetu/src/repositories/circularbufferrepository.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/workspaces/qpcetu/src/repositories/sqliterepository.cpp",
 			"Mu",
 			null
 		],

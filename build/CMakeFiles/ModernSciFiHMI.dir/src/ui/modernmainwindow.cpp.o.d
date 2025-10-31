@@ -395,6 +395,7 @@ CMakeFiles/ModernSciFiHMI.dir/src/ui/modernmainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /workspaces/qpcetu/src/ui/../pages/dashboardpage.h \
+ /workspaces/qpcetu/src/ui/../pages/../viewmodels/dashboardviewmodel.h \
  /workspaces/qpcetu/src/ui/../pages/graphspage.h \
  /workspaces/qpcetu/src/ui/../pages/settingspage.h \
  /workspaces/qpcetu/src/ui/../pages/udpresponsepage.h \

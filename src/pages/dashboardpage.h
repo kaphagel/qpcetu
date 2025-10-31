@@ -5,6 +5,8 @@
 #include <QTextEdit>
 #include <QVBoxLayout>
 #include <QGridLayout>
+#include "../viewmodels/dashboardviewmodel.h"
+
 class DataWidget;
 class AnimatedProgressBar;
 class GraphWidget;
@@ -13,21 +15,39 @@ class DashboardPage : public QWidget {
     Q_OBJECT
 public:
     explicit DashboardPage(QWidget *parent = nullptr);
+    ~DashboardPage() override;
 
-    // Methods to update dashboard data
-    void updateData();
-    void updateSystemStatus();
+private slots:
+    // ViewModel signal handlers
+    void onEnergyCoreUpdated(int value);
+    void onShieldMatrixUpdated(int value);
+    void onEngineThrustUpdated(int value);
+    void onWeaponArrayUpdated(int value);
+    void onSystemParametersUpdated(const DashboardViewModel::SystemParameters& params);
+    void onNavigationDataUpdated(const DashboardViewModel::NavigationData& data);
+    void onSystemStatusChanged(DashboardViewModel::SystemStatus status, const QString& message);
+    void onTimeUpdated(const QString& timestamp);
+    void onAlertGenerated(const QString& message);
+    void onConnectionStatusChanged(bool connected, const QString& message);
 
-public:
-    void simulateAlert();
 private:
+    void setupUI();
+    void connectSignals();
     void setupEEGLayout();
     QWidget *createTopBar();
     QWidget *createGraphArea();
     QWidget *createDataWidgetRow();
     QWidget *createBottomBar();
+    void createStatusPanel(QVBoxLayout *mainVLayout);
+    void createDataPanels(QGridLayout *mainLayout);
+    void createSystemPanel(QGridLayout *mainLayout);
+    void createControlPanel(QGridLayout *mainLayout);
+    void createGraphPanels(QGridLayout *mainLayout);
 
 private:
+    // ViewModel (business logic)
+    DashboardViewModel* m_viewModel;
+    
     // Status indicators
     QLabel *m_statusLabel;
     QLabel *m_timeLabel;
@@ -62,14 +82,4 @@ private:
     GraphWidget *m_networkGraph;
     GraphWidget *m_thrusterGraph;
     GraphWidget *m_sensorGraph;
-
-    // Data
-    int m_alertLevel = 0;
-    bool m_systemOnline = true;
-
-    void createStatusPanel(QVBoxLayout *mainVLayout);
-    void createDataPanels(QGridLayout *mainLayout);
-    void createSystemPanel(QGridLayout *mainLayout);
-    void createControlPanel(QGridLayout *mainLayout);
-    void createGraphPanels(QGridLayout *mainLayout);
 };
